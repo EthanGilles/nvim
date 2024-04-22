@@ -10,6 +10,8 @@ Currently I am using the Lazy plugin manager.
 
 <h2>Font<h2>
 
+Currently I am using JetBrainsMonoNL Nerd Font Mono
+
 <h2>Plugins</h2>
 <ul>
     <li>coc.nvim (Conquer of Completion)</li>

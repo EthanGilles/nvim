@@ -1,4 +1,7 @@
 # NEOVIM CONFIG
+
+<img src="https://github.com/EthanGilles/nvim/blob/a6935eb501045e80170ca92d665e60709fdaded4/pictures/nvim.png">
+
 ------------------
 <h2>Colorscheme</h2>
 

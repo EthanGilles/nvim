@@ -8,7 +8,7 @@ Currently I use the 'nightfox' theme.
 
 Currently I am using the Lazy plugin manager.
 
-<h2>Font<h2>
+<h2>Font</h2>
 
 Currently I am using JetBrainsMonoNL Nerd Font Mono
 

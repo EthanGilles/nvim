@@ -1,7 +1,5 @@
 # NEOVIM CONFIG
 
-<img src="https://github.com/EthanGilles/nvim/blob/a6935eb501045e80170ca92d665e60709fdaded4/pictures/nvim.png">
-
 ------------------
 <h2>Colorscheme</h2>
 
@@ -35,11 +33,6 @@ Currently I am using JetBrainsMonoNL Nerd Font Mono
     <li>vimtex.nvim</li>
 </ul>
 
-<h2>Dependencies<h2>
-<ul>
-    <li>python3</li>
-    <li>node.js</li>
-    <li>ripgrep</li>
-</ul>
+<h2>Screenshots</h2>
 
 

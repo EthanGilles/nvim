@@ -1,10 +1,11 @@
 local config = function()
-  local theme = require('lualine.themes.nightfox')
-  theme.normal.c.bg = nil
+  -- local theme = require('lualine.themes.nightfox')
+  -- theme.normal.c.bg = nil
 
   require('lualine').setup {
     options = {
-      theme = theme,
+      theme = 'tokyonight',
+      -- theme = theme,
       globalstatus = true
     },
     sections = {

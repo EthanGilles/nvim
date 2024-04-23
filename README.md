@@ -2,7 +2,8 @@
 ------------------
 <h2>Colorscheme</h2>
 
-Currently I use the 'nightfox' theme.
+Currently I am using the 'tokyonight' theme.
+I also have the 'nightfox' theme installed and sometimes use that when I want to switch it up.
 
 <h2>Plugin Manager</h2>
 

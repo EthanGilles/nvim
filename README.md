@@ -36,7 +36,6 @@ Currently I am using JetBrainsMonoNL Nerd Font Mono
 <h2>Screenshots</h2>
 
 Tokyonight Theme:
-<img src="https://github.com/EthanGilles/nvim/blob/0cd5c44964a303d86636a4cc679e344f1a25c202/pictures/tokyonight.png">
 
 Nightfox Theme:
 <img src="https://github.com/EthanGilles/nvim/blob/0cd5c44964a303d86636a4cc679e344f1a25c202/pictures/nightfox.png">

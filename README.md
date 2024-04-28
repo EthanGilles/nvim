@@ -26,7 +26,7 @@ I have the following language servers/COC extensions installed
     <li>coc-texlab (LaTeX lsp for auto complete)</li>
     <li>coc-rust-analyzer (Rust lsp for auto complete)</li>
     <li>coc-clangd (C/C++ lsp for auto complete)</li>
-<ul>
+</ul>
 
 You can install them by using the command ':CocInstall <list-item>'
 

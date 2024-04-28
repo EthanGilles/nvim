@@ -14,7 +14,6 @@ keymap.set("n", "<C-l>", "<C-w>l", opts) -- Right
 -- Window Management -- 
 keymap.set("n", "<leader>sv", ":vsplit<CR>", opts) -- Split Vertical
 keymap.set("n", "<leader>sh", ":split<CR>", opts) -- Split Horizontal
-keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>", opts) -- Toggle Minimize Window
 
 -- Indenting --
 keymap.set("v", "<", "<gv")
@@ -24,6 +23,9 @@ keymap.set("v", ">", ">gv")
 vim.api.nvim_set_keymap("n", "<C-_>", "gcc", { noremap = false })
 vim.api.nvim_set_keymap("v", "<C-_>", "gcc", { noremap = false })
 
+-- VimTex Command --
+-- <SPACE+L+C> (Latex Clean) cleans the directory with latex files after compiling.
+keymap.set("n","<leader>lc", ":VimtexClean<CR>", {noremap = true})
 
 -- Auto Completion --
 
@@ -34,11 +36,7 @@ function _G.check_back_space()
     return col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') ~= nil
 end
 
--- Use Tab for trigger completion with characters ahead and navigate
--- NOTE: There's always a completion item selected by default, you may want to enable
--- no select by setting `"suggest.noselect": true` in your configuration file
--- NOTE: Use command ':verbose imap <tab>' to make sure Tab is not mapped by
--- other plugins before putting this into your config
+-- Press <TAB> to cycle down, <Shift+TAB> for cycle up, and <ENTER> for confirming.
 local opts = {silent = true, noremap = true, expr = true, replace_keycodes = false}
 keyset("i", "<TAB>", 'coc#pum#visible() ? coc#pum#next(1) : v:lua.check_back_space() ? "<TAB>" : coc#refresh()', opts)
 keyset("i", "<S-TAB>", [[coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"]], opts)

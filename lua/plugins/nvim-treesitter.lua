@@ -20,10 +20,11 @@ local config = function()
     "markdown",
     "lua",
     "gitignore",
+    "latex",
   },
   auto_install = true,
   highlight = {
-    enable = true,
+    -- enable = true,
     additional_vim_regex_highlighting = true,
   },
 })

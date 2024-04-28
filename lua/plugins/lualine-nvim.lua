@@ -1,10 +1,11 @@
 local config = function()
   -- local theme = require('lualine.themes.nightfox')
   -- theme.normal.c.bg = nil
-
+  
+  local cyberdream = require("lualine.themes.cyberdream")
   require('lualine').setup {
     options = {
-      theme = 'tokyonight',
+      theme = 'cyberdream',
       -- theme = theme,
       globalstatus = true
     },

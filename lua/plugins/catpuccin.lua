@@ -29,6 +29,24 @@ local config = function()
         -- miscs = {}, -- Uncomment to turn off hard-coded styles
     },
     default_integrations = true,
+    integrations = {
+      coc_nvim = true,
+      indent_blankline = {
+        enabled = true,
+        scope_color = "lavender", -- catppuccin color (eg. `lavender`) Default: text
+        colored_indent_levels = false,
+      },
+      noice = true,
+      nvimtree = true,
+      treesitter = true,
+      telescope = {
+        enabled = true,
+      },
+      illuminate = {
+        enabled = true,
+        lsp = false
+      },
+    }
   })
 
   vim.cmd.colorscheme "catppuccin-mocha"

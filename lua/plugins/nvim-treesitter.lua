@@ -24,7 +24,8 @@ local config = function()
   },
   auto_install = true,
   highlight = {
-    -- enable = true,
+    enable = true,
+    disable = { "latex", "bibtex" },
     additional_vim_regex_highlighting = true,
   },
 })

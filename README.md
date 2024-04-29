@@ -60,7 +60,7 @@ To add a snippet, type ':UltiSnipsEdit' within the filetype that you want to add
 <h2>Screenshots</h2>
 
 Dracula Theme, With 'Zathura' pdf viewer for LaTeX.
-<img src='https://github.com/EthanGilles/nvim/blob/987d5cd43fdb5667dfb3bef2b8a1c0bbcbb5ca01/pictures/dracula.png'>
+<img src='https://github.com/EthanGilles/nvim/blob/8c82727cd82be77106654af057d89cd300dc0513/pictures/dracula.png'>
 
 Tokyonight Theme:
 <img src="https://github.com/EthanGilles/nvim/blob/9596e0a5c0158617258f0591d7b0429dd604d94f/pictures/tokyonight.png">

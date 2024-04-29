@@ -60,11 +60,11 @@ Some of the snippets I am using for LaTeX can be found <a href='https://castel.d
 <h2>Screenshots</h2>
 
 A C++ file with this config:
-
+<img src="https://github.com/EthanGilles/nvim/blob/36bc6266a08a117f7190891209028ad966350c63/pictures/cpp.png">
 
 A Rust file with this config:
+<img src="https://github.com/EthanGilles/nvim/blob/36bc6266a08a117f7190891209028ad966350c63/pictures/rust.png">
 
-
-A LaTeX file with this config:
-
+A LaTeX file with this config, using Zathura PDF viewer:
+<img src="https://github.com/EthanGilles/nvim/blob/36bc6266a08a117f7190891209028ad966350c63/pictures/latex.png">
 

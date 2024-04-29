@@ -54,7 +54,6 @@ Some of the snippets I am using for LaTeX can be found <a href='https://castel.d
     <li>vim-highlightedyank.nvim</li>
     <li>vim-illuminate.nvim</li>
     <li>vimtex.nvim</li>
-    <li>which-key.nvim (not used)</li>
 </ul>
 
 <h2>Screenshots</h2>

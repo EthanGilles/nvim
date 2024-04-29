@@ -1,6 +1,9 @@
 # NEOVIM CONFIG
 
 ------------------
+
+<img src="https://github.com/EthanGilles/nvim/blob/f713dc8d368f7091503ebd86c037e73c6132b973/pictures/demo.gif">
+
 <h2>Colorscheme</h2>
 
 Currently I am running the 'Catpuccin' theme. I have it installed for 

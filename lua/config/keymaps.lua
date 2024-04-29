@@ -28,9 +28,6 @@ vim.api.nvim_set_keymap("v", "<C-_>", "gcc", { noremap = false })
 keymap.set("n","<leader>lc", ":VimtexClean<CR>", {noremap = true})
 
 -- Auto Completion --
-
-local keyset = vim.keymap.set
-
 function _G.check_back_space()
     local col = vim.fn.col('.') - 1
     return col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') ~= nil
@@ -38,14 +35,14 @@ end
 
 -- Press <TAB> to cycle down, <Shift+TAB> for cycle up, and <ENTER> for confirming.
 local opts = {silent = true, noremap = true, expr = true, replace_keycodes = false}
-keyset("i", "<TAB>", 'coc#pum#visible() ? coc#pum#next(1) : v:lua.check_back_space() ? "<TAB>" : coc#refresh()', opts)
-keyset("i", "<S-TAB>", [[coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"]], opts)
+keymap.set("i", "<TAB>", 'coc#pum#visible() ? coc#pum#next(1) : v:lua.check_back_space() ? "<TAB>" : coc#refresh()', opts)
+keymap.set("i", "<S-TAB>", [[coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"]], opts)
 
 -- Make <CR> to accept selected completion item or notify coc.nvim to format
 -- <C-g>u breaks current undo, please make your own choice
-keyset("i", "<cr>", [[coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"]], opts)
+keymap.set("i", "<cr>", [[coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"]], opts)
 
 -- Use <c-j> to trigger snippets
-keyset("i", "<c-j>", "<Plug>(coc-snippets-expand-jump)")
+keymap.set("i", "<c-j>", "<Plug>(coc-snippets-expand-jump)")
 -- Use <c-space> to trigger completion
-keyset("i", "<c-space>", "coc#refresh()", {silent = true, expr = true})
+keymap.set("i", "<c-space>", "coc#refresh()", {silent = true, expr = true})

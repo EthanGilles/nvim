@@ -17,6 +17,30 @@ Currently I am using the Lazy plugin manager.
 
 Currently I am using JetBrainsMonoNL Nerd Font Mono
 
+<h2>Plugins</h2>
+<ul>
+    <li>catpuccin.nvim</li>
+    <li>coc.nvim (Conquer of Completion)</li>
+    <li>comment.nvim</li>
+    <li>cyberdream.nvim (Used for LuaLine theme)</li>
+    <li>gh.nvim</li>
+    <li>indent-blankline.nvim</li>
+    <li>lazy.nvim (Plugin Manager)</li>
+    <li>litee.nvim (gh dependency)</li>
+    <li>lualine.nvim</li>
+    <li>noice.nvim (No nvim-notify)</li>
+    <li>nui.nvim (Noice dependency)</li>
+    <li>nvim-tree.nvim</li>
+    <li>nvim-treesitter.nvim</li>
+    <li>nvim-web-devicons.nvim</li>
+    <li>telescope.nvim (fzf)</li>
+    <li>ultisnips.nvim </li>
+    <li>vim-highlightedyank.nvim</li>
+    <li>vim-illuminate.nvim</li>
+    <li>vim-snippets</li>
+    <li>vimtex.nvim</li>
+</ul>
+
 <h2>Info</h2>
 
 <h3>Conquer of Completion</h3>
@@ -39,28 +63,7 @@ I am using UltiSnips for snippet completion.
 To add a snippet, type ':UltiSnipsEdit' within the filetype that you want to add a snippet for.
 Some of the snippets I am using for LaTeX can be found <a href='https://castel.dev/post/lecture-notes-1/'>here</a>
 
-<h2>Plugins</h2>
-<ul>
-    <li>catpuccin.nvim</li>
-    <li>coc.nvim (Conquer of Completion)</li>
-    <li>comment.nvim</li>
-    <li>cyberdream.nvim (Used for LuaLine theme)</li>
-    <li>gh.nvim</li>
-    <li>indent-blankline.nvim</li>
-    <li>litee.nvim (gh dependency)</li>
-    <li>lualine.nvim</li>
-    <li>noice.nvim (No nvim-notify)</li>
-    <li>nvim-tree.nvim</li>
-    <li>nvim-treesitter.nvim</li>
-    <li>nvim-web-devicons.nvim</li>
-    <li>telescope.nvim (fzf)</li>
-    <li>ultisnips.nvim (with 'vim-snippets')</li>
-    <li>vim-highlightedyank.nvim</li>
-    <li>vim-illuminate.nvim</li>
-    <li>vimtex.nvim</li>
-</ul>
-
-<h2>Screenshots</h2>
+<h2>More Screenshots</h2>
 
 A C++ file with this config:
 <img src="https://github.com/EthanGilles/nvim/blob/36bc6266a08a117f7190891209028ad966350c63/pictures/cpp.png">

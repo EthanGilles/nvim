@@ -23,10 +23,8 @@ Currently I am using JetBrainsMonoNL Nerd Font Mono
     <li>coc.nvim (Conquer of Completion)</li>
     <li>comment.nvim</li>
     <li>cyberdream.nvim (Used for LuaLine theme)</li>
-    <li>gh.nvim</li>
     <li>indent-blankline.nvim</li>
     <li>lazy.nvim (Plugin Manager)</li>
-    <li>litee.nvim (gh dependency)</li>
     <li>lualine.nvim</li>
     <li>noice.nvim (No nvim-notify)</li>
     <li>nui.nvim (Noice dependency)</li>

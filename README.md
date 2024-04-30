@@ -33,6 +33,7 @@ Currently I am using JetBrainsMonoNL Nerd Font Mono
     <li>nvim-tree.nvim</li>
     <li>nvim-treesitter.nvim</li>
     <li>nvim-web-devicons.nvim</li>
+    <li>plenary.nvim (telescope dependency)</li>
     <li>telescope.nvim (fzf)</li>
     <li>ultisnips.nvim </li>
     <li>vim-highlightedyank.nvim</li>

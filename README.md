@@ -47,6 +47,7 @@ Some of the snippets I am using for LaTeX can be found <a href='https://castel.d
     <li>cyberdream.nvim (Used for LuaLine theme)</li>
     <li>gh.nvim</li>
     <li>indent-blankline.nvim</li>
+    <li>litee.nvim (gh dependency)</li>
     <li>lualine.nvim</li>
     <li>noice.nvim (No nvim-notify)</li>
     <li>nvim-tree.nvim</li>

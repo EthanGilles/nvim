@@ -67,7 +67,7 @@ etc. will be highlighted with its own color. A simple quality of life plugin.
 
 <h3>Comment</h3>
 Comment.nvim is used to group together and comment out code. In my configuration, you use
-visual mode to highlight the words you want commented out and then press `Shift + /`
+visual mode to highlight the words you want commented out and then press ` Shift + / `
 
 <h3>Indent-blankline</h3>
 indent-blankline will help with auto indenting the next line, and will give you different colors

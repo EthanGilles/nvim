@@ -4,20 +4,20 @@
 
 <img src="https://github.com/EthanGilles/nvim/blob/4b265ca4bb40c88dc32fe163bd623ced765408b8/pictures/demo.gif">
 
-<h2>Colorscheme</h2>
+## Colorscheme
 
 Currently I am running the 'Catppuccin' theme. I have it installed for 
 my terminal (Windows Terminal), NeoVim, and Zathura (PDF viewer).
 
-<h2>Plugin Manager</h2>
+## Plugin Manager
 
 Currently I am using the Lazy plugin manager.
 
-<h2>Font</h2>
+## Font
 
 Currently I am using JetBrainsMonoNL Nerd Font Mono
 
-<h2>Plugins</h2>
+## Plugins
 <ul>
     <li>alpha.nvim</li>
     <li>catppuccin.nvim</li>
@@ -59,11 +59,17 @@ other auto complete functionality.
 Within COC you have to install 'CoC extensions' to get functionality.
 I have the following language servers/COC extensions installed
 <ul>
-    <li>coc-vimtex  (VimTex support for CoC)</li>
-    <li>coc-snippets (Snippets included in CoC)</li>
-    <li>coc-pairs (Auto-pairing for parenthesis, quotes, brackets, etc.)</li>
-    <li>coc-texlab (LaTeX lsp for auto complete)</li>
-    <li>coc-rust-analyzer (Rust lsp for auto complete)</li>
+    <li>coc-vimtex  -  VimTex support for CoC</li>
+    <li>coc-snippets  -  Snippets for CoC</li>
+    <li>coc-pairs  -  Auto-pairing for parenthesis, quotes, brackets, etc.</li>
+    <li>coc-html  -  HTML auto complete support</li>
+    <li>coc-calc  -  Auto completes math expressions in code</li>
+    <li>coc-tsserver  -  JavaScript and TypeScript auto complete support</li>
+    <li>coc-texlab  -  LaTeX auto complete support</li>
+    <li>coc-sh  -  Bash auto complete support</li>
+    <li>coc-rust-analyzer  -  Rust auto complete support </li>
+    <li>coc-lia  -  Lua auto complete support</li>
+    <li>coc-css  -  CSS auto complete support</li>
     <li>coc-clangd (C/C++ lsp for auto complete)</li>
 </ul>
 

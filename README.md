@@ -2,7 +2,7 @@
 
 ------------------
 
-<img src="https://github.com/EthanGilles/nvim/blob/f713dc8d368f7091503ebd86c037e73c6132b973/pictures/demo.gif">
+<img src="https://github.com/EthanGilles/nvim/blob/4b265ca4bb40c88dc32fe163bd623ced765408b8/pictures/demo.gif">
 
 <h2>Colorscheme</h2>
 

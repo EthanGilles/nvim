@@ -42,7 +42,7 @@ Currently I am using JetBrainsMonoNL Nerd Font Mono
     <li>vimtex.nvim</li>
 </ul>
 
-<h2>Info</h2>
+## Plugin Information
 
 <h3>Alpha</h3>
 Alpha is the greeter I use for NeoVim. The greeting screen is something I pieced together

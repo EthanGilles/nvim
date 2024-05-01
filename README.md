@@ -21,6 +21,7 @@ Currently I am using JetBrainsMonoNL Nerd Font Mono
 <ul>
     <li>catppuccin.nvim</li>
     <li>coc.nvim (Conquer of Completion)</li>
+    <li>colorizer.nvim</li>
     <li>comment.nvim</li>
     <li>cyberdream.nvim (Used for LuaLine theme)</li>
     <li>indent-blankline.nvim</li>
@@ -60,6 +61,10 @@ I have the following language servers/COC extensions installed
 
 You can install them by using the command ':CocInstall [list-item]'
 
+<h3>Colorizer</h3>
+Colorizer highlights color-codes with the color they are representing. Hexcodes, names, RGB values,
+etc. will be highlighted with its own color. A simple quality of life plugin.
+
 <h3>Comment</h3>
 Comment.nvim is used to group together and comment out code. In my configuration, you use
 visual mode to highlight the words you want commented out and then press `Shift + /`
@@ -82,7 +87,7 @@ a lot better in general. It also integrates with telescope to make everything lo
 <h3>Nvim-tree</h3>
 Nvim-tree gives you a file explorer on the left side of the screen. With web-dev-icons the file
 explorer will also display icon types for each type of file, as well as git status. With my
-configuration I have `<leader> + f` mapped to close the tree, and `<leader> m` to move the cursor
+configuration I have `leader + f` mapped to close the tree, and `leader m` to move the cursor
 to the tree.
 
 <h3>Nvim-treesitter</h3>

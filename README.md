@@ -19,6 +19,7 @@ Currently I am using JetBrainsMonoNL Nerd Font Mono
 
 <h2>Plugins</h2>
 <ul>
+    <li>alpha.nvim</li>
     <li>catppuccin.nvim</li>
     <li>coc.nvim (Conquer of Completion)</li>
     <li>colorizer.nvim</li>
@@ -42,6 +43,12 @@ Currently I am using JetBrainsMonoNL Nerd Font Mono
 </ul>
 
 <h2>Info</h2>
+
+<h3>Alpha</h3>
+Alpha is the greeter I use for NeoVim. The greeting screen is something I pieced together
+from other people's setups mixed with some of my own personal preferences. 
+
+Alpha screen:
 
 <h3>Conquer of Completion</h3>
 CoC is used to for auto completion. It has compatability with UltiSnips so you can get 

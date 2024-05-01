@@ -49,7 +49,7 @@ Alpha is the greeter I use for NeoVim. The greeting screen is something I pieced
 from other people's setups mixed with some of my own personal preferences. 
 
 Alpha screen:
-<img src='https://github.com/EthanGilles/nvim/blob/9833171e0a5b01766ff253ee93fb36b250da796b/pictures/alpha.png'>
+<img src='https://github.com/EthanGilles/nvim/blob/f7fc603b255dad1895f9f00f541ced29b0e14a91/pictures/alpha.png'>
 
 <h3>Conquer of Completion</h3>
 CoC is used to for auto completion. It has compatability with UltiSnips so you can get 

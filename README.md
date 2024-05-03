@@ -239,9 +239,44 @@ More plug-in specific keymaps can be found in the documentation for the plugin, 
 
 ## Plugin Information
 
+All configuration for plugins are within their respective lua files. This is accomplished by
+making the configuration a lua function, and then calling that function for the config option.
+
+An example is shown below with the plugin Colorizer 
+```lua
+local config = function()
+  require ('colorizer').setup {
+    filetypes = {
+      '*'; -- Highlight all files, but customize some others.
+    },
+  }
+end
+
+return {
+  'NvChad/nvim-colorizer.lua',
+  lazy = false,
+  config = config,
+}
+```
+In this example, I setup a function called 'config' and tell the plugin to setup,
+with the filetypes set to '\*' or 'all'. Then, I return the plugin with the configuration function.
+This is how all of the plugins are setup, so to edit the configuration of a plugin, go to its
+respective configuration function, within its lua file.
+
 ### Alpha
-Alpha is the greeter I use for NeoVim. The greeting screen is something I pieced together
-from other people's setups mixed with some of my own personal preferences. 
+Alpha is the greeting screen plugin. Alpha is widely used and is extremely customizable.
+The greeting screen is something I have pieced together from other people's setups mixed with some 
+of my own personal preferences. Alpha will appear whenever you just use the command `vim` with no specific file.
+I have Alpha setup so that you can update all of your plugins from the greeting screen, with easy access
+so there is no memorization of commands needed.
+
+To edit the ASCII art, just copy paste into the area where the current logo is.
+
+All of the buttons on the greeting screen can be customized too. For example, a button is defined as:
+```lua
+dashboard.button("e", "   New file", ":ene <BAR> startinsert <CR>")
+```
+Where the first argument is the hot-key, the second is the displayed text, and the third is the command to execute.
 
 Alpha screen:
 ![Greeting Page](https://github.com/EthanGilles/EthanGilles/blob/main/nvim-pics/greeting.png)

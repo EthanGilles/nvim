@@ -19,6 +19,7 @@
   - [Tutorial](#tutorial)
   - [Keymaps](#keymaps)
 - [Plugins](#plugins)
+- [Plugin Information](#plugin-information)
 - [Screenshots](#screenshots)
 
 ## General Info
@@ -263,8 +264,24 @@ with the filetypes set to '\*' or 'all'. Then, I return the plugin with the conf
 This is how all of the plugins are setup, so to edit the configuration of a plugin, go to its
 respective configuration function, within its lua file.
 
+### ToC for Plugins
+ - [Alpha](#alpha)
+ - [Conquer of Completion](#conquer-of-completion)
+ - [Colorizer](#colorizer)
+ - [Comment](#comment)
+ - [Indent-Blankline](#indent-blankline)
+ - [LuaLine](#lualine)
+ - [Noice](#noice)
+ - [nvim-tree](#nvim-tree)
+ - [nvim-treesitter](#nvim-treesitter)
+ - [telescope](#telescope)
+ - [UltiSnips](#ultisnips)
+ - [Highlighted Yank](#Highlighted-yank)
+ - [Illuminate](#illuminate)
+ - [VimTex](#vimtex)
+
 ### Alpha
-Alpha is the greeting screen plugin. Alpha is widely used and is extremely customizable.
+[Alpha](https://github.com/goolord/alpha-nvim) is the greeting screen plugin. Alpha is widely used and is extremely customizable.
 The greeting screen is something I have pieced together from other people's setups mixed with some 
 of my own personal preferences. Alpha will appear whenever you just use the command `vim` with no specific file.
 I have Alpha setup so that you can update all of your plugins from the greeting screen, with easy access
@@ -282,9 +299,9 @@ Alpha screen:
 ![Greeting Page](https://github.com/EthanGilles/EthanGilles/blob/main/nvim-pics/greeting.png)
 
 ### Conquer of Completion
-CoC is used for auto completion. It has compatability with UltiSnips so you can get 
+[CoC](https://github.com/neoclide/coc.nvim) is used for auto completion. It has compatability with UltiSnips so you can get 
 snippets and reccomendations from the language server you choose to download. It also provides
-other auto complete functionality.
+other auto complete functionality, like with math expressions.
 
 Within COC you have to install 'CoC extensions' to get functionality.
 I have the following language servers/COC extensions installed
@@ -299,24 +316,48 @@ I have the following language servers/COC extensions installed
 - **coc-rust-analyzer**  -  Rust auto complete support 
 - **coc-lua**  -  Lua auto complete support
 - **coc-css**  -  CSS auto complete support
-- **coc-clang**d - (C/C++ lsp for auto complete)
+- **coc-clangd** - (C/C++ lsp for auto complete)
 
 You can install them by using the command 
 ```
 :CocInstall [extension]
 ```
+If you find that you want an extension that you don't see here, try [this](https://github.com/neoclide/coc.nvim/network/dependents?dependents_before=NDA0MzM0NjQyNA).
+If you find that you don't want one of the extensions, use the command
+```
+:CoCUninstall [extension]
+```
+
 ### Colorizer
-Colorizer highlights color-codes with the color they are representing. Hexcodes, names, RGB values,
+[Colorizer](https://github.com/norcalli/nvim-colorizer.lua) highlights color-codes with the color they are representing. Hexcodes, names, RGB values,
 etc. will be highlighted with its own color. A simple quality of life plugin.
 
 ### Comment
-Comment.nvim is used to group together and comment out code. In my configuration, you use
+[Comment](https://github.com/numToStr/Comment.nvim) is used to group together and comment out code. In my configuration, you use
 visual mode to highlight the words you want commented out and then press ` Shift + / `
 
 ### Indent-blankline
-indent-blankline will help with auto indenting the next line, and will give you different colors
+[Indent-Blankline](https://github.com/lukas-reineke/indent-blankline.nvim) will help with auto indenting the next line, and will give you different colors
 along the lefthand side of the editor for separate indenting levels. The colors can be customized
-in its lua file.
+by changing the hex values within the lua file.
+
+The highlighting order is as follows, with `RainbowRed` coming first. To change the order,
+simply arrange the variable names in the order you would like them to appear.
+```lua
+local highlight = {
+"RainbowRed",
+"RainbowYellow",
+"RainbowBlue",
+"RainbowViolet",
+"RainbowOrange",
+"RainbowGreen",
+"RainbowCyan",
+```
+To change the actual value, just change the hex value for the corresponding variable. 
+For example, to change the first level indent color, modify the hex value from the line below.
+```lua
+vim.api.nvim_set_hl(0, "RainbowRed", { fg = "#FF79C6" })
+```
 
 ### LuaLine
 LuaLine helps by giving you information on your NeoVim session. It gives information like the

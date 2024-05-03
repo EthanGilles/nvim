@@ -156,7 +156,7 @@ Alpha screen:
 ![Greeting Page](https://github.com/EthanGilles/EthanGilles/blob/main/nvim-pics/greeting.png)
 
 ### Conquer of Completion
-CoC is used to for auto completion. It has compatability with UltiSnips so you can get 
+CoC is used for auto completion. It has compatability with UltiSnips so you can get 
 snippets and reccomendations from the language server you choose to download. It also provides
 other auto complete functionality.
 
@@ -171,7 +171,7 @@ I have the following language servers/COC extensions installed
 - coc-texlab  -  LaTeX auto complete support
 - coc-sh  -  Bash auto complete support
 - coc-rust-analyzer  -  Rust auto complete support 
-- coc-lia  -  Lua auto complete support
+- coc-lua  -  Lua auto complete support
 - coc-css  -  CSS auto complete support
 - coc-clangd (C/C++ lsp for auto complete)
 

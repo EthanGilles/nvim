@@ -38,7 +38,7 @@ with LaTeX dependencies and one without.
 
 I am using [Catppuccin Mocha](https://github.com/catppuccin/nvim) as my main theme and for my 
 LuaLine I use [Cyberdream](https://github.com/scottmckendry/cyberdream.nvim).
-I use JetBrains Mono, but any [Nerd Font](https://github.com/ryanoasis/nerd-fonts) will do.
+For font, I use JetBrains Mono, but any [Nerd Font](https://github.com/ryanoasis/nerd-fonts) will do.
 
 ## Requirements
 
@@ -78,7 +78,7 @@ apt install ripgrep
 apt install xclip
 ```
 
-### LaTeX Dependencies
+### LaTeX/VimTex Dependencies
 
 For LaTeX live viewing to work with VimTex there are a few more dependencies needed.
 First is a PDF viewer that will update whenever we write to the file. I use [Zathura](https://wiki.archlinux.org/title/zathura)
@@ -114,63 +114,61 @@ npm install tree-sitter-cli
 ### Keymaps
 
 ## Plugins
-<ul>
-    <li>alpha.nvim</li>
-    <li>catppuccin.nvim</li>
-    <li>coc.nvim (Conquer of Completion)</li>
-    <li>colorizer.nvim</li>
-    <li>comment.nvim</li>
-    <li>cyberdream.nvim (Used for LuaLine theme)</li>
-    <li>indent-blankline.nvim</li>
-    <li>lazy.nvim (Plugin Manager)</li>
-    <li>lualine.nvim</li>
-    <li>noice.nvim (No nvim-notify)</li>
-    <li>nui.nvim (Noice dependency)</li>
-    <li>nvim-tree.nvim</li>
-    <li>nvim-treesitter.nvim</li>
-    <li>nvim-web-devicons.nvim</li>
-    <li>plenary.nvim (telescope dependency)</li>
-    <li>telescope.nvim (fzf)</li>
-    <li>ultisnips.nvim </li>
-    <li>vim-highlightedyank.nvim</li>
-    <li>vim-illuminate.nvim</li>
-    <li>vim-snippets</li>
-    <li>vimtex.nvim</li>
-</ul>
+- [Alpha](https://github.com/goolord/alpha-nvim)
+- [Catppuccin](https://github.com/catppuccin/nvim)
+- [Conquer of Completion](https://github.com/neoclide/coc.nvim)
+- [Colorizer](https://github.com/norcalli/nvim-colorizer.lua)
+- [Comment](https://github.com/numToStr/Comment.nvim)
+- [Cyberdream](https://github.com/scottmckendry/cyberdream.nvim)
+- [Indent-Blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
+- [Lazy](https://github.com/folke/lazy.nvim)
+- [LuaLine](https://github.com/nvim-lualine/lualine.nvim)
+- [Noice](https://github.com/folke/noice.nvim)
+- [Nui](https://github.com/MunifTanjim/nui.nvim)
+- [nvim-tree](https://github.com/nvim-tree/nvim-tree.lua)
+- [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
+- [nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons)
+- [Plenary](https://github.com/nvim-lua/plenary.nvim)
+- [Telescope](https://github.com/nvim-telescope/telescope.nvim)
+- [Ultisnips](https://github.com/SirVer/ultisnips)
+- [Highlighted Yank](https://github.com/machakann/vim-highlightedyank)
+- [Illuminate](https://github.com/RRethy/vim-illuminate)
+- [Vim-Snippets](https://github.com/honza/vim-snippets)
+- [VimTex](https://github.com/lervag/vimtex)
 
 ## Plugin Information
 
-<h3>Alpha</h3>
+### Alpha
 Alpha is the greeter I use for NeoVim. The greeting screen is something I pieced together
 from other people's setups mixed with some of my own personal preferences. 
 
 Alpha screen:
 <img src='https://github.com/EthanGilles/nvim/blob/f7fc603b255dad1895f9f00f541ced29b0e14a91/pictures/alpha.png'>
 
-<h3>Conquer of Completion</h3>
+### Conquer of Completion
 CoC is used to for auto completion. It has compatability with UltiSnips so you can get 
 snippets and reccomendations from the language server you choose to download. It also provides
 other auto complete functionality.
 
 Within COC you have to install 'CoC extensions' to get functionality.
 I have the following language servers/COC extensions installed
-<ul>
-    <li>coc-vimtex  -  VimTex support for CoC</li>
-    <li>coc-snippets  -  Snippets for CoC</li>
-    <li>coc-pairs  -  Auto-pairing for parenthesis, quotes, brackets, etc.</li>
-    <li>coc-html  -  HTML auto complete support</li>
-    <li>coc-calc  -  Auto completes math expressions in code</li>
-    <li>coc-tsserver  -  JavaScript and TypeScript auto complete support</li>
-    <li>coc-texlab  -  LaTeX auto complete support</li>
-    <li>coc-sh  -  Bash auto complete support</li>
-    <li>coc-rust-analyzer  -  Rust auto complete support </li>
-    <li>coc-lia  -  Lua auto complete support</li>
-    <li>coc-css  -  CSS auto complete support</li>
-    <li>coc-clangd (C/C++ lsp for auto complete)</li>
-</ul>
+- coc-vimtex  -  VimTex support for CoC
+- coc-snippets  -  Snippets for CoC
+- coc-pairs  -  Auto-pairing for parenthesis, quotes, brackets, etc.
+- coc-html  -  HTML auto complete support
+- coc-calc  -  Auto completes math expressions in code
+- coc-tsserver  -  JavaScript and TypeScript auto complete support
+- coc-texlab  -  LaTeX auto complete support
+- coc-sh  -  Bash auto complete support
+- coc-rust-analyzer  -  Rust auto complete support 
+- coc-lia  -  Lua auto complete support
+- coc-css  -  CSS auto complete support
+- coc-clangd (C/C++ lsp for auto complete)
 
-You can install them by using the command ':CocInstall [list-item]'
-
+You can install them by using the command 
+```
+:CocInstall [extension]
+```
 ### Colorizer
 Colorizer highlights color-codes with the color they are representing. Hexcodes, names, RGB values,
 etc. will be highlighted with its own color. A simple quality of life plugin.

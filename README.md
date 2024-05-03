@@ -152,17 +152,16 @@ keymap.set("[n, v, i]", "[keys to press]", ":[Vim cmd]<CR>", opts)
 My global `<leader>` key is set to `<SPACE>`.
 If you would like to change the `<leader>` keymap, it is in the `globals.lua` file.
 
-## Getting Started
+## Tutorial
 
 WIP
 
-### Tutorial
+## Keymaps
 
-WIP
-
-### Keymaps
-
-WIP
+| Keymap                                    | Description                         |
+| ----------------------------------------- | ----------------------------------- |
+| <kbd>`<leader>`</kbd><kbd>></kbd><kbd>m</kbd> | Switch cursor to file tree |
+| 
 
 ## Plugins
 - [Alpha](https://github.com/goolord/alpha-nvim)

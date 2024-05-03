@@ -97,6 +97,8 @@ apt install texlive-full
 ```
 # NOTE: I used Cargo to download tree-sitter-cli. Should work with the Node Manager as well though.
 npm install tree-sitter-cli
+# OR
+cargo install tree-sitter-cli
 ```
 
 ## Installation

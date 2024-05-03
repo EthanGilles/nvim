@@ -160,7 +160,7 @@ WIP
 
 | Keymap                                    | Description                         |
 | ----------------------------------------- | ----------------------------------- |
-| <kbd>`<leader>`</kbd><kbd>></kbd><kbd>m</kbd> | Switch cursor to file tree |
+| <kbd>`leader`</kbd><kbd>></kbd><kbd>m</kbd> | Switch cursor to file tree |
 | 
 
 ## Plugins

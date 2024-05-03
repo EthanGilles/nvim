@@ -7,7 +7,9 @@
 ## Table of Conents
 
 - [General Info](#general-info)
+  - [Extra Info](#extra-info)
 - [Requirements](#requirements)
+  - [LaTeX Dependencies](#latex-dependencies)
 - [Installation](#installation)
 - [Configuration](#configuration)
 - [Getting Started](#getting-started)
@@ -30,7 +32,13 @@ to me as a Computer Science Major. The main uses for this configuration are:
 - **Making LaTeX Documents**
 
 Eventually, I'd like to have several versions of this config that you could download. One version
-with dependencies and one without.
+with LaTeX dependencies and one without.
+
+### Extra Info
+
+I am using the [Catppuccin Mocha](https://github.com/catppuccin/nvim) theme. My LuaLine theme is
+[Cyberdream](https://github.com/scottmckendry/cyberdream.nvim).
+I use JetBrains Mono, but any [Nerd Font](https://github.com/ryanoasis/nerd-fonts) will do.
 
 ## Requirements
 
@@ -40,17 +48,55 @@ with dependencies and one without.
 # installs NVM (Node Version Manager)
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 
-# download and install Node.js
+#download and install Node.js
 nvm install 20
-
-# verifies the right Node.js version is in the environment
-node -v # should print `v20.12.2`
-
-# verifies the right NPM version is in the environment
-npm -v # should print `10.5.0`
 
 # install the neovim package for NodeJS
 npm install -g neovim
+```
+- **Python/Pip**
+```
+# Ubuntu comes with python but just in case
+apt install python3
+
+# Install pip
+apt install python3-pip
+
+# Use pip to install pynvim
+pip3 install pynvim
+```
+- **C/C++ Compiler**
+```
+apt install build-essential
+```
+- **RipGrep** for Telescope.nvim (Live Grep)
+```
+apt install ripgrep
+```
+- **XClip** for clipboard (Optional)
+```
+apt install xclip
+```
+
+### LaTeX Dependencies
+
+For LaTeX live viewing to work with VimTex there are a few more dependencies needed.
+First is a PDF viewer that will update whenever we write to the file. I use [Zathura](https://wiki.archlinux.org/title/zathura)
+for this purpose because it comes with Vim style motions out of the box. You can also customize
+Zathura to have the colorscheme of your choice. I am using [Catppuccin Mocha](https://github.com/catppuccin/zathura)
+
+- **Zathura** (Recommended)
+```
+apt install zathura
+```
+- **latexmk**: LaTeX Compiler
+```
+apt install texlive-full
+```
+- **tree-sitter-cli**: Allows for better syntax highlighting of LaTeX Documents
+```
+# NOTE: I used Cargo to download tree-sitter-cli. Should work with the Node Manager as well though.
+npm install tree-sitter-cli
 ```
 
 ## Installation

@@ -2,7 +2,7 @@
 
 ------------------
 
-https://github.com/EthanGilles/EthanGilles/blob/main/nvim-pics/greeting.png
+![Greeting Page](https://github.com/EthanGilles/EthanGilles/blob/main/nvim-pics/greeting.png)
 
 
 ## Table of Conents

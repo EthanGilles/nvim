@@ -125,7 +125,7 @@ alias vim=nvim
 ## Configuration 
 
 Plugins and Configuration are setup in their own folders within the `lua` directory. Keymaps are
-found within `keymaps.lua`. Vim options are found in `options.lua`. Configuration for each plug-in 
+found within `keymaps.lua` and Vim options are found in `options.lua`. Configuration for each plug-in 
 can be found within it's lua file. Configuration details for each plugin can be found within [Plugin Information](#plugin-information).
 
 ![File Tree](https://github.com/EthanGilles/EthanGilles/blob/82d3ce5d94fecc32c9f303b11f29a2da00385ab9/nvim-pics/filetree.png)

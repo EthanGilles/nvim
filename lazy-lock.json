@@ -3,15 +3,15 @@
   "alpha-nvim": { "branch": "main", "commit": "41283fb402713fc8b327e60907f74e46166f4cfd" },
   "catppuccin": { "branch": "main", "commit": "a1439ad7c584efb3d0ce14ccb835967f030450fe" },
   "coc.nvim": { "branch": "release", "commit": "e159d0b26277c579552fd7e171c2bf1712f0f00e" },
-  "cyberdream.nvim": { "branch": "main", "commit": "2d23fe29d75279137a3406c14e0098ed34897b69" },
+  "cyberdream.nvim": { "branch": "main", "commit": "a9eb003663010322b3acbf41740dd8024f24acb9" },
   "indent-blankline.nvim": { "branch": "master", "commit": "3d08501caef2329aba5121b753e903904088f7e6" },
   "lazy.nvim": { "branch": "main", "commit": "3f13f080434ac942b150679223d54f5ca91e0d52" },
   "lualine.nvim": { "branch": "master", "commit": "0a5a66803c7407767b799067986b4dc3036e1983" },
-  "noice.nvim": { "branch": "main", "commit": "0cbe3f88d038320bdbda3c4c5c95f43a13c3aa12" },
+  "noice.nvim": { "branch": "main", "commit": "f4decbc7a80229ccc9f86026b74bdcf0c39e38a7" },
   "nui.nvim": { "branch": "main", "commit": "cbd2668414331c10039278f558630ed19b93e69b" },
   "nvim-colorizer.lua": { "branch": "master", "commit": "85855b38011114929f4058efc97af1059ab3e41d" },
   "nvim-tree.lua": { "branch": "master", "commit": "347e1eb35264677f66a79466bb5e3d111968e12c" },
-  "nvim-treesitter": { "branch": "master", "commit": "bbc67f736e22c37c23f2c11a05bfa23b715af30c" },
+  "nvim-treesitter": { "branch": "master", "commit": "96defe1cbd444cfedb0927796a6c0c1308e5b988" },
   "nvim-web-devicons": { "branch": "master", "commit": "794bba734ec95eaff9bb82fbd112473be2087283" },
   "plenary.nvim": { "branch": "master", "commit": "08e301982b9a057110ede7a735dd1b5285eb341f" },
   "telescope.nvim": { "branch": "master", "commit": "6312868392331c9c0f22725041f1ec2bef57c751" },
@@ -19,5 +19,5 @@
   "vim-highlightedyank": { "branch": "master", "commit": "afb0f262b490706c23e94012c2ab9fa67c0481ce" },
   "vim-illuminate": { "branch": "master", "commit": "e522e0dd742a83506db0a72e1ced68c9c130f185" },
   "vim-snippets": { "branch": "master", "commit": "393d980157b8149b3ff65a48bc4aae24dca9c846" },
-  "vimtex": { "branch": "master", "commit": "a80934749c69cc6875b3c9b13ef59573a4824fb2" }
+  "vimtex": { "branch": "master", "commit": "e4e659b088a082f6b7bb895ccbefb1f96a5b2710" }
 }

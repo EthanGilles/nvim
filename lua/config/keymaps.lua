@@ -15,6 +15,15 @@ keymap.set("n", "<C-l>", "<C-w>l", opts) -- Right
 keymap.set("n", "<leader>sv", ":vsplit<CR>", opts) -- Split Vertical
 keymap.set("n", "<leader>sh", ":split<CR>", opts) -- Split Horizontal
 
+-- Tab Management --
+keymap.set("n", "<leader>to", ":tabnew<CR>") -- TAB OPEN
+keymap.set("n", "<leader>tx", ":tabclose<CR>") -- TAB X - CLOSE
+keymap.set("n", "<leader>tn", ":tabn<CR>") -- TAB NEXT
+keymap.set("n", "<leader>tp", ":tabp<CR>") -- TAB PREVIOUS
+
+-- Code folding --
+keymap.set("n", "<leader>fi", ":set foldmethod=indent<CR>") -- FOLD INDENT
+
 -- Indenting --
 keymap.set("v", "<", "<gv")
 keymap.set("v", ">", ">gv")

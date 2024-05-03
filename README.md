@@ -1,4 +1,4 @@
-# NEOVIM CONFIG
+# NEOVIM CONFIGURATION
 
 ------------------
 

@@ -10,7 +10,7 @@
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Configuration](#configuration)
-- [Getting Started](#getting Started)
+- [Getting Started](#getting-started)
   - [Tutorial](#tutorial)
   - [Keymaps](#keymaps)
 - [Plugins](#plugins)

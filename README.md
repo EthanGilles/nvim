@@ -162,18 +162,18 @@ other auto complete functionality.
 
 Within COC you have to install 'CoC extensions' to get functionality.
 I have the following language servers/COC extensions installed
-- coc-vimtex  -  VimTex support for CoC
-- coc-snippets  -  Snippets for CoC
-- coc-pairs  -  Auto-pairing for parenthesis, quotes, brackets, etc.
-- coc-html  -  HTML auto complete support
-- coc-calc  -  Auto completes math expressions in code
-- coc-tsserver  -  JavaScript and TypeScript auto complete support
-- coc-texlab  -  LaTeX auto complete support
-- coc-sh  -  Bash auto complete support
-- coc-rust-analyzer  -  Rust auto complete support 
-- coc-lua  -  Lua auto complete support
-- coc-css  -  CSS auto complete support
-- coc-clangd (C/C++ lsp for auto complete)
+- **coc-vimtex**  -  VimTex support for CoC
+- **coc-snippets**  -  Snippets for CoC
+- **coc-pairs**  -  Auto-pairing for parenthesis, quotes, brackets, etc.
+- **coc-html**  -  HTML auto complete support
+- **coc-calc**  -  Auto completes math expressions in code
+- **coc-tsserver**  -  JavaScript and TypeScript auto complete support
+- **coc-texlab**  -  LaTeX auto complete support
+- **coc-sh**  -  Bash auto complete support
+- **coc-rust-analyzer**  -  Rust auto complete support 
+- **coc-lua**  -  Lua auto complete support
+- **coc-css**  -  CSS auto complete support
+- **coc-clang**d - (C/C++ lsp for auto complete)
 
 You can install them by using the command 
 ```

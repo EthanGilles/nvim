@@ -158,13 +158,60 @@ WIP
 
 ## Keymaps
 
+### File Tree 
+
 | Keymap                                    | Description                         |
 | ----------------------------------------- | ----------------------------------- |
-| <kbd>leader</kbd>><kbd>m</kbd> | Switch cursor to file tree          |
-| <kbd>leader</kbd>><kbd>f</kbd> | Toggle file tree                    |
-| <kbd>leader</kbd>><kbd>s</kbd>><kbd>v</kbd> | Split pane vertically |
-| <kbd>leader</kbd>><kbd>s</kbd>><kbd>h</kbd> | Split pane horizontaly |
-| <kbd>Ctrl</kbd>+<kbd>h</kbd>   | Move down a pane                    |
+| <kbd>leader</kbd>><kbd>m</kbd>            | Switch cursor to file tree          |
+| <kbd>leader</kbd>><kbd>f</kbd>            | Toggle file tree                    |
+
+### Window Management 
+
+| Keymap                                        | Description                         |
+| --------------------------------------------- | ----------------------------------- |
+| <kbd>leader</kbd>><kbd>s</kbd>><kbd>v</kbd>   | Split pane vertically               |
+| <kbd>leader</kbd>><kbd>s</kbd>><kbd>h</kbd>   | Split pane horizontaly              |
+| <kbd>Ctrl</kbd>+<kbd>h</kbd>                  | Move a pane left                    |
+| <kbd>Ctrl</kbd>+<kbd>j</kbd>                  | Move down a pane                    |
+| <kbd>Ctrl</kbd>+<kbd>k</kbd>                  | Move up a pane                      |
+| <kbd>Ctrl</kbd>+<kbd>l</kbd>                  | Move a pane right                   |
+
+### Tab Management
+
+| Keymap                                        | Description                         |
+| --------------------------------------------- | ----------------------------------- |
+| <kbd>leader</kbd>><kbd>t</kbd>><kbd>o</kbd>   | Open a new tab                      |
+| <kbd>leader</kbd>><kbd>t</kbd>><kbd>o</kbd>   | Open a new tab                      |
+| <kbd>leader</kbd>><kbd>t</kbd>><kbd>n</kbd>   | Go to the next tab                  |
+| <kbd>leader</kbd>><kbd>t</kbd>><kbd>p</kbd>   | Go to the previous tab              |
+
+### LaTeX
+
+| Keymap                                        | Description                                   |
+| --------------------------------------------- | --------------------------------------------- |
+| <kbd>leader</kbd>><kbd>l</kbd>><kbd>l</kbd>   | Start continous LaTeX compiler and PDF viewer |
+| <kbd>leader</kbd>><kbd>l</kbd>><kbd>c</kbd>   | Clean the current LaTeX directory             |
+
+### Auto-Completion
+
+| Keymap                                        | Description                                   |
+| --------------------------------------------- | --------------------------------------------- |
+| <kbd>ENTER</kbd>                              | Autocomplete with the current suggestion      |
+| <kbd>TAB</kbd>                                | Cycle to next auto-complete suggestion        |
+| <kbd>SHIFT</kbd>+<kbd>TAB</kbd>               | Cycle to the previous auto-complete suggestion|
+
+### Others
+
+| Keymap                                        | Description                         |
+| --------------------------------------------- | ----------------------------------- |
+| <kbd>leader</kbd>><kbd>f</kbd>><kbd>i</kbd>   | Fold **ALL** code by indent level       |
+| <kbd>z</kbd>><kbd>a</kbd>                     | Unfold current code block           |
+| <kbd>z</kbd>><kbd>f</kbd>                     | Fold current code (in visual mode)  |
+| <kbd>Ctrl</kbd>+<kbd>/</kbd>                  | Comment out current line, or highlighted code  |
+| <kbd>Ctrl</kbd>+<kbd>></kbd>                  | Shift highlighted code one indent to the right |
+| <kbd>Ctrl</kbd>+<kbd><</kbd>                  | Shift highlighted code one indent to the left  |
+
+More plug-in specific keymaps can be found in the documentation for the plugin, found below.
 
 ## Plugins
 

@@ -139,9 +139,6 @@ vim.opt.number = true -- Show line numbers.
 vim.opt.relativenumber = true -- Line numbers relative to cursor position.
 ```
 
-My global `<leader>` key is set to `<SPACE>`.
-If you would like to change the `<leader>` keymap, it is in the `globals.lua` file.
-
 All my keymaps are listed under [Keymaps](#Keymaps). To add a new Keymap, add it into the `keymaps.lua` 
 file. All of the current keymaps are commented with their purpose, so make sure
 a keymap doesn't already exist before you add one!
@@ -151,6 +148,9 @@ for executing the command in normal mode, visual mode, or insert mode.
 ```lua
 keymap.set("[n, v, i]", "[keys to press]", ":[Vim cmd]<CR>", opts)
 ```
+
+My global `<leader>` key is set to `<SPACE>`.
+If you would like to change the `<leader>` keymap, it is in the `globals.lua` file.
 
 ## Getting Started
 

@@ -2,7 +2,8 @@
 
 ------------------
 
-<img src="https://github.com/EthanGilles/nvim/blob/4b265ca4bb40c88dc32fe163bd623ced765408b8/pictures/demo.gif">
+https://github.com/EthanGilles/EthanGilles/blob/main/nvim-pics/greeting.png
+
 
 ## Table of Conents
 

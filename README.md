@@ -160,11 +160,11 @@ WIP
 
 | Keymap                                    | Description                         |
 | ----------------------------------------- | ----------------------------------- |
-| <kbd>leader</kbd><kbd>></kbd><kbd>m</kbd> | Switch cursor to file tree          |
-| <kbd>leader</kbd><kbd>></kbd><kbd>f</kbd> | Toggle file tree                    |
-| <kbd>leader</kbd><kbd>></kbd><kbd>s</kbd><kbd>></kbd><kbd>v</kbd> | Split pane vertically |
-| <kbd>leader</kbd><kbd>></kbd><kbd>s</kbd><kbd>></kbd><kbd>h</kbd> | Split pane horizontaly |
-| <kbd>Ctrl</kbd><kbd>+</kbd><kbd>h</kbd>   | Move down a pane                    |
+| <kbd>leader</kbd>><kbd>m</kbd> | Switch cursor to file tree          |
+| <kbd>leader</kbd>><kbd>f</kbd> | Toggle file tree                    |
+| <kbd>leader</kbd>><kbd>s</kbd>><kbd>v</kbd> | Split pane vertically |
+| <kbd>leader</kbd>><kbd>s</kbd>><kbd>h</kbd> | Split pane horizontaly |
+| <kbd>Ctrl</kbd>+<kbd>h</kbd>   | Move down a pane                    |
 
 ## Plugins
 

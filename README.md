@@ -332,6 +332,8 @@ If you find that you don't want one of the extensions, use the command
 [Colorizer](https://github.com/norcalli/nvim-colorizer.lua) highlights color-codes with the color they are representing. Hexcodes, names, RGB values,
 etc. will be highlighted with its own color. A simple quality of life plugin.
 
+![Colorizer Example](https://github.com/EthanGilles/EthanGilles/blob/f367bae151299a744fcf4b6fefd28c33377dc3b1/nvim-pics/colorizer.png)
+
 ### Comment
 [Comment](https://github.com/numToStr/Comment.nvim) is used to group together and comment out code. In my configuration, you use
 visual mode to highlight the words you want commented out and then press ` Shift + / `

@@ -160,10 +160,14 @@ WIP
 
 | Keymap                                    | Description                         |
 | ----------------------------------------- | ----------------------------------- |
-| <kbd>`leader`</kbd><kbd>></kbd><kbd>m</kbd> | Switch cursor to file tree |
-| 
+| <kbd>leader</kbd><kbd>></kbd><kbd>m</kbd> | Switch cursor to file tree          |
+| <kbd>leader</kbd><kbd>></kbd><kbd>f</kbd> | Toggle file tree                    |
+| <kbd>leader</kbd><kbd>></kbd><kbd>s</kbd><kbd>></kbd><kbd>v</kbd> | Split pane vertically |
+| <kbd>leader</kbd><kbd>></kbd><kbd>s</kbd><kbd>></kbd><kbd>h</kbd> | Split pane horizontaly |
+| <kbd>Ctrl</kbd><kbd>+</kbd><kbd>h</kbd>   | Move down a pane                    |
 
 ## Plugins
+
 - [Alpha](https://github.com/goolord/alpha-nvim)
 - [Catppuccin](https://github.com/catppuccin/nvim)
 - [Conquer of Completion](https://github.com/neoclide/coc.nvim)

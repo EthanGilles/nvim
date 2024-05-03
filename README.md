@@ -143,7 +143,7 @@ My global `<leader>` key is set to `<SPACE>`.
 If you would like to change the `<leader>` keymap, it is in the `globals.lua` file.
 
 All my keymaps are listed under [Keymaps](#Keymaps). To add a new Keymap, add it into the `keymaps.lua` 
-file. All of the current keymaps for the configuration are listed their, with their purpose, so make sure
+file. All of the current keymaps are commented with their purpose, so make sure
 a keymap doesn't already exist before you add one!
 
 To add a new keymap, use the following syntax. For the first option, choose either `"n"`, `"v"`, or `"i"`

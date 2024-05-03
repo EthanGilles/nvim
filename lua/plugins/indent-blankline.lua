@@ -1,8 +1,8 @@
 local config = function()
   local highlight = {
     "RainbowRed",
-    "RainbowYellow",
     "RainbowBlue",
+    "RainbowYellow",
     "RainbowViolet",
     "RainbowOrange",
     "RainbowGreen",

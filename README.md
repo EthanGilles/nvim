@@ -348,12 +348,13 @@ simply arrange the variable names in the order you would like them to appear.
 ```lua
 local highlight = {
 "RainbowRed",
-"RainbowYellow",
 "RainbowBlue",
+"RainbowYellow",
 "RainbowViolet",
 "RainbowOrange",
 "RainbowGreen",
 "RainbowCyan",
+}
 ```
 To change the actual value, just change the hex value for the corresponding variable. 
 For example, to change the first level indent color, modify the hex value from the line below.
@@ -362,10 +363,20 @@ vim.api.nvim_set_hl(0, "RainbowRed", { fg = "#FF79C6" })
 ```
 
 ### LuaLine
-LuaLine helps by giving you information on your NeoVim session. It gives information like the
-filetype, your git status, the files you have edited, OS, and more. Super easy to customize and
-most NeoVim 'themes' come with a LuaLine theme as well. I use 'cyberdream' for my LuaLine theme,
-I like it quite a bit more than the catppuccin theme
+[LuaLine](https://github.com/nvim-lualine/lualine.nvim) helps by giving you information on your NeoVim session. 
+It gives information like the filetype, your git status, the files you have edited, OS, and more. 
+Most NeoVim 'themes' come with a LuaLine theme as well. I use [Cyberdream](https://github.com/scottmckendry/cyberdream.nvim) for my LuaLine theme,
+however, you can find more themes from LuaLine [here](https://github.com/nvim-lualine/lualine.nvim/blob/master/THEMES.md)
+
+To change the theme, locate this code in the config and change the value for `theme`
+```lua
+require('lualine').setup {
+  options = {
+  theme = cyberdream,
+  globalstatus = true
+  },
+}
+```
 
 ### Noice
 Noice makes things look, well, noice. It gives centers your command line and makes things look

@@ -36,8 +36,8 @@ with LaTeX dependencies and one without.
 
 ### Extra Info
 
-I am using the [Catppuccin Mocha](https://github.com/catppuccin/nvim) theme. My LuaLine theme is
-[Cyberdream](https://github.com/scottmckendry/cyberdream.nvim).
+I am using [Catppuccin Mocha](https://github.com/catppuccin/nvim) as my main theme and for my 
+LuaLine I use [Cyberdream](https://github.com/scottmckendry/cyberdream.nvim).
 I use JetBrains Mono, but any [Nerd Font](https://github.com/ryanoasis/nerd-fonts) will do.
 
 ## Requirements

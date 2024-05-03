@@ -1,7 +1,6 @@
 # NEOVIM CONFIGURATION
 
 ------------------
-<!-- TO DO: INSTALLATION -->
 <!-- TO DO: CONFIGURATION -->
 <!-- TO DO: GETTING STARTED -->
 <!-- FIX: Plugin Descriptions -->
@@ -125,7 +124,33 @@ alias vim=nvim
 ```
 ## Confgiuation
 
-WIP
+Plugins and Configuration are setup in their own folders within the `lua` directory. Keymaps are
+found within `keymaps.lua`. Vim options are found in `options.lua`. Configuration for each plug-in 
+can be found within it's lua file. Configuration details for each plugin can be found within [Plugin Information](#plugin-information).
+
+![File Tree](https://github.com/EthanGilles/EthanGilles/blob/82d3ce5d94fecc32c9f303b11f29a2da00385ab9/nvim-pics/filetree.png)
+
+Some of the options I have on that you might want to change are:
+```lua
+vim.opt.stop = 2 -- <TAB> goes two spaces instead of 4.
+vim.opt.ignorecase = true -- Ignore capitalization in searches.
+vim.opt.wrap = false -- Don't wrap text if it goes off the line.
+vim.opt.number = true -- Show line numbers.
+vim.opt.relativenumber = true -- Line numbers relative to cursor position.
+```
+
+My global `<leader>` key is set to `<SPACE>`.
+If you would like to change the `<leader>` keymap, it is in the `globals.lua` file.
+
+All my keymaps are listed under [Keymaps](#Keymaps). To add a new Keymap, add it into the `keymaps.lua` 
+file. All of the current keymaps for the configuration are listed their, with their purpose, so make sure
+a keymap doesn't already exist before you add one!
+
+To add a new keymap, use the following syntax. For the first option, choose either `"n"`, `"v"`, or `"i"`
+for executing the command in normal mode, visual mode, or insert mode.
+```lua
+keymap.set("[n, v, i]", "[keys to press]", ":[Vim cmd]<CR>", opts)
+```
 
 ## Getting Started
 

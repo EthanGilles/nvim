@@ -379,14 +379,27 @@ require('lualine').setup {
 ```
 
 ### Noice
-Noice makes things look, well, noice. It gives centers your command line and makes things look
+[Noice](https://github.com/folke/noice.nvim) makes things look, well, noice. It centers your command line and makes things look
 a lot better in general. It also integrates with telescope to make everything look great.
 
+![Noice Example](https://github.com/EthanGilles/EthanGilles/blob/ef9def1e4033c1486ca68767641fe83af433b20a/nvim-pics/noice.png)
+
 ### Nvim-tree
-Nvim-tree gives you a file explorer on the left side of the screen. With web-dev-icons the file
-explorer will also display icon types for each type of file, as well as git status. With my
-configuration I have `leader + f` mapped to close the tree, and `leader m` to move the cursor
-to the tree.
+[Nvim-tree](https://github.com/nvim-tree/nvim-tree.lua) gives you a file explorer on the left side of the screen. With web-dev-icons the file
+explorer will also display icon types for each type of file, as well as git status.
+
+It has a couple of configuration settings you might want to change, for example, I have
+```lua
+view = {
+  width = 25, -- Changes the width of the window
+},
+renderer = {
+  group_empty = true, -- Will show folderseven if they are empty
+},
+filters = {
+  dotfiles = false, -- Will not filter out dot files ('.bashrc', '.config', etc.)
+},
+```
 
 ### Nvim-treesitter
 Nvim-treesitter gives better syntax highlighting for languages. It parses the language using a 

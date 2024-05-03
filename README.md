@@ -107,8 +107,22 @@ cargo install tree-sitter-cli
 
 ## Installation
 
-WIP
+Before you start, make sure you are in your home directory. Then, clone the repository
+into your `.config` directory.
+```
+cd ~/.config
 
+git clone https://github.com/EthanGilles/nvim.git
+```
+
+After cloning the repository into your `.config`, open up NeoVim. The Lazy plugin manager
+should pop up and start downloading all of the plugins, and their dependencies. Once everything
+is downloaded, re-open NeoVim and the configuration should be loaded.
+
+If you would like to just call `vim` as a command, add the following to your `.bashrc` file
+```
+alias vim=nvim
+```
 ## Confgiuation
 
 WIP

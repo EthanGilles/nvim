@@ -132,7 +132,7 @@ can be found within it's lua file. Configuration details for each plugin can be 
 
 Some of the options I have on that you might want to change are:
 ```lua
-vim.opt.stop = 2 -- <TAB> goes two spaces instead of 4.
+vim.opt.tabstop = 2 -- <TAB> goes two spaces instead of 4.
 vim.opt.ignorecase = true -- Ignore capitalization in searches.
 vim.opt.wrap = false -- Don't wrap text if it goes off the line.
 vim.opt.number = true -- Show line numbers.

@@ -107,8 +107,8 @@ cargo install tree-sitter-cli
 
 ## Installation
 
-Before you start, make sure you are in your home directory. Then, clone the repository
-into your `.config` directory.
+Before you start, enter your `.config` directory in your home directory.
+Then, clone the repository into your `.config` directory.
 ```
 cd ~/.config
 

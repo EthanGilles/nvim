@@ -50,7 +50,7 @@ For font, I use JetBrains Mono, but any [Nerd Font](https://github.com/ryanoasis
 # installs NVM (Node Version Manager)
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 
-#download and install Node.js
+# download and install Node.js
 nvm install 20
 
 # install the neovim package for NodeJS
@@ -241,14 +241,19 @@ When compiling, the LaTeX compiler creates some junk files that can be cleaned u
 
 ## Screenshots
 
+### Lua
+![Lua Example](https://github.com/EthanGilles/EthanGilles/blob/05ae235d6c1ae6886770ba7c17573c6a1fa2faed/nvim-pics/lua.png)
+
 ### C++
+![C++ Example](https://github.com/EthanGilles/EthanGilles/blob/c43222f2111e03962c79e926a9d9c8e5efd09e0a/nvim-pics/cpp.png)
 
 ### Rust
+![Rust Example](https://github.com/EthanGilles/EthanGilles/blob/c43222f2111e03962c79e926a9d9c8e5efd09e0a/nvim-pics/rust.png)
 
 ### LaTeX
-![Latex Demo](https://github.com/EthanGilles/EthanGilles/blob/ef7c791b66e9235a60a9bbe2841beaadec440ebd/nvim-pics/latex-demo.gif)
+![LaTeX Example](https://github.com/EthanGilles/EthanGilles/blob/c43222f2111e03962c79e926a9d9c8e5efd09e0a/nvim-pics/latex.png)
 
 ### JavaScript
-
+![JavaScript Example](https://github.com/EthanGilles/EthanGilles/blob/c43222f2111e03962c79e926a9d9c8e5efd09e0a/nvim-pics/js.png)
 
 

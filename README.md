@@ -103,17 +103,23 @@ cargo install tree-sitter-cli
 
 ## Installation
 
-
+WIP
 
 ## Confgiuation
 
-
+WIP
 
 ## Getting Started
 
+WIP
+
 ### Tutorial
 
+WIP
+
 ### Keymaps
+
+WIP
 
 ## Plugins
 - [Alpha](https://github.com/goolord/alpha-nvim)
@@ -243,5 +249,6 @@ When compiling, the LaTeX compiler creates some junk files that can be cleaned u
 <img src="https://github.com/EthanGilles/nvim/blob/36bc6266a08a117f7190891209028ad966350c63/pictures/latex.png">
 
 ### JavaScript
+
 
 

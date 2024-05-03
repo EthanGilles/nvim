@@ -122,7 +122,7 @@ If you would like to just call `vim` as a command, add the following to your `.b
 ```
 alias vim=nvim
 ```
-## Confgiuation
+## Configuration 
 
 Plugins and Configuration are setup in their own folders within the `lua` directory. Keymaps are
 found within `keymaps.lua`. Vim options are found in `options.lua`. Configuration for each plug-in 

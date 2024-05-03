@@ -4,6 +4,8 @@
 
 ![Greeting Page](https://github.com/EthanGilles/EthanGilles/blob/main/nvim-pics/greeting.png)
 
+![Greeting Demo](https://github.com/EthanGilles/EthanGilles/blob/ef7c791b66e9235a60a9bbe2841beaadec440ebd/nvim-pics/greeting-demo.gif)
+
 
 ## Table of Conents
 
@@ -241,13 +243,11 @@ When compiling, the LaTeX compiler creates some junk files that can be cleaned u
 ## Screenshots
 
 ### C++
-<img src="https://github.com/EthanGilles/nvim/blob/36bc6266a08a117f7190891209028ad966350c63/pictures/cpp.png">
 
 ### Rust
-<img src="https://github.com/EthanGilles/nvim/blob/36bc6266a08a117f7190891209028ad966350c63/pictures/rust.png">
 
 ### LaTeX
-<img src="https://github.com/EthanGilles/nvim/blob/36bc6266a08a117f7190891209028ad966350c63/pictures/latex.png">
+![Latex Demo](https://github.com/EthanGilles/EthanGilles/blob/ef7c791b66e9235a60a9bbe2841beaadec440ebd/nvim-pics/latex-demo.gif)
 
 ### JavaScript
 

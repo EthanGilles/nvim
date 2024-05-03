@@ -6,17 +6,66 @@
 
 ## Table of Conents
 
+- [General Info](#general-info)
 - [Requirements](#requirements)
-
-## Requirements
-
-You need neovim haha.
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Getting Started](#getting Started)
+  - [Tutorial](#tutorial)
+  - [Keymaps](#keymaps)
+- [Plugins](#plugins)
+- [Screenshots](#screenshots)
 
 ## General Info
 
-Currently I am running the 'Catppuccin' theme. I have it installed for 
-my terminal (Windows Terminal), NeoVim, and Zathura (PDF viewer). 
-I use Lazy.nvim for a plugin manager and JetBrains Mono Nerd Font.
+This guide has information relating to **Linux/Ubuntu.**  
+
+This is my personal NeoVim config that I use for a wide variety of things. This config is not
+meant for a specific purpose, but rather to cover a few different purposes that are specific
+to me as a Computer Science Major. The main uses for this configuration are:
+
+- **Coding in C/C++**
+- **Coding in Rust**
+- **Front end Development**
+- **Making LaTeX Documents**
+
+Eventually, I'd like to have several versions of this config that you could download. One version
+with dependencies and one without.
+
+## Requirements
+
+- **Latest Version** of [NeoVim](https://github.com/neovim/neovim/blob/master/INSTALL.md) is required (v0.9.5).
+- **NodeJS**  
+```
+# installs NVM (Node Version Manager)
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+
+# download and install Node.js
+nvm install 20
+
+# verifies the right Node.js version is in the environment
+node -v # should print `v20.12.2`
+
+# verifies the right NPM version is in the environment
+npm -v # should print `10.5.0`
+
+# install the neovim package for NodeJS
+npm install -g neovim
+```
+
+## Installation
+
+
+
+## Confgiuation
+
+
+
+## Getting Started
+
+### Tutorial
+
+### Keymaps
 
 ## Plugins
 <ul>
@@ -120,7 +169,7 @@ I use `<leader>ff` to fuzzy-find files, and `<leader>fg` to live-grep through fi
 ### UltiSnips
 I am using UltiSnips for snippet completion.
 To add a snippet, type ':UltiSnipsEdit' within the filetype that you want to add a snippet for.
-Some of the snippets I am using for LaTeX can be found <a href='https://castel.dev/post/lecture-notes-1/'>here</a>
+Some of the snippets I am using for LaTeX can be found [here](https://castel.dev/post/lecture-notes-1/)
 
 ### Highlighted Yank
 This plugin does exactly what the name states. I like having the text highlighted after I 'copy' 
@@ -136,14 +185,17 @@ continuous compiling of a '.tex' document. In my configuration, `<leader>ll` sta
 compiler and viewer. For a PDF viewer, I use Zathura, which can be installed with `apt get`. 
 When compiling, the LaTeX compiler creates some junk files that can be cleaned up with `<leader>lc` as well.
 
-## More Screenshots
+## Screenshots
 
-A C++ file with this config:
+### C++
 <img src="https://github.com/EthanGilles/nvim/blob/36bc6266a08a117f7190891209028ad966350c63/pictures/cpp.png">
 
-A Rust file with this config:
+### Rust
 <img src="https://github.com/EthanGilles/nvim/blob/36bc6266a08a117f7190891209028ad966350c63/pictures/rust.png">
 
-A LaTeX file with this config, using Zathura PDF viewer:
+### LaTeX
 <img src="https://github.com/EthanGilles/nvim/blob/36bc6266a08a117f7190891209028ad966350c63/pictures/latex.png">
+
+### JavaScript
+
 

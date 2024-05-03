@@ -1,10 +1,12 @@
 # NEOVIM CONFIGURATION
 
 ------------------
-
+<!-- TO DO: INSTALLATION -->
+<!-- TO DO: CONFIGURATION -->
+<!-- TO DO: GETTING STARTED -->
+<!-- FIX: Plugin Descriptions -->
 
 ![Greeting Demo](https://github.com/EthanGilles/EthanGilles/blob/ef7c791b66e9235a60a9bbe2841beaadec440ebd/nvim-pics/greeting-demo.gif)
-
 
 ## Table of Conents
 

@@ -451,16 +451,25 @@ It integrates with [Plenary](https://github.com/nvim-lua/plenary.nvim) to give y
 Other keymaps for opening different Telescope windows can be found [here](#fuzzy-finding)
 
 ### UltiSnips
-I am using UltiSnips for snippet completion.
-To add a snippet, type ':UltiSnipsEdit' within the filetype that you want to add a snippet for.
-Some of the snippets I am using for LaTeX can be found [here](https://castel.dev/post/lecture-notes-1/)
+I am using UltiSnips for snippet completion. All of my *personal* snippets are in the UltiSnips folder.
+Currently, I only have snippets that I use for LaTeX. Most of the snippets I am using 
+can be found [here](https://castel.dev/post/lecture-notes-1/). 
+
+To add more snippets for LaTeX, find the `tex.snippet` file within the Ultisnips directory 
+and add another snippet. To add another snippet for a
+different language, add a new file to the Ultisnips directory that has the file extension for 
+the language as the title of the file, with a '.snippets' extension.
+
+The other snippets I have downloaded are from [Vim-Snippets](https://github.com/honza/vim-snippets).
+Use the command `:UltiSnipsEdit` to find snippets for the filetype you are currently in.
 
 ### Highlighted Yank
-This plugin does exactly what the name states. I like having the text highlighted after I 'copy' 
+[Highlighted Yank](https://github.com/machakann/vim-highlightedyank) does exactly what the name states. 
+It is a simple quality of life plugin that shows exactly what you just copied to the clipboard 
 or yank it. So it highlights the copied text to show you exactly what was copied to the clipboard.
 
 ### Illuminate
-Illuminate is another aesthetic plugin that will highlight all occurrances of the same word that
+[Illuminate] is another aesthetic plugin that will highlight all occurrances of the same word that
 your cursor is currently on. It is especially useful for variable names or object types.
 
 ### VimTex

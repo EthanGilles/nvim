@@ -441,11 +441,12 @@ It integrates with [Plenary](https://github.com/nvim-lua/plenary.nvim) to give y
 
 ![Telescope Example](https://github.com/EthanGilles/EthanGilles/blob/ef88b8df928210ebffa3a2061edb0bf01e734ac6/nvim-pics/telescope.png)
 
-| Keymap                                    | Description                         |
+| Keymaps for when the Telescope window is open | Description                     |
 | ----------------------------------------- | ----------------------------------- |
+| <kbd>ENTER</kbd>                          | Open the selected file              |
 | <kbd>Ctrl</kbd>+<kbd>j</kbd>              | Move down a selection in the menu   |
 | <kbd>Ctrl</kbd>+<kbd>k</kbd>              | Move up a selection in the menu     |
-
+| <kbd>ESC</kbd>                            | Exit the Telescope menu             |
 
 ### UltiSnips
 I am using UltiSnips for snippet completion.

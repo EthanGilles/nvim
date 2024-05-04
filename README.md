@@ -201,6 +201,16 @@ WIP
 | <kbd>TAB</kbd>                                | Cycle to next auto-complete suggestion        |
 | <kbd>SHIFT</kbd>+<kbd>TAB</kbd>               | Cycle to the previous auto-complete suggestion|
 
+### Fuzzy Finding
+
+| Keymap                                        | Description                                   |
+| --------------------------------------------- | --------------------------------------------- |
+| <kbd>leader</kbd>><kbd>f</kbd>><kbd>a</kbd>   | Open Telescope                                |
+| <kbd>leader</kbd>><kbd>f</kbd>><kbd>k</kbd>   | Use Telescope to fuzzy find keybindng         |
+| <kbd>leader</kbd>><kbd>f</kbd>><kbd>f</kbd>   | Use Telescope to fuzzy find files             |
+| <kbd>leader</kbd>><kbd>f</kbd>><kbd>f</kbd>   | Use Telescope to fuzzy find using live-grep   |
+| <kbd>leader</kbd>><kbd>f</kbd>><kbd>b</kbd>   | Use Telescope to fuzzy find buffers           |
+
 ### Others
 
 | Keymap                                        | Description                         |
@@ -400,18 +410,42 @@ filters = {
   dotfiles = false, -- Will not filter out dot files ('.bashrc', '.config', etc.)
 },
 ```
-
 ### Nvim-treesitter
-Nvim-treesitter gives better syntax highlighting for languages. It parses the language using a 
-language tree to give much better syntax highlighting than without it. All of the languages I use
-are listed in `ensure_install` in the lua file. 'tree-sitter-cli' is required for tree-sitter to
-parse and highlight LaTeX documents. I used cargo to install the package and it works great.
+[Nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) gives better syntax highlighting for languages.
+I disabled highlighting for LaTeX and BibTex because I was getting errors for the highlighting in LaTeX documents.
+I have a list of languages that are installed automatically within the config. To add a new 
+language you can add it to the list shown below. 
+```lua
+ensure_installed = {
+"c",
+"cpp",
+"bash",
+"bibtex",
+"java",
+"rust",
+"html",
+"css",
+"javascript",
+"python",
+"markdown",
+"lua",
+"gitignore",
+"latex",
+},
+```
+To remove a language, first remove it from the list above and then run the command `:TSUninstall [language]`.
 
 ### Telescope
-Telescope is the ultimate fuzzy finder for NeoVim. It integrates with noice to give you a fuzzy 
-finder with a file previewer right in NeoVim. It also has a live-grep feature with a file previewer
-as well. It uses ripgrep as a dependency which can be installed with `apt get`. With my configuration
-I use `<leader>ff` to fuzzy-find files, and `<leader>fg` to live-grep through files.
+[Telescope](https://github.com/nvim-telescope/telescope.nvim) is the ultimate fuzzy finder for NeoVim. 
+It integrates with [Plenary](https://github.com/nvim-lua/plenary.nvim) to give you a fuzzy finder with a file previewer right in NeoVim.
+
+![Telescope Example](https://github.com/EthanGilles/EthanGilles/blob/ef88b8df928210ebffa3a2061edb0bf01e734ac6/nvim-pics/telescope.png)
+
+| Keymap                                    | Description                         |
+| ----------------------------------------- | ----------------------------------- |
+| <kbd>Ctrl</kbd>+<kbd>j</kbd>              | Move down a selection in the menu   |
+| <kbd>Ctrl</kbd>+<kbd>k</kbd>              | Move up a selection in the menu     |
+
 
 ### UltiSnips
 I am using UltiSnips for snippet completion.

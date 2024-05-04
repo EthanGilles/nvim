@@ -182,7 +182,7 @@ WIP
 | Keymap                                        | Description                         |
 | --------------------------------------------- | ----------------------------------- |
 | <kbd>leader</kbd>><kbd>t</kbd>><kbd>o</kbd>   | Open a new tab                      |
-| <kbd>leader</kbd>><kbd>t</kbd>><kbd>o</kbd>   | Open a new tab                      |
+| <kbd>leader</kbd>><kbd>t</kbd>><kbd>x</kbd>   | Close the current tab                      |
 | <kbd>leader</kbd>><kbd>t</kbd>><kbd>n</kbd>   | Go to the next tab                  |
 | <kbd>leader</kbd>><kbd>t</kbd>><kbd>p</kbd>   | Go to the previous tab              |
 

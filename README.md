@@ -388,13 +388,13 @@ a lot better in general. It also integrates with telescope to make everything lo
 [Nvim-tree](https://github.com/nvim-tree/nvim-tree.lua) gives you a file explorer on the left side of the screen. With web-dev-icons the file
 explorer will also display icon types for each type of file, as well as git status.
 
-It has a couple of configuration settings you might want to change, for example, 
+It has a couple of configuration settings you might want to change, for example
 ```lua
 view = {
   width = 25, -- Changes the width of the window
 },
 renderer = {
-  group_empty = true, -- Will show folderseven if they are empty
+  group_empty = true, -- Will show folders even if they are empty
 },
 filters = {
   dotfiles = false, -- Will not filter out dot files ('.bashrc', '.config', etc.)

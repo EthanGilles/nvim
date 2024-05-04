@@ -448,6 +448,8 @@ It integrates with [Plenary](https://github.com/nvim-lua/plenary.nvim) to give y
 | <kbd>Ctrl</kbd>+<kbd>k</kbd>              | Move up a selection in the menu     |
 | <kbd>ESC</kbd>                            | Exit the Telescope menu             |
 
+Other keymaps for opening different Telescope windows can be found [here](#fuzzy-finding)
+
 ### UltiSnips
 I am using UltiSnips for snippet completion.
 To add a snippet, type ':UltiSnipsEdit' within the filetype that you want to add a snippet for.

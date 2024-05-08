@@ -57,7 +57,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 nvm install 20
 
 # download yarn
-sudo npm install --global yarn
+npm install --global yarn
 
 # install the neovim package for NodeJS
 npm install -g neovim
@@ -232,6 +232,7 @@ More plug-in specific keymaps can be found in the documentation for the plugin, 
 ## Plugins
 
 - [Alpha](https://github.com/goolord/alpha-nvim)
+- [Bufferline](https://github.com/akinsho/bufferline.nvim)
 - [Catppuccin](https://github.com/catppuccin/nvim)
 - [Conquer of Completion](https://github.com/neoclide/coc.nvim)
 - [Colorizer](https://github.com/norcalli/nvim-colorizer.lua)
@@ -281,6 +282,7 @@ respective configuration function, within its lua file.
 
 ### ToC for Plugins
  - [Alpha](#alpha)
+ = [Bufferline](#bufferline)
  - [Catppuccin](#catppuccin)
  - [Conquer of Completion](#conquer-of-completion)
  - [Colorizer](#colorizer)
@@ -315,6 +317,10 @@ Alpha screen:
 ![Greeting Page](https://github.com/EthanGilles/EthanGilles/blob/main/nvim-pics/greeting.png)
 
 ### Catppuccin
+
+WIP
+
+### Bufferline
 
 WIP
 

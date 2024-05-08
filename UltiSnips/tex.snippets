@@ -8,7 +8,7 @@ snippet today "Date"
 endsnippet
 
 # List/Itemize snippet - "list"
-snippet list "Itemize" bA
+snippet list "Itemize" b 
 \begin{itemize}
 	\item $0
 \end{itemize}
@@ -26,13 +26,6 @@ snippet box "Box"
 │ $1 │
 `!p snip.rv = '└' + '─' * (len(t[1]) + 2) + '┘'`
 $0
-endsnippet
-
-# Begin and end environment - "beg"
-snippet beg "begin{} / end{}" bA
-\begin{$1}
-	$0
-\end{$1}
 endsnippet
 
 # Inline math - "mk"

@@ -3,6 +3,7 @@
 ------------------
 <!-- TO DO: TUTORIAL -->
 <!-- TO DO: KEYMAPS-->
+<!-- TO DO: ADD CATPPUCCIN INFO -->
 <!-- FIX: Plugin Descriptions -->
 
 ![Greeting Demo](https://github.com/EthanGilles/EthanGilles/blob/ef7c791b66e9235a60a9bbe2841beaadec440ebd/nvim-pics/greeting-demo.gif)
@@ -52,11 +53,16 @@ For font, I use JetBrains Mono, but any [Nerd Font](https://github.com/ryanoasis
 # installs NVM (Node Version Manager)
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 
-# download and install Node.js
+# download Node.js version 20
 nvm install 20
+
+# download yarn
+sudo npm install --global yarn
 
 # install the neovim package for NodeJS
 npm install -g neovim
+
+
 ```
 - **Python/Pip**
 ```
@@ -73,9 +79,10 @@ pip3 install pynvim
 ```
 apt install build-essential
 ```
-- **RipGrep** for Telescope.nvim (Live Grep)
+- **RipGrep** and **fd** for Telescope.nvim (Live Grep)
 ```
-apt install ripgrep
+apt install ripgrep 
+apt install fd-find
 ```
 - **XClip** for clipboard (Optional)
 ```
@@ -276,6 +283,7 @@ respective configuration function, within its lua file.
 
 ### ToC for Plugins
  - [Alpha](#alpha)
+ - [Catppuccin](#catppuccin)
  - [Conquer of Completion](#conquer-of-completion)
  - [Colorizer](#colorizer)
  - [Comment](#comment)
@@ -307,6 +315,10 @@ Where the first argument is the hot-key, the second is the displayed text, and t
 
 Alpha screen:
 ![Greeting Page](https://github.com/EthanGilles/EthanGilles/blob/main/nvim-pics/greeting.png)
+
+### Catppuccin
+
+WIP
 
 ### Conquer of Completion
 [CoC](https://github.com/neoclide/coc.nvim) is used for auto completion. It has compatability with UltiSnips so you can get 
@@ -419,18 +431,19 @@ language you can add it to the list shown below.
 ensure_installed = {
 "c",
 "cpp",
-"bash",
+"latex",
 "bibtex",
-"java",
 "rust",
 "html",
 "css",
 "javascript",
 "python",
-"markdown",
-"lua",
-"gitignore",
-"latex",
+"bash", -- Needed for Noice
+"markdown", -- Needed for Noice
+"lua", -- Needed for Noice
+"markdown_inline", -- Needed for Noice
+"regex", -- Needed for Noice
+"vim", -- Needed for Noice
 },
 ```
 To remove a language, first remove it from the list above and then run the command `:TSUninstall [language]`.
@@ -451,7 +464,7 @@ It integrates with [Plenary](https://github.com/nvim-lua/plenary.nvim) to give y
 Other keymaps for opening different Telescope windows can be found [here](#fuzzy-finding)
 
 ### UltiSnips
-I am using UltiSnips for snippet completion. All of my *personal* snippets are in the UltiSnips folder.
+I am using [UltiSnips](https://github.com/SirVer/ultisnips) for snippet completion. All of my *personal* snippets are in the UltiSnips folder.
 Currently, I only have snippets that I use for LaTeX. Most of the snippets I am using 
 can be found [here](https://castel.dev/post/lecture-notes-1/). 
 

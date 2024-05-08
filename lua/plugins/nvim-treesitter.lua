@@ -9,23 +9,24 @@ local config = function()
   ensure_installed = {
     "c",
     "cpp",
-    "bash",
+    "latex",
     "bibtex",
-    "java",
     "rust",
     "html",
     "css",
     "javascript",
     "python",
-    "markdown",
-    "lua",
-    "gitignore",
-    "latex",
+    "bash", -- Needed for Noice
+    "markdown", -- Needed for Noice
+    "lua", -- Needed for Noice
+    "markdown_inline", -- Needed for Noice
+    "regex", -- Needed for Noice
+    "vim", -- Needed for Noice
   },
   auto_install = true,
   highlight = {
     enable = true,
-    disable = { "latex", "bibtex" },
+    -- disable = { "latex", "bibtex" },
     additional_vim_regex_highlighting = true,
   },
 })

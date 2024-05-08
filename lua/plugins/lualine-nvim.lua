@@ -9,27 +9,30 @@ local config = function()
       component_separators = { left = ' | ', right = ' | ' },
     },
     sections = {
-      lualine_b = {
+      lualine_a = {
       {
         'buffers',
-        show_filename_only = true,   -- Shows shortened relative path when set to false.
-        hide_filename_extension = false,   -- Hide filename extension when set to true.
-        show_modified_status = true, -- Shows indicator when the buffer is modified.
-        mode = 0, -- 0: Shows buffer name
+        show_filename_only = true,
+        hide_filename_extension = false,
+        show_modified_status = true,
+        mode = 0, -- mode 0 shows the buffer name
         symbols = {
-          modified = ' ●',      -- Text to show when the buffer is modified
-          alternate_file = '#', -- Text to show to identify the alternate file
-          directory =  '',     -- Text to show when the buffer is a directory
+          modified = ' 󰷫',      -- Text to show when the buffer is modified
+          alternate_file = '󰷈 ', -- Text to show to identify the alternate file
+          directory =  ' ',     -- Text to show when the buffer is a directory
         },
+      }
+    },
+      lualine_b = {
+      {
+        'mode',
       }
     },
       lualine_c = {
       {
         'diagnostics',
         sources = {'coc' },
-        -- Displays diagnostics for the defined severity types
         sections = { 'error', 'warn', 'info', 'hint' },
-
         diagnostics_color = {
           -- Same values as the general color option can be used here.
           error = 'DiagnosticError', -- Changes diagnostics' error color.
@@ -38,25 +41,43 @@ local config = function()
           hint  = 'DiagnosticHint',  -- Changes diagnostics' hint color.
         },
         colored = true,           -- Displays diagnostics status in color if set to true.
-        update_in_insert = false, -- Update diagnostics in insert mode.
+        update_in_insert = true, -- Update diagnostics in insert mode.
         always_visible = true,   -- Show diagnostics even if there are none.
-
       },
       {
         'branch',
+        color = { fg = '#cba6f7'},
       },
       {
         'diff',
         colored = true, -- Displays a colored diff status if set to true
-        symbols = {added = '+', modified = '~', removed = '-'}, -- Changes the symbols used by the diff.
+        symbols = {added = '󱇬 ', modified = '󱣳 ', removed = '󱘹 '}, -- Changes the symbols used by the diff.
       }
     },
-      lualine_y = {},
+      lualine_x = {
+      {
+        'filetype',
+        icons_enabled = true,
+        icon_only = true,
+        icon = { align = 'right', },
+        color = { fg = '#89dceb',},
+      },
+    },
+      lualine_y = {
+      {
+        'encoding',
+        color = { fg = '#a6e3a1', },
+      },
+    },
       lualine_z = {
       {
         'datetime',
         style = 'default'
-      }
+      },
+      {
+        'fileformat',
+        color = { fg = '#fab387', },
+      },
     },
   }
 }

@@ -1,10 +1,16 @@
 # NEOVIM CONFIGURATION
 
 ------------------
+<!-- TO DO: Add buffer keymaps into VIM Config -->
 <!-- TO DO: TUTORIAL -->
-<!-- TO DO: KEYMAPS-->
-<!-- TO DO: ADD CATPPUCCIN INFO -->
+<!-- FIX: Buffer Keymaps README -->
+<!-- -->
 <!-- FIX: Plugin Descriptions -->
+<!-- Alpha -->
+<!-- Catppuccin -->
+<!-- LuaLine-->
+<!-- Illuminate -->
+<!-- VimTex-->
 
 ![Greeting Demo](https://github.com/EthanGilles/EthanGilles/blob/ef7c791b66e9235a60a9bbe2841beaadec440ebd/nvim-pics/greeting-demo.gif)
 
@@ -232,7 +238,6 @@ More plug-in specific keymaps can be found in the documentation for the plugin, 
 ## Plugins
 
 - [Alpha](https://github.com/goolord/alpha-nvim)
-- [Bufferline](https://github.com/akinsho/bufferline.nvim)
 - [Catppuccin](https://github.com/catppuccin/nvim)
 - [Conquer of Completion](https://github.com/neoclide/coc.nvim)
 - [Colorizer](https://github.com/norcalli/nvim-colorizer.lua)
@@ -282,7 +287,6 @@ respective configuration function, within its lua file.
 
 ### ToC for Plugins
  - [Alpha](#alpha)
- - [Bufferline](#bufferline)
  - [Catppuccin](#catppuccin)
  - [Conquer of Completion](#conquer-of-completion)
  - [Colorizer](#colorizer)
@@ -313,14 +317,16 @@ dashboard.button("e", "   New file", ":ene <BAR> startinsert <CR>")
 ```
 Where the first argument is the hot-key, the second is the displayed text, and the third is the command to execute.
 
+Currently, I have 9 buttons on the greeting screen. The options are
+
+| Keymap                    | Option                | Description                         |
+| ------------------------- | --------------------- | ----------------------------------- |
+| <kbd>e</kbd>              | New file              | Create a blank file and open it     |
+
 Alpha screen:
 ![Greeting Page](https://github.com/EthanGilles/EthanGilles/blob/main/nvim-pics/greeting.png)
 
 ### Catppuccin
-
-WIP
-
-### Bufferline
 
 WIP
 
@@ -463,6 +469,7 @@ It integrates with [Plenary](https://github.com/nvim-lua/plenary.nvim) to give y
 | <kbd>ENTER</kbd>                          | Open the selected file              |
 | <kbd>Ctrl</kbd>+<kbd>j</kbd>              | Move down a selection in the menu   |
 | <kbd>Ctrl</kbd>+<kbd>k</kbd>              | Move up a selection in the menu     |
+| <kbd>TAB</kbd>                            | Move up a selection in the menu     |
 | <kbd>ESC</kbd>                            | Exit the Telescope menu             |
 
 Other keymaps for opening different Telescope windows can be found [here](#fuzzy-finding)
@@ -478,12 +485,12 @@ different language, add a new file to the Ultisnips directory that has the file 
 the language as the title of the file, with a '.snippets' extension.
 
 The other snippets I have downloaded are from [Vim-Snippets](https://github.com/honza/vim-snippets).
-Use the command `:UltiSnipsEdit` to find snippets for the filetype you are currently in.
 
 ### Highlighted Yank
 [Highlighted Yank](https://github.com/machakann/vim-highlightedyank) does exactly what the name states. 
-It is a simple quality of life plugin that shows exactly what you just copied to the clipboard 
-or yank it. So it highlights the copied text to show you exactly what was copied to the clipboard.
+It is a simple quality of life plugin that shows exactly what you just copied to the clipboard. 
+It highlights the copied text to show you exactly what was copied. Something I would expect
+in any modern IDE.
 
 ### Illuminate
 [Illuminate] is another aesthetic plugin that will highlight all occurrances of the same word that

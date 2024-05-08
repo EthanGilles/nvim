@@ -37,7 +37,7 @@ local config = function()
 			dashboard.button("g", "󰱼   Find word", ":cd $HOME | Telescope live_grep<CR>"),
 			dashboard.button("r", "   Recent files", ":Telescope oldfiles<CR>"),
 			dashboard.button("l", "󰒲   Lazy", ":Lazy<CR>"),
-			dashboard.button("u", "󰂖   Update plugins", "<cmd>lua require('lazy').sync()<CR>"),
+			dashboard.button("u", "󰂖   Update Parsers", ":TSUpdate all<CR>"),
 			dashboard.button("o", "󱌣   Update LSPs", ":CocUpdate<CR>"),
 			dashboard.button("c", "󰋠   Checkhealth", ":checkhealth<CR>"),
 			dashboard.button("q", "   Quit NVIM", ":qa<CR>"),

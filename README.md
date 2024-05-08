@@ -61,8 +61,6 @@ sudo npm install --global yarn
 
 # install the neovim package for NodeJS
 npm install -g neovim
-
-
 ```
 - **Python/Pip**
 ```

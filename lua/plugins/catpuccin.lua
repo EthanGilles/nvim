@@ -2,7 +2,7 @@ local config = function()
   require("catppuccin").setup({
     flavour = "mocha", -- latte, frappe, macchiato, mocha
     background = { -- :h background
-        light = "latte",
+        light = "mocha",
         dark = "mocha",
     },
     transparent_background = true, -- disables setting the background color.
@@ -53,8 +53,8 @@ local config = function()
 end
 
 return {
-  "catppuccin/nvim", 
-  name = "catppuccin", 
+  "catppuccin/nvim",
+  name = "catppuccin",
   priority = 1000,
   config = config,
 }

@@ -1,12 +1,9 @@
 # NEOVIM CONFIGURATION
 
 ------------------
-<!-- TO DO: Add buffer keymaps into VIM Config -->
 <!-- TO DO: TUTORIAL -->
-<!-- FIX: Buffer Keymaps README -->
 <!-- -->
 <!-- FIX: Plugin Descriptions -->
-<!-- Alpha -->
 <!-- Catppuccin -->
 <!-- LuaLine-->
 <!-- Illuminate -->
@@ -188,14 +185,14 @@ WIP
 | <kbd>Ctrl</kbd>+<kbd>k</kbd>                  | Move up a pane                      |
 | <kbd>Ctrl</kbd>+<kbd>l</kbd>                  | Move a pane right                   |
 
-### Tab Management
+### Buffer Management
 
 | Keymap                                        | Description                         |
 | --------------------------------------------- | ----------------------------------- |
-| <kbd>leader</kbd>><kbd>t</kbd>><kbd>o</kbd>   | Open a new tab                      |
-| <kbd>leader</kbd>><kbd>t</kbd>><kbd>x</kbd>   | Close the current tab                      |
-| <kbd>leader</kbd>><kbd>t</kbd>><kbd>n</kbd>   | Go to the next tab                  |
-| <kbd>leader</kbd>><kbd>t</kbd>><kbd>p</kbd>   | Go to the previous tab              |
+| <kbd>leader</kbd>><kbd>n</kbd>                | Go to the next buffer               |
+| <kbd>leader</kbd>><kbd>p</kbd>                | Go to the previous buffer           |
+| <kbd>leader</kbd>><kbd>d</kbd>                | Close the current buffer            |
+| <kbd>leader</kbd>><kbd>o</kbd>                | Open a new empty buffer             |
 
 ### LaTeX
 
@@ -221,6 +218,7 @@ WIP
 | <kbd>leader</kbd>><kbd>f</kbd>><kbd>f</kbd>   | Use Telescope to fuzzy find files             |
 | <kbd>leader</kbd>><kbd>f</kbd>><kbd>f</kbd>   | Use Telescope to fuzzy find using live-grep   |
 | <kbd>leader</kbd>><kbd>f</kbd>><kbd>b</kbd>   | Use Telescope to fuzzy find buffers           |
+| <kbd>leader</kbd>><kbd>f</kbd>><kbd>r</kbd>   | Use Telescope to fuzzy find recent files      |
 
 ### Others
 
@@ -321,14 +319,38 @@ Currently, I have 9 buttons on the greeting screen. The options are
 
 | Keymap                    | Option                | Description                         |
 | ------------------------- | --------------------- | ----------------------------------- |
-| <kbd>e</kbd>              | New file              | Create a blank file and open it     |
+| <kbd>f</kbd>              | Find file             | Use Telescope to look for files    |
+| <kbd>g</kbd>              | Find word             | Use Telescope to live grep through files|
+| <kbd>r</kbd>              | Recent files          | Use Telescope to look through recent files |
+| <kbd>l</kbd>              | Lazy                  | Open Lazy plugin manager          |
+| <kbd>u</kbd>              | Update Plugins        | Update plugins through the Lazy plugin manager |
+| <kbd>c</kbd>              | Update CoC            | Update all the CoC extensions installed   |
+| <kbd>p</kbd>              | Update Parsers        | Update all the tree-sitter parsers |
+| <kbd>h</kbd>              | Check Health          | Use the `:checkhealth` command to check dependencies |
+| <kbd>q</kbd>              | Quit NVIM             | Close NeoVim                      |
 
-Alpha screen:
-![Greeting Page](https://github.com/EthanGilles/EthanGilles/blob/main/nvim-pics/greeting.png)
+Greeting:
+![Greeting image](https://github.com/EthanGilles/EthanGilles/blob/61ab3fb7cd0d99a122ceccdffb7ef554871c467b/nvim-pics/alpha.png)
 
 ### Catppuccin
 
-WIP
+[Catppuccin](https://github.com/catppuccin/nvim) is the theme I am using for NeoVim. There is some configuration that goes into the theme,
+like choosing whether you want the background to be transparent or not. I have also turned on integrations
+for other plugins being used in the configuration. The main reason I like using Catppuccin is because they
+have a theme for everything. I can have the same theme for my Terminal Emulator, NeoVim, and my PDF viewer,
+which is very aesthetically pleasing.
+
+I have my Terminal Emulator settings set to use my background at a certain opacity to get the 
+transparent effect that doesn't hurt the eyes too much. NeoVim will use whatever background your
+Terminal Emulator is using if you set it to transparent, so background configuration is seperate from
+NeoVim.
+
+If you would like to use my background image it is [here](https://github.com/EthanGilles/EthanGilles/blob/61ab3fb7cd0d99a122ceccdffb7ef554871c467b/nvim-pics/background.jpeg)
+
+To change the transparency, find the Catppuccin config and change
+```lua
+transparent_background = true,
+```
 
 ### Conquer of Completion
 [CoC](https://github.com/neoclide/coc.nvim) is used for auto completion. It has compatability with UltiSnips so you can get 

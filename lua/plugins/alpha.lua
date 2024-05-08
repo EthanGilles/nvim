@@ -26,12 +26,9 @@ local config = function()
 		_Gopts = {
 			position = "center",
 			hl = "Type",
-			-- wrap = "overflow";
 		}
 
-		-- Set menu
 		dashboard.section.buttons.val = {
-			-- dashboard.button("SPC j", "󰈚   Restore Session", ":SessionRestore<cr>"),
 			dashboard.button("f", "󰥨   Find file", ":cd $HOME | Telescope find_files<CR>"),
 			dashboard.button("g", "󰱼   Find word", ":cd $HOME | Telescope live_grep<CR>"),
 			dashboard.button("r", "󰤘   Recent files", ":Telescope oldfiles<CR>"),
@@ -39,7 +36,7 @@ local config = function()
 			dashboard.button("u", "   Update Plugins", "<cmd>lua require('lazy').sync()<CR>"),
 			dashboard.button("c", "   Update CoC", ":CocUpdate<CR>"),
 			dashboard.button("p", "󱌣   Update Parsers", ":TSUpdate all<CR>"),
-			dashboard.button("h", "󰋠   Checkhealth", ":checkhealth<CR>"),
+			dashboard.button("h", "󰋠   Check Health", ":checkhealth<CR>"),
 			dashboard.button("q", "   Quit NVIM", ":qa<CR>"),
 		}
     

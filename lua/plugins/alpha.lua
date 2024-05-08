@@ -32,14 +32,14 @@ local config = function()
 		-- Set menu
 		dashboard.section.buttons.val = {
 			-- dashboard.button("SPC j", "󰈚   Restore Session", ":SessionRestore<cr>"),
-			dashboard.button("e", "   New file", ":ene <BAR> startinsert <CR>"),
-			dashboard.button("f", "   Find file", ":cd $HOME | Telescope find_files<CR>"),
+			dashboard.button("f", "󰥨   Find file", ":cd $HOME | Telescope find_files<CR>"),
 			dashboard.button("g", "󰱼   Find word", ":cd $HOME | Telescope live_grep<CR>"),
-			dashboard.button("r", "   Recent files", ":Telescope oldfiles<CR>"),
+			dashboard.button("r", "󰤘   Recent files", ":Telescope oldfiles<CR>"),
 			dashboard.button("l", "󰒲   Lazy", ":Lazy<CR>"),
-			dashboard.button("u", "󰂖   Update Parsers", ":TSUpdate all<CR>"),
-			dashboard.button("o", "󱌣   Update LSPs", ":CocUpdate<CR>"),
-			dashboard.button("c", "󰋠   Checkhealth", ":checkhealth<CR>"),
+			dashboard.button("u", "   Update Plugins", "<cmd>lua require('lazy').sync()<CR>"),
+			dashboard.button("c", "   Update CoC", ":CocUpdate<CR>"),
+			dashboard.button("p", "󱌣   Update Parsers", ":TSUpdate all<CR>"),
+			dashboard.button("h", "󰋠   Checkhealth", ":checkhealth<CR>"),
 			dashboard.button("q", "   Quit NVIM", ":qa<CR>"),
 		}
     

@@ -2,7 +2,7 @@
 
 ------------------
 <!-- TO DO: TUTORIAL -->
-<!-- -->
+<!-- FIX: Demo GIF -->
 <!-- FIX: Plugin Descriptions -->
 <!-- Catppuccin -->
 <!-- LuaLine-->
@@ -127,6 +127,10 @@ After cloning the repository into your `.config`, open up NeoVim. The Lazy plugi
 should pop up and start downloading all of the plugins, and their dependencies. Once everything
 is downloaded, re-open NeoVim and the configuration should be loaded.
 
+To get auto-completion support, see [Conquer of Completion](#conquer-of-completion). You have to install
+certain Conquer of Completion (CoC) *extensions* to get auto-complete. Any extension is 
+one NeoVim command away.
+
 If you would like to just call `vim` as a command, add the following to your `.bashrc` file
 ```
 alias vim=nvim
@@ -191,7 +195,7 @@ WIP
 | --------------------------------------------- | ----------------------------------- |
 | <kbd>leader</kbd>><kbd>n</kbd>                | Go to the next buffer               |
 | <kbd>leader</kbd>><kbd>p</kbd>                | Go to the previous buffer           |
-| <kbd>leader</kbd>><kbd>d</kbd>                | Close the current buffer            |
+| <kbd>leader</kbd>><kbd>d</kbd>                | Delete the current buffer            |
 | <kbd>leader</kbd>><kbd>o</kbd>                | Open a new empty buffer             |
 
 ### LaTeX
@@ -283,7 +287,7 @@ with the filetypes set to '\*' or 'all'. Then, I return the plugin with the conf
 This is how all of the plugins are setup, so to edit the configuration of a plugin, go to its
 respective configuration function, within its lua file.
 
-### ToC for Plugins
+### ToC for Plugin Information
  - [Alpha](#alpha)
  - [Catppuccin](#catppuccin)
  - [Conquer of Completion](#conquer-of-completion)
@@ -292,9 +296,9 @@ respective configuration function, within its lua file.
  - [Indent-Blankline](#indent-blankline)
  - [LuaLine](#lualine)
  - [Noice](#noice)
- - [nvim-tree](#nvim-tree)
- - [nvim-treesitter](#nvim-treesitter)
- - [telescope](#telescope)
+ - [Nvim-tree](#nvim-tree)
+ - [Nvim-treesitter](#nvim-treesitter)
+ - [Telescope](#telescope)
  - [UltiSnips](#ultisnips)
  - [Highlighted Yank](#Highlighted-yank)
  - [Illuminate](#illuminate)
@@ -334,7 +338,7 @@ Greeting:
 
 ### Catppuccin
 
-[Catppuccin](https://github.com/catppuccin/nvim) is the theme I am using for NeoVim. There is some configuration that goes into the theme,
+[Catppuccin](https://github.com/catppuccin/nvim) is the theme being used. There is some configuration that goes into the theme,
 like choosing whether you want the background to be transparent or not. I have also turned on integrations
 for other plugins being used in the configuration. The main reason I like using Catppuccin is because they
 have a theme for everything. I can have the same theme for my Terminal Emulator, NeoVim, and my PDF viewer,
@@ -349,7 +353,7 @@ If you would like to use my background image it is [here](https://github.com/Eth
 
 To change the transparency, find the Catppuccin config and change
 ```lua
-transparent_background = true,
+transparent_background = false,
 ```
 
 ### Conquer of Completion

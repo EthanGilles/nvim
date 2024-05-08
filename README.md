@@ -282,7 +282,7 @@ respective configuration function, within its lua file.
 
 ### ToC for Plugins
  - [Alpha](#alpha)
- = [Bufferline](#bufferline)
+ - [Bufferline](#bufferline)
  - [Catppuccin](#catppuccin)
  - [Conquer of Completion](#conquer-of-completion)
  - [Colorizer](#colorizer)

@@ -1,15 +1,8 @@
 # NEOVIM CONFIGURATION
 
 ------------------
-<!-- TO DO: TUTORIAL -->
-<!-- FIX: Demo GIF -->
-<!-- FIX: Plugin Descriptions -->
-<!-- Catppuccin -->
-<!-- LuaLine-->
-<!-- Illuminate -->
-<!-- VimTex-->
 
-![Greeting Demo](https://github.com/EthanGilles/EthanGilles/blob/ef7c791b66e9235a60a9bbe2841beaadec440ebd/nvim-pics/greeting-demo.gif)
+![Greeting Demo](https://github.com/EthanGilles/EthanGilles/blob/a69d86fbae49867357f74ce911a345a2eef069f3/nvim-pics/greeting-demo.gif)
 
 ## Table of Conents
 
@@ -436,6 +429,15 @@ require('lualine').setup {
 }
 ```
 
+The rest of the LuaLine configuration is quite complicated, but it is setup to give lots of
+information on the current session, with custom icons. To learn more about customizing LuaLine,
+see their [documentation](https://github.com/nvim-lualine/lualine.nvim).
+
+The current LuaLine setup has: Buffers, Mode, CoC Diagnostics, git branch, modifications to the 
+file, the time and date, OS, and file-format. Here is what it looks like.
+
+![LuaLine Example](https://github.com/EthanGilles/EthanGilles/blob/bb638cb9f4044e6096218518a17bf07e70578259/nvim-pics/lualine.png)
+
 ### Noice
 [Noice](https://github.com/folke/noice.nvim) makes things look, well, noice. It centers your command line and makes things look
 a lot better in general. It also integrates with telescope to make everything look great.
@@ -495,6 +497,7 @@ It integrates with [Plenary](https://github.com/nvim-lua/plenary.nvim) to give y
 | <kbd>ENTER</kbd>                          | Open the selected file              |
 | <kbd>Ctrl</kbd>+<kbd>j</kbd>              | Move down a selection in the menu   |
 | <kbd>Ctrl</kbd>+<kbd>k</kbd>              | Move up a selection in the menu     |
+| <kbd>SHIFT</kbd>+<kbd>TAB</kbd>           | Move down a selection in the menu   |
 | <kbd>TAB</kbd>                            | Move up a selection in the menu     |
 | <kbd>ESC</kbd>                            | Exit the Telescope menu             |
 
@@ -519,14 +522,24 @@ It highlights the copied text to show you exactly what was copied. Something I w
 in any modern IDE.
 
 ### Illuminate
-[Illuminate] is another aesthetic plugin that will highlight all occurrances of the same word that
-your cursor is currently on. It is especially useful for variable names or object types.
+[Illuminate](https://github.com/RRethy/vim-illuminate) is another quality of life plugin. It highlights all occurrances of the word that
+your cursor is currently on. It is especially useful for looking at variable names or object types.
 
 ### VimTex
-VimTex is the perfect plugin for anyone wanting to edit LaTeX files in NeoVim. It allows for
+[VimTex](https://github.com/lervag/vimtex) is the perfect plugin for anyone wanting to edit LaTeX files in NeoVim. It allows for
 continuous compiling of a '.tex' document. In my configuration, `<leader>ll` starts the continuous
-compiler and viewer. For a PDF viewer, I use Zathura, which can be installed with `apt get`. 
+compiler and viewer. 
 When compiling, the LaTeX compiler creates some junk files that can be cleaned up with `<leader>lc` as well.
+
+The only configuration I have added in for VimTex is a command in the config to enable expression
+concealling. To disable it, delete the following lines from the config.
+
+```lua
+init = function()
+    vim.cmd[[set conceallevel=2]]
+    vim.cmd[[let g:tex_conceal='abdmg']]
+end,
+```
 
 ## Screenshots
 

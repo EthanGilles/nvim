@@ -19,5 +19,5 @@
   "vim-highlightedyank": { "branch": "master", "commit": "afb0f262b490706c23e94012c2ab9fa67c0481ce" },
   "vim-illuminate": { "branch": "master", "commit": "e522e0dd742a83506db0a72e1ced68c9c130f185" },
   "vim-snippets": { "branch": "master", "commit": "393d980157b8149b3ff65a48bc4aae24dca9c846" },
-  "vimtex": { "branch": "master", "commit": "5732cd898cc7027e58191fe4be64da8dbc158995" }
+  "vimtex": { "branch": "master", "commit": "bab312e0a89ca22a18a45e679ddb291bcf321acc" }
 }

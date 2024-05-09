@@ -240,9 +240,6 @@ WIP
 | <kbd>Ctrl</kbd>+<kbd>/</kbd>                  | Comment out current line, or highlighted code  |
 | <kbd>Ctrl</kbd>+<kbd>></kbd>                  | Shift highlighted code one indent to the right |
 | <kbd>Ctrl</kbd>+<kbd><</kbd>                  | Shift highlighted code one indent to the left  |
-| <kbd>leader</kbd>><kbd>s</kbd>><kbd>s</kbd>   | Save the current session            |
-| <kbd>leader</kbd>><kbd>s</kbd>><kbd>r</kbd>   | Restore the previous session        |
-
 
 More plug-in specific keymaps can be found in the documentation for the plugin, found below.
 

@@ -387,7 +387,7 @@ etc. will be highlighted with its own color. A simple quality of life plugin.
 
 ### Comment
 [Comment](https://github.com/numToStr/Comment.nvim) is used to group together and comment out code. In my configuration, you use
-visual mode to highlight the words you want commented out and then press ` Shift + / `
+visual mode to highlight the words you want commented out and then press ` Ctrl + / `
 
 ### Indent-blankline
 [Indent-Blankline](https://github.com/lukas-reineke/indent-blankline.nvim) will help with auto indenting the next line, and will give you different colors

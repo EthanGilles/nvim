@@ -217,22 +217,39 @@ WIP
 | <kbd>leader</kbd>><kbd>f</kbd>><kbd>b</kbd>   | Use Telescope to fuzzy find buffers           |
 | <kbd>leader</kbd>><kbd>f</kbd>><kbd>r</kbd>   | Use Telescope to fuzzy find recent files      |
 
-### Others
+### Code Folding
 
 | Keymap                                        | Description                         |
 | --------------------------------------------- | ----------------------------------- |
 | <kbd>leader</kbd>><kbd>f</kbd>><kbd>i</kbd>   | Fold **ALL** code by indent level       |
 | <kbd>z</kbd>><kbd>a</kbd>                     | Unfold current code block           |
 | <kbd>z</kbd>><kbd>f</kbd>                     | Fold current code (in visual mode)  |
+
+### Session Management
+
+| Keymap                                        | Description                         |
+| --------------------------------------------- | ----------------------------------- |
+| <kbd>leader</kbd>><kbd>s</kbd>><kbd>s</kbd>   | Save the current session            |
+| <kbd>leader</kbd>><kbd>s</kbd>><kbd>r</kbd>   | Restore the previous session        |
+| <kbd>Ctrl</kbd>+<kbd>s</kbd>                  | Search sessions                     |
+
+### Others
+
+| Keymap                                        | Description                         |
+| --------------------------------------------- | ----------------------------------- |
 | <kbd>Ctrl</kbd>+<kbd>/</kbd>                  | Comment out current line, or highlighted code  |
 | <kbd>Ctrl</kbd>+<kbd>></kbd>                  | Shift highlighted code one indent to the right |
 | <kbd>Ctrl</kbd>+<kbd><</kbd>                  | Shift highlighted code one indent to the left  |
+| <kbd>leader</kbd>><kbd>s</kbd>><kbd>s</kbd>   | Save the current session            |
+| <kbd>leader</kbd>><kbd>s</kbd>><kbd>r</kbd>   | Restore the previous session        |
+
 
 More plug-in specific keymaps can be found in the documentation for the plugin, found below.
 
 ## Plugins
 
 - [Alpha](https://github.com/goolord/alpha-nvim)
+- [Auto Session](https://github.com/rmagatti/auto-session)
 - [Catppuccin](https://github.com/catppuccin/nvim)
 - [Conquer of Completion](https://github.com/neoclide/coc.nvim)
 - [Colorizer](https://github.com/norcalli/nvim-colorizer.lua)
@@ -328,6 +345,22 @@ Currently, I have 9 buttons on the greeting screen. The options are
 
 Greeting:
 ![Greeting image](https://github.com/EthanGilles/EthanGilles/blob/61ab3fb7cd0d99a122ceccdffb7ef554871c467b/nvim-pics/alpha.png)
+
+### Auto Session
+[Auto Session](https://github.com/rmagatti/auto-session) is a quality of life plugin that lets you
+save all of your current windows and then restore them the next time you use NeoVim. Auto Session
+also auto-saves your session while you are working if you forget to save a session. Sessions are
+saved with their name being the current working directory. 
+
+There are a few keybinds associated with auto session that can be found [here](#session-management). When you 
+are searching through sessions, here are a couple more keybinds to be aware of.
+
+![Auto Session Example](https://github.com/EthanGilles/EthanGilles/blob/4264a4359f7f30134432a4cf5545973f63911f40/nvim-pics/sessions.png)
+
+| Keymap                                        | Description                         |
+| --------------------------------------------- | ----------------------------------- |
+| <kbd>Ctrl</kbd>+<kbd>d</kbd>                  | Delete the highlighted session      |
+| <kbd>Ctrl</kbd>+<kbd>s</kbd>                  | Restore the previous session        |
 
 ### Catppuccin
 

@@ -21,7 +21,6 @@ keymap.set("n", "<leader>p", ":bp<CR>", opts) -- Previous Buffer
 keymap.set("n", "<leader>d", ":bd<CR>", opts) -- Close current buffer 
 keymap.set("n", "<leader>o", ":enew<CR>", opts) -- Create a new empty buffer 
 
-
 -- Code folding --
 keymap.set("n", "<leader>fi", ":set foldmethod=indent<CR>") -- FOLD INDENT
 
@@ -40,6 +39,11 @@ keymap.set("n", "<leader>ff", ":Telescope find_files<CR>") -- Find files
 keymap.set("n", "<leader>fa", ":Telescope <CR>") -- Find all
 keymap.set("n", "<leader>fg", ":Telescope live_grep<CR>") -- Find grep
 keymap.set("n", "<leader>fr", ":Telescope oldfiles<CR>") -- Find recent
+
+-- Session Management --
+keymap.set("n", "<leader>ss", "<cmd>SessionSave<CR>") -- Save Session
+keymap.set("n", "<leader>sr", "<cmd>SessionRestore<CR>") -- Restore Session
+keymap.set("n", "<C-s>", require("auto-session.session-lens").search_session, opts)
 
 -- VimTex Command --
 -- <SPACE+L+C> (Latex Clean) cleans the directory with latex files after compiling.

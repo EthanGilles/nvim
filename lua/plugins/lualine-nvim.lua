@@ -55,13 +55,7 @@ local config = function()
       }
     },
       lualine_x = {
-      {
-        'filetype',
-        icons_enabled = true,
-        icon_only = true,
-        icon = { align = 'right', },
-        color = { fg = '#89dceb',},
-      },
+      { require('auto-session.lib').current_session_name }
     },
       lualine_y = {
       {

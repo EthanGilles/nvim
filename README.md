@@ -358,6 +358,9 @@ are searching through sessions, here are a couple more keybinds to be aware of.
 | --------------------------------------------- | ----------------------------------- |
 | <kbd>Ctrl</kbd>+<kbd>d</kbd>                  | Delete the highlighted session      |
 | <kbd>Ctrl</kbd>+<kbd>s</kbd>                  | Restore the previous session        |
+| <kbd>ENTER</kbd>                              | Restore the highlighted session     |
+| <kbd>TAB</kbd>                                | Highlight the next session in the list |
+| <kbd>SHIFT</kbd>+<kbd>TAB</kbd>               | Highlight the previous session in the list |
 
 ### Catppuccin
 

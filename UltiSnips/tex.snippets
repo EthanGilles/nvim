@@ -2,8 +2,39 @@
 # Huge thanks to Gilles Castile
 # https://castel.dev/post/lecture-notes-1/
 
+# Beamer snippets
+snippet frame "Frame" iA
+\begin{frame}[${1:t}]
+	\frametitle{${2:title}}
+	\framesubtitle{${3:subtitle}}
+	${0:${VISUAL}}
+\end{frame}
+endsnippet
+
+# Only - for just one slide in Beamer
+snippet only "Only" b
+\only<$1>
+endsnippet
+
+
+
+snippet bf "Bold Face" iA
+\textbf{$1}
+endsnippet
+
+snippet ita "Italics" b
+\textit{$1}
+endsnippet
+
+# Personal - for answering HW questions
+snippet answer "Answer" b
+\textbf{Answer: }
+
+$1
+endsnippet
+
 # Date - "today"
-snippet today "Date"
+snippet today "Date" b
 `date +%F`
 endsnippet
 
@@ -21,7 +52,7 @@ snippet ... "cdots" iA
 endsnippet
 
 # Summation snippet, useful for geometric series
-snippet sum "Summation" iA
+snippet summ "Summation" iA
 \sum_{k=1}^{n} k
 endsnippet
 
@@ -126,6 +157,33 @@ endsnippet
 
 snippet >= "geq" iA
 \ge 
+endsnippet
+
+# TikZ Template for Graph Theory
+snippet tikz "TikZ template" b
+\[
+\begin{tikzpicture}
+  %Styles for picture
+  \tikzset
+  {
+  vertex/.style={circle, inner sep=0pt, outer sep=0pt, minimum width=1cm,fill=black!10},
+	redvertex/.style={circle, inner sep=0pt, outer sep = 0pt, minimum width = 1cm, fill=red!70}, 
+  }
+
+  %Nodes
+  \node[vertex] (v1) at (1,0) {$v_1$};
+  \node[vertex] (v2) at (3,0) {$v_2$};
+	$1
+
+	%Edges
+  \draw[-, thin] (v1.east) to node[above] {4} (v2.west); %v1 --4-- v2
+
+\end{tikzpicture}
+\]
+endsnippet
+
+snippet beamer "Beamer template" b
+WIP
 endsnippet
 
 # Template - My personal template for assignments, use if you like.
@@ -294,4 +352,3 @@ snippet template "Basic template" b
 \end{document}
 % -----------------------------------------------------------
 endsnippet
-

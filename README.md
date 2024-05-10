@@ -134,7 +134,7 @@ Plugins and Configuration are setup in their own folders within the `lua` direct
 found within `keymaps.lua` and Vim options are found in `options.lua`. Configuration for each plug-in 
 can be found within it's lua file. Configuration details for each plugin can be found within [Plugin Information](#plugin-information).
 
-![File Tree](https://github.com/EthanGilles/EthanGilles/blob/82d3ce5d94fecc32c9f303b11f29a2da00385ab9/nvim-pics/filetree.png)
+![File Tree](https://github.com/EthanGilles/EthanGilles/blob/a9329906941416930681d8760c63572df4be2f1c/nvim-pics/filetree.png)
 
 Some of the options I have on that you might want to change are:
 ```lua
@@ -191,13 +191,6 @@ WIP
 | <kbd>leader</kbd>><kbd>d</kbd>                | Delete the current buffer            |
 | <kbd>leader</kbd>><kbd>o</kbd>                | Open a new empty buffer             |
 
-### LaTeX
-
-| Keymap                                        | Description                                   |
-| --------------------------------------------- | --------------------------------------------- |
-| <kbd>leader</kbd>><kbd>l</kbd>><kbd>l</kbd>   | Start continous LaTeX compiler and PDF viewer |
-| <kbd>leader</kbd>><kbd>l</kbd>><kbd>c</kbd>   | Clean the current LaTeX directory             |
-
 ### Auto-Completion
 
 | Keymap                                        | Description                                   |
@@ -232,6 +225,16 @@ WIP
 | <kbd>leader</kbd>><kbd>s</kbd>><kbd>s</kbd>   | Save the current session            |
 | <kbd>leader</kbd>><kbd>s</kbd>><kbd>r</kbd>   | Restore the previous session        |
 | <kbd>Ctrl</kbd>+<kbd>s</kbd>                  | Search sessions                     |
+
+### LaTeX
+
+| Keymap                                        | Description                                   |
+| --------------------------------------------- | --------------------------------------------- |
+| <kbd>leader</kbd>><kbd>l</kbd>><kbd>l</kbd>   | Start continous LaTeX compiler and PDF viewer |
+| <kbd>leader</kbd>><kbd>l</kbd>><kbd>c</kbd>   | Clean the current LaTeX directory             |
+| <kbd>leader</kbd>><kbd>l</kbd>><kbd>t</kbd>   | See a table of contents for your document     |
+| <kbd>]</kbd>><kbd>]</kbd>                     | Jump to the next section/subsection           |
+| <kbd>[</kbd>><kbd>[</kbd>                     | Jump to the previous section/subsection       |
 
 ### Others
 
@@ -573,6 +576,9 @@ init = function()
     vim.cmd[[let g:tex_conceal='abdmg']]
 end,
 ```
+
+VimTex comes with a ton of keybinds beyond the ones I covered in this guide, back in the [LaTeX](#latex) 
+section of the [Keymaps](#keymaps). To explore more of them, check out the [VimTex](https://github.com/lervag/vimtex) documentation, or `:h VimTex`.
 
 ## Screenshots
 

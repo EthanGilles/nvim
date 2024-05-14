@@ -204,7 +204,7 @@ WIP
 | Keymap                                        | Description                                   |
 | --------------------------------------------- | --------------------------------------------- |
 | <kbd>leader</kbd>><kbd>f</kbd>><kbd>a</kbd>   | Open Telescope                                |
-| <kbd>leader</kbd>><kbd>f</kbd>><kbd>k</kbd>   | Use Telescope to fuzzy find keybindng         |
+| <kbd>leader</kbd>><kbd>f</kbd>><kbd>k</kbd>   | Use Telescope to fuzzy find keybindings       |
 | <kbd>leader</kbd>><kbd>f</kbd>><kbd>f</kbd>   | Use Telescope to fuzzy find files             |
 | <kbd>leader</kbd>><kbd>f</kbd>><kbd>f</kbd>   | Use Telescope to fuzzy find using live-grep   |
 | <kbd>leader</kbd>><kbd>f</kbd>><kbd>b</kbd>   | Use Telescope to fuzzy find buffers           |
@@ -226,7 +226,7 @@ WIP
 | <kbd>leader</kbd>><kbd>s</kbd>><kbd>r</kbd>   | Restore the previous session        |
 | <kbd>Ctrl</kbd>+<kbd>s</kbd>                  | Search sessions                     |
 
-### LaTeX
+### LaTeX/VimTex
 
 | Keymap                                        | Description                                   |
 | --------------------------------------------- | --------------------------------------------- |

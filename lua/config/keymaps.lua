@@ -38,6 +38,7 @@ keymap.set("n", "<leader>fh", ":Telescope help_tags<CR>") -- Find help
 keymap.set("n", "<leader>ff", ":Telescope find_files<CR>") -- Find files
 keymap.set("n", "<leader>fa", ":Telescope <CR>") -- Find all
 keymap.set("n", "<leader>fg", ":Telescope live_grep<CR>") -- Find grep
+keymap.set("n", "<leader>fb", ":Telescope buffers<CR>") -- Find byffers 
 keymap.set("n", "<leader>fr", ":Telescope oldfiles<CR>") -- Find recent
 
 -- Session Management --

@@ -16,8 +16,6 @@ snippet only "Only" b
 \only<$1>
 endsnippet
 
-
-
 snippet bf "Bold Face" iA
 \textbf{$1}
 endsnippet
@@ -107,7 +105,7 @@ snippet cb "^3" iA
 endsnippet
 
 # Compliment - 'compl'
-snippet compl "complement" iA
+snippet compl "complement" b 
 ^{c}
 endsnippet
 
@@ -184,6 +182,32 @@ endsnippet
 
 snippet beamer "Beamer template" b
 WIP
+endsnippet
+
+snippet state "State" b
+\State $1
+endsnippet
+
+snippet algorithm "Algorithm environment" b
+\begin{algorithm}
+	\caption{An algorithm with caption}\label{alg:cap}
+	\begin{algorithmic}
+	\Require $n \geq 0$
+	\Ensure $y = x^n$
+	\State $y \gets 1$
+	\State $X \gets x$
+	\State $N \gets n$
+	\While{$N \neq 0$}
+	\If{$N$ is even}
+			\State $X \gets X \times X$
+			\State $N \gets \frac{N}{2}$  \Comment{This is a comment}
+	\ElsIf{$N$ is odd}
+			\State $y \gets y \times X$
+			\State $N \gets N - 1$
+	\EndIf
+	\EndWhile
+	\end{algorithmic}
+\end{algorithm}
 endsnippet
 
 # Template - My personal template for assignments, use if you like.

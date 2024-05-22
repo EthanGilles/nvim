@@ -88,7 +88,7 @@ apt install xclip
 For LaTeX live viewing to work with VimTex there are a few more dependencies needed.
 First is a PDF viewer that will update whenever we write to the file. I use [Zathura](https://wiki.archlinux.org/title/zathura)
 for this purpose because it comes with Vim style motions out of the box. You can also customize
-Zathura to have the colorscheme of your choice. I am using [Catppuccin Mocha](https://github.com/catppuccin/zathura)
+Zathura to have the colorscheme of your choice. I am using [Catppuccin Mocha](https://github.com/catppuccin/zathura).
 
 - **Zathura** (Recommended)
 ```
@@ -108,31 +108,26 @@ cargo install tree-sitter-cli
 
 ## Installation
 
-Before you start, enter your `.config` directory in your home directory.
-Then, clone the repository into your `.config` directory.
+Before you start, enter the `.config` directory in the home directory.
+Then clone the repository.
 ```
 cd ~/.config
 
 git clone https://github.com/EthanGilles/nvim.git
 ```
 
-After cloning the repository into your `.config`, open up NeoVim. The Lazy plugin manager
-should pop up and start downloading all of the plugins, and their dependencies. Once everything
+After cloning the repository, open up NeoVim. The Lazy plugin manager and its GUI
+should load and start downloading all of the plugina for the configuration. Once everything
 is downloaded, re-open NeoVim and the configuration should be loaded.
 
 To get auto-completion support, see [Conquer of Completion](#conquer-of-completion). You have to install
-certain Conquer of Completion (CoC) *extensions* to get auto-complete. Any extension is 
-one NeoVim command away.
+certain Conquer of Completion (CoC) *extensions* to get auto complete for a language.
 
-If you would like to just call `vim` as a command, add the following to your `.bashrc` file
-```
-alias vim=nvim
-```
 ## Configuration 
 
 Plugins and Configuration are setup in their own folders within the `lua` directory. Keymaps are
 found within `keymaps.lua` and Vim options are found in `options.lua`. Configuration for each plug-in 
-can be found within it's lua file. Configuration details for each plugin can be found within [Plugin Information](#plugin-information).
+can be found within it's respective lua file. [More Plugin Information](#plugin-information).
 
 ![File Tree](https://github.com/EthanGilles/EthanGilles/blob/a9329906941416930681d8760c63572df4be2f1c/nvim-pics/filetree.png)
 
@@ -145,11 +140,10 @@ vim.opt.number = true -- Show line numbers.
 vim.opt.relativenumber = true -- Line numbers relative to cursor position.
 ```
 
-All my keymaps are listed under [Keymaps](#Keymaps). To add a new Keymap, add it into the `keymaps.lua` 
-file. All of the current keymaps are commented with their purpose, so make sure
-a keymap doesn't already exist before you add one!
+All the keymaps are listed under [Keymaps](#Keymaps). They can also be found within the 
+`keymaps.lua` file, where every keymap for this config is listed with its purpose commented around it.
 
-To add a new keymap, use the following syntax. For the first option, choose either `"n"`, `"v"`, or `"i"`
+To add a new keymap, it is the following syntax. In the first option, choose either `"n"`, `"v"`, or `"i"`
 for executing the command in normal mode, visual mode, or insert mode.
 ```lua
 keymap.set("[n, v, i]", "[keys to press]", ":[Vim cmd]<CR>", opts)
@@ -292,10 +286,9 @@ return {
   config = config,
 }
 ```
-In this example, I setup a function called 'config' and tell the plugin to setup,
-with the filetypes set to '\*' or 'all'. Then, I return the plugin with the configuration function.
-This is how all of the plugins are setup, so to edit the configuration of a plugin, go to its
-respective configuration function, within its lua file.
+All of the plugin configuration is done in the following fashion. First, a function called 'config' is made to setup the plugin.
+Then, the options of the plugin are specified within the function. Then, a table is returned wih the plugin name,
+and the configuration set to the 
 
 ### ToC for Plugin Information
  - [Alpha](#alpha)

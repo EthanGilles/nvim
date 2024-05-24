@@ -4,7 +4,7 @@
   "auto-session": { "branch": "main", "commit": "af2219b9fa99c1d7ac409bd9eac094c459d3f52d" },
   "catppuccin": { "branch": "main", "commit": "d97387aea8264f484bb5d5e74f2182a06c83e0d8" },
   "coc.nvim": { "branch": "release", "commit": "f1ffb8d9b336ec6fe2ea0bd68ffeff5b77150e43" },
-  "cyberdream.nvim": { "branch": "main", "commit": "17f9e55bd3c349006190e7ff8203c2af6b7e3051" },
+  "cyberdream.nvim": { "branch": "main", "commit": "0c1706f09788e8c2dd36dd33dd60474c672dde51" },
   "indent-blankline.nvim": { "branch": "master", "commit": "d98f537c3492e87b6dc6c2e3f66ac517528f406f" },
   "lazy.nvim": { "branch": "main", "commit": "8f19915175395680808de529e4220da8dafc0759" },
   "lualine.nvim": { "branch": "master", "commit": "0a5a66803c7407767b799067986b4dc3036e1983" },

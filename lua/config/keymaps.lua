@@ -28,10 +28,6 @@ keymap.set("n", "<leader>fi", ":set foldmethod=indent<CR>") -- FOLD INDENT
 keymap.set("v", "<", "<gv") -- Move left an indent
 keymap.set("v", ">", ">gv") -- Move right an indent
 
--- Comments --
-keymap.set("n", "<C-_>", "gcc", opts)
-keymap.set("v", "<C-_>", "gcc", opts)
-
 -- Telescope --
 keymap.set("n", "<leader>fk", ":Telescope keymaps<CR>") -- Find key
 keymap.set("n", "<leader>fh", ":Telescope help_tags<CR>") -- Find help

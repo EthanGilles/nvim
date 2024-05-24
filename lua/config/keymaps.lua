@@ -29,8 +29,8 @@ keymap.set("v", "<", "<gv") -- Move left an indent
 keymap.set("v", ">", ">gv") -- Move right an indent
 
 -- Comments --
-keymap.set("n", "<C-_>", "gcc", { noremap = false })
-keymap.set("v", "<C-_>", "gcc", { noremap = false })
+keymap.set("n", "<C-_>", "gcc", opts)
+keymap.set("v", "<C-_>", "gcc", opts)
 
 -- Telescope --
 keymap.set("n", "<leader>fk", ":Telescope keymaps<CR>") -- Find key
@@ -50,7 +50,6 @@ keymap.set("n", "<C-s>", require("auto-session.session-lens").search_session, op
 -- <SPACE+L+C> (Latex Clean) cleans the directory with latex files after compiling.
 keymap.set("n","<leader>lc", ":VimtexClean<CR>", {noremap = true})
 
-
 -- Auto Completion / CoC --
 function _G.check_back_space()
     local col = vim.fn.col('.') - 1
@@ -59,12 +58,13 @@ end
 
 -- Press <TAB> to cycle down, <Shift+TAB> for cycle up, and <ENTER> for confirming.
 opts = {silent = true, noremap = true, expr = true, replace_keycodes = false}
+
 keymap.set("i", "<TAB>", 'coc#pum#visible() ? coc#pum#next(1) : v:lua.check_back_space() ? "<TAB>" : coc#refresh()', opts)
 keymap.set("i", "<S-TAB>", [[coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"]], opts)
 
 -- Make <ENTER> to accept selected completion item or notify coc.nvim to format
 -- <C-g>u breaks current undo, please make your own choice
-keymap.set("i", "<cr>", [[coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"]], opts)
+keymap.set("i", "<CR>", [[coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"]], opts)
 
 -- Use <c-j> to trigger snippets
 keymap.set("i", "<c-j>", "<Plug>(coc-snippets-expand-jump)")

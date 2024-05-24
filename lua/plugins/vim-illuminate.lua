@@ -5,4 +5,3 @@ return {
     require('illuminate').configure({})
   end
 }
-

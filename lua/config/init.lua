@@ -37,8 +37,6 @@ local opts = {
 
 require('config.globals')
 require('config.options')
-
 require("lazy").setup('plugins')
-
 require('config.keymaps')
 

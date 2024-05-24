@@ -8,24 +8,13 @@ local config = function()
       section_separators = { left = ' | ', right = ' | ' },
       component_separators = { left = ' | ', right = ' | ' },
     },
+    extensions = { 'nvim-tree' },
     sections = {
       lualine_a = {
-      {
-        'buffers',
-        show_filename_only = true,
-        hide_filename_extension = false,
-        show_modified_status = true,
-        mode = 0, -- mode 0 shows the buffer name
-        symbols = {
-          modified = ' 󰷫',      -- Text to show when the buffer is modified
-          alternate_file = '󰷈 ', -- Text to show to identify the alternate file
-          directory =  ' ',     -- Text to show when the buffer is a directory
-        },
-      }
     },
       lualine_b = {
       {
-        'mode',
+        'mode', fmt = function(str) return str:sub(1,1) end
       }
     },
       lualine_c = {
@@ -55,7 +44,7 @@ local config = function()
       }
     },
       lualine_x = {
-      { require('auto-session.lib').current_session_name }
+      { require('auto-session.lib').current_session_name },
     },
       lualine_y = {
       {
@@ -72,11 +61,27 @@ local config = function()
         'fileformat',
         color = { fg = '#fab387', },
       },
+      },
     },
-  }
+    tabline = {
+      lualine_a = {
+      {
+        'buffers',
+        show_filename_only = true,
+        hide_filename_extension = false,
+        show_modified_status = true,
+        mode = 0, -- mode 0 shows the buffer name
+        symbols = {
+          modified = ' 󰷫',      -- Text to show when the buffer is modified
+          alternate_file = '󰷈 ', -- Text to show to identify the alternate file
+          directory =  ' ',     -- Text to show when the buffer is a directory
+        },
+        use_mode_colors = true,
+      }
+    },
+  },
 }
 end
-
 
 return {
   'nvim-lualine/lualine.nvim',

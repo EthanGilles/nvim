@@ -28,13 +28,10 @@ This is my personal NeoVim config that I use for a wide variety of things. This 
 meant for a specific purpose, but rather to cover a few different purposes that are specific
 to me as a Computer Science Major. The main uses for this configuration are:
 
+- **Making LaTeX Documents**
 - **Coding in C/C++**
 - **Coding in Rust**
-- **Front end Development**
-- **Making LaTeX Documents**
-
-Eventually, I'd like to have several versions of this config that you could download. One version
-with LaTeX dependencies and one without.
+- (some) **Front end Development**
 
 ### Extra Info
 
@@ -49,7 +46,7 @@ For font, I use JetBrains Mono, but any [Nerd Font](https://github.com/ryanoasis
 # downloads NeoVim
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 
-# give read+access permissions to NeoVim
+# give read+execute permissions to NeoVim
 chmod 555 nvim.appimage
 
 # add a NeoVim folder to the optional directory
@@ -306,9 +303,9 @@ return {
   config = config,
 }
 ```
-All of the plugin configuration is done in the following fashion. First, a function called 'config' is made to setup the plugin.
-Then, the options of the plugin are specified within the function. Then, a table is returned wih the plugin name,
-and the configuration set to the 
+All of the plugin configuration is done in the following fashion, with a function controlling the configuration,
+within the plugin's lua file. This makes it easy to find options for each plugin. I use Telescope to search for
+plugins or keymaps wheenever I want to configure something.
 
 ### ToC for Plugin Information
  - [Alpha](#alpha)

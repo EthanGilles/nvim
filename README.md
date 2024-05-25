@@ -200,7 +200,7 @@ WIP
 | <kbd>leader</kbd>><kbd>f</kbd>><kbd>a</kbd>   | Open Telescope                                |
 | <kbd>leader</kbd>><kbd>f</kbd>><kbd>k</kbd>   | Use Telescope to fuzzy find keybindings       |
 | <kbd>leader</kbd>><kbd>f</kbd>><kbd>f</kbd>   | Use Telescope to fuzzy find files             |
-| <kbd>leader</kbd>><kbd>f</kbd>><kbd>f</kbd>   | Use Telescope to fuzzy find using live-grep   |
+| <kbd>leader</kbd>><kbd>f</kbd>><kbd>g</kbd>   | Use Telescope to fuzzy find using live-grep   |
 | <kbd>leader</kbd>><kbd>f</kbd>><kbd>b</kbd>   | Use Telescope to fuzzy find buffers           |
 | <kbd>leader</kbd>><kbd>f</kbd>><kbd>r</kbd>   | Use Telescope to fuzzy find recent files      |
 

@@ -11,6 +11,6 @@ end
 return {
     "scottmckendry/cyberdream.nvim",
     lazy = false,
-    priority = 1000,
+    priority = 999,
     config = config,
 }

@@ -5,16 +5,16 @@ local config = function()
     options = {
       theme = cyberdream,
       globalstatus = true,
-      section_separators = { left = ' | ', right = ' | ' },
-      component_separators = { left = ' | ', right = ' | ' },
+      section_separators = { left = ' ⟩ ', right = ' ⟨ ' },
+      component_separators = { left = ' ⟩ ', right = ' ⟨ ' },
     },
-    extensions = { 'nvim-tree' },
     sections = {
       lualine_a = {
     },
       lualine_b = {
       {
-        'mode', fmt = function(str) return str:sub(1,1) end
+        'mode',
+        fmt = function(str) return str:sub(1,1) end,
       }
     },
       lualine_c = {
@@ -76,7 +76,6 @@ local config = function()
           alternate_file = '󰷈 ', -- Text to show to identify the alternate file
           directory =  ' ',     -- Text to show when the buffer is a directory
         },
-        use_mode_colors = true,
       }
     },
   },

@@ -1,6 +1,12 @@
 local keymap = vim.keymap
 local opts = { noremap = true, silent = true }
 
+-- Set Cursor to the middle of the screen --
+keymap.set('n', '<leader>to', function() vim.opt.scrolloff = 999 - vim.o.scrolloff end, opts)
+
+-- Clear the current search word
+keymap.set("n", "<C-c>", ":nohl<CR>", opts)
+
 -- Directory Navigation --
 keymap.set("n", "<leader>m", ":NvimTreeFocus<CR>", opts) -- Jump to tree
 keymap.set("n", "<leader>f", ":NvimTreeToggle<CR>", opts) -- Toggle tree

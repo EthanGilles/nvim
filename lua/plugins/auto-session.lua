@@ -14,9 +14,8 @@ local config = function()
     },
   }
 end
-
 return {
   'rmagatti/auto-session',
-  lazy = false,
+  lazy = true,
   config = config,
 }

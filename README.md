@@ -2,6 +2,7 @@
 
 ------------------
 
+
 ![Greeting Demo](https://github.com/EthanGilles/EthanGilles/blob/a69d86fbae49867357f74ce911a345a2eef069f3/nvim-pics/greeting-demo.gif)
 
 ## Table of Conents
@@ -43,7 +44,23 @@ For font, I use JetBrains Mono, but any [Nerd Font](https://github.com/ryanoasis
 
 ## Requirements
 
-- **Latest Version** of [NeoVim](https://github.com/neovim/neovim/blob/master/INSTALL.md) is required (v0.9.5).
+- [NeoVim](https://github.com/neovim/neovim/blob/master/INSTALL.md) version (v0.9.5) is required. The latest version is recommended (v0.10.0). I use the NeoVim appimage because it works on every distro.
+```
+# downloads NeoVim
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+
+# give read+access permissions to NeoVim
+chmod 555 nvim.appimage
+
+# add a NeoVim folder to the optional directory
+mkdir -p /opt/nvim
+
+# move the app image to the optional directory
+mv nvim.appimage /opt/nvim/nvim
+
+# add to .bashrc
+export PATH="$PATH:/opt/nvim/"
+```
 - **NodeJS**  
 ```
 # installs NVM (Node Version Manager)
@@ -149,7 +166,7 @@ for executing the command in normal mode, visual mode, or insert mode.
 keymap.set("[n, v, i]", "[keys to press]", ":[Vim cmd]<CR>", opts)
 ```
 
-My global `<leader>` key is set to `<SPACE>`.
+My global `<leader>` key is set to <kbd>SPACE</kbd>.
 If you would like to change the `<leader>` keymap, it is in the `globals.lua` file.
 
 ## Tutorial
@@ -238,6 +255,8 @@ WIP
 | <kbd>Ctrl</kbd>+<kbd>/</kbd>                  | Comment out current line, or highlighted code  |
 | <kbd>Ctrl</kbd>+<kbd>></kbd>                  | Shift highlighted code one indent to the right |
 | <kbd>Ctrl</kbd>+<kbd><</kbd>                  | Shift highlighted code one indent to the left  |
+| <kbd>Ctrl</kbd>+<kbd>c</kbd>                  | Clear the current search phrase     |
+| <kbd>leader</kbd>><kbd>t</kbd>><kbd>o</kbd>   | Toggle the cursor to stay in the center, and not scroll off|
 
 More plug-in specific keymaps can be found in the documentation for the plugin, found below.
 
@@ -276,7 +295,7 @@ An example is shown below with the plugin Colorizer
 local config = function()
   require ('colorizer').setup {
     filetypes = {
-      '*'; -- Highlight all files, but customize some others.
+      '*'; -- Highlight all files.
     },
   }
 end
@@ -416,8 +435,10 @@ etc. will be highlighted with its own color. A simple quality of life plugin.
 ![Colorizer Example](https://github.com/EthanGilles/EthanGilles/blob/f367bae151299a744fcf4b6fefd28c33377dc3b1/nvim-pics/colorizer.png)
 
 ### Comment
-[Comment](https://github.com/numToStr/Comment.nvim) is used to group together and comment out code. In my configuration, you use
-visual mode to highlight the words you want commented out and then press ` Ctrl + / `
+[Comment](https://github.com/numToStr/Comment.nvim) is used to group together and comment out code. The keymaps for this plugin
+are set within the `comment.lua` file because they access the plugin's api. Currently,
+commenting out the current line (in normal mode) and commenting out the highlighted lines in visual mode
+are both set to <kbd>Ctrl</kbd>+<kbd>/</kbd>.
 
 ### Indent-blankline
 [Indent-Blankline](https://github.com/lukas-reineke/indent-blankline.nvim) will help with auto indenting the next line, and will give you different colors
@@ -439,6 +460,7 @@ local highlight = {
 ```
 To change the actual value, just change the hex value for the corresponding variable. 
 For example, to change the first level indent color, modify the hex value from the line below.
+I have modified some of the colors to be brighter so I can clearly see tab levels.
 ```lua
 vim.api.nvim_set_hl(0, "RainbowRed", { fg = "#FF79C6" })
 ```
@@ -464,13 +486,16 @@ information on the current session, with custom icons. To learn more about custo
 see their [documentation](https://github.com/nvim-lualine/lualine.nvim).
 
 The current LuaLine setup has: Buffers, Mode, CoC Diagnostics, git branch, modifications to the 
-file, the time and date, OS, and file-format. Here is what it looks like.
+file, the time and date, OS, and file-format. I have the buffers in present in the at the top left
+where you would normally see tabs in an application, but for this photo, they are along the bottom.
 
 ![LuaLine Example](https://github.com/EthanGilles/EthanGilles/blob/bb638cb9f4044e6096218518a17bf07e70578259/nvim-pics/lualine.png)
 
 ### Noice
 [Noice](https://github.com/folke/noice.nvim) makes things look, well, noice. It centers your command line and makes things look
-a lot better in general. It also integrates with telescope to make everything look great.
+a lot better in general. I have disabled the notifications that Noice can provide. To enable them,
+you need a seperate plugin in the dependencies. However, getting notifications for writing to a file,
+executing commands, etc, is not something I was looking for.
 
 ![Noice Example](https://github.com/EthanGilles/EthanGilles/blob/ef9def1e4033c1486ca68767641fe83af433b20a/nvim-pics/noice.png)
 
@@ -494,7 +519,8 @@ filters = {
 [Nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) gives better syntax highlighting for languages.
 I disabled highlighting for LaTeX and BibTex because I was getting errors for the highlighting in LaTeX documents.
 I have a list of languages that are installed automatically within the config. To add a new 
-language you can add it to the list shown below. 
+language you can add it to the list shown below. All of the language servers can be updated on the Greeting screen or
+by using `:TSUpdate`.
 ```lua
 ensure_installed = {
 "c",
@@ -536,7 +562,7 @@ Other keymaps for opening different Telescope windows can be found [here](#fuzzy
 ### UltiSnips
 I am using [UltiSnips](https://github.com/SirVer/ultisnips) for snippet completion. All of my *personal* snippets are in the UltiSnips folder.
 Currently, I only have snippets that I use for LaTeX. Most of the snippets I am using 
-can be found [here](https://castel.dev/post/lecture-notes-1/). 
+can be found [here](https://castel.dev/post/lecture-notes-1/).
 
 To add more snippets for LaTeX, find the `tex.snippet` file within the Ultisnips directory 
 and add another snippet. To add another snippet for a
@@ -562,7 +588,7 @@ compiler and viewer.
 When compiling, the LaTeX compiler creates some junk files that can be cleaned up with `<leader>lc` as well.
 
 The only configuration I have added in for VimTex is a command in the config to enable expression
-concealling. To disable it, delete the following lines from the config.
+concealling. To disable it, delete or comment out the following lines from the config.
 
 ```lua
 init = function()

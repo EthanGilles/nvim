@@ -226,6 +226,7 @@ WIP
 | --------------------------------------------- | --------------------------------------------- |
 | <kbd>leader</kbd>><kbd>l</kbd>><kbd>l</kbd>   | Start continous LaTeX compiler and PDF viewer |
 | <kbd>leader</kbd>><kbd>l</kbd>><kbd>c</kbd>   | Clean the current LaTeX directory             |
+| <kbd>leader</kbd>><kbd>l</kbd>><kbd>e</kbd>   | Close the LaTeX error message window          |
 | <kbd>leader</kbd>><kbd>l</kbd>><kbd>t</kbd>   | See a table of contents for your document     |
 | <kbd>]</kbd>><kbd>]</kbd>                     | Jump to the next section/subsection           |
 | <kbd>[</kbd>><kbd>[</kbd>                     | Jump to the previous section/subsection       |

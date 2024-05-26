@@ -253,7 +253,8 @@ WIP
 | <kbd>Ctrl</kbd>+<kbd>></kbd>                  | Shift highlighted code one indent to the right |
 | <kbd>Ctrl</kbd>+<kbd><</kbd>                  | Shift highlighted code one indent to the left  |
 | <kbd>Ctrl</kbd>+<kbd>c</kbd>                  | Clear the current search phrase     |
-| <kbd>leader</kbd>><kbd>t</kbd>><kbd>o</kbd>   | Toggle the cursor to stay in the center, and not scroll off|
+| <kbd>Shift</kbd>+<kbd>k</kbd>                 | Show information for the item under the cursor |
+| <kbd>leader</kbd>><kbd>t</kbd>><kbd>o</kbd>   | Toggle the cursor to stay in the center, and not scroll off |
 
 More plug-in specific keymaps can be found in the documentation for the plugin, found below.
 

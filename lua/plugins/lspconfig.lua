@@ -1,7 +1,6 @@
 local config = function()
   local on_attach = function(_, _)
     local keyset = vim.keymap.set
-
     keyset('n', '<leader>rn', vim.lsp.buf.rename, {}) -- rename
     keyset('n', '<leader>ca', vim.lsp.buf.code_action, {}) -- code action
 

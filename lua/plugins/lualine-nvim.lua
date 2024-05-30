@@ -1,6 +1,7 @@
 local config = function()
   local cyberdream = require("lualine.themes.cyberdream")
 
+
   require('lualine').setup {
     options = {
       theme = cyberdream,
@@ -8,19 +9,24 @@ local config = function()
       section_separators = { left = ' ⟩ ', right = ' ⟨ ' },
       component_separators = { left = ' ⟩ ', right = ' ⟨ ' },
     },
+    extensions = {'mason', 'lazy', },
     sections = {
       lualine_a = {
-    },
-      lualine_b = {
       {
         'mode',
         fmt = function(str) return str:sub(1,1) end,
       }
     },
+      lualine_b = {
+      { 
+        'location',
+        color = { fg = '#eba0ac' },
+      }
+    },
       lualine_c = {
       {
         'diagnostics',
-        sources = {'coc' },
+        sources = {'nvim_lsp'},
         sections = { 'error', 'warn', 'info', 'hint' },
         diagnostics_color = {
           -- Same values as the general color option can be used here.

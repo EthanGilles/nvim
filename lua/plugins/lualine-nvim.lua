@@ -18,7 +18,7 @@ local config = function()
       }
     },
       lualine_b = {
-      { 
+      {
         'location',
         color = { fg = '#eba0ac' },
       }
@@ -47,7 +47,13 @@ local config = function()
         'diff',
         colored = true, -- Displays a colored diff status if set to true
         symbols = {added = '󱇬 ', modified = '󱣳 ', removed = '󱘹 '}, -- Changes the symbols used by the diff.
-      }
+      },
+      {
+        function()
+          return require('lsp-progress').progress()
+        end,
+        color = { fg = '#89b4fa'}
+      },
     },
       lualine_x = {
       { require('auto-session.lib').current_session_name },
@@ -86,6 +92,13 @@ local config = function()
     },
   },
 }
+
+  vim.api.nvim_create_augroup("lualine_augroup", { clear = true })
+  vim.api.nvim_create_autocmd("User", {
+    group = "lualine_augroup",
+    pattern = "LspProgressStatusUpdated",
+    callback = require("lualine").refresh,
+  })
 end
 
 return {

@@ -1,7 +1,12 @@
 # NEOVIM CONFIGURATION
 
 ------------------
-
+<!-- TO DO: -->
+<!-- Fix: Plugin List -->
+<!-- Fix: Keymaps -->
+<!-- Fix: Alpha Picture (Mason now) -->
+<!-- Fix: Plugin Information -->
+<!-- Add: Plugin Information -->
 
 ![Greeting Demo](https://github.com/EthanGilles/EthanGilles/blob/a69d86fbae49867357f74ce911a345a2eef069f3/nvim-pics/greeting-demo.gif)
 
@@ -58,7 +63,7 @@ mv nvim.appimage /opt/nvim/nvim
 # add to .bashrc
 export PATH="$PATH:/opt/nvim/"
 ```
-- **NodeJS**  
+- **NodeJS**
 ```
 # installs NVM (Node Version Manager)
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
@@ -258,12 +263,12 @@ WIP
 
 More plug-in specific keymaps can be found in the documentation for the plugin, found below.
 
-## Plugins
+## Plugins 
+
 
 - [Alpha](https://github.com/goolord/alpha-nvim)
 - [Auto Session](https://github.com/rmagatti/auto-session)
 - [Catppuccin](https://github.com/catppuccin/nvim)
-- [Conquer of Completion](https://github.com/neoclide/coc.nvim)
 - [Colorizer](https://github.com/norcalli/nvim-colorizer.lua)
 - [Comment](https://github.com/numToStr/Comment.nvim)
 - [Cyberdream](https://github.com/scottmckendry/cyberdream.nvim)

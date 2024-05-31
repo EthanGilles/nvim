@@ -2,6 +2,7 @@ local config = function()
   local cmp = require("cmp")
 
   local cmp_ultisnips_mappings = require("cmp_nvim_ultisnips.mappings")
+  local cmp_autopairs = require('nvim-autopairs.completion.cmp')
 
   cmp.setup({
     snippet = {
@@ -54,6 +55,11 @@ local config = function()
     }),
     matching = { disallow_symbol_nonprefix_matching = false }
   })
+
+  cmp.event:on(
+    'confirm_done',
+    cmp_autopairs.on_confirm_done()
+  )
 end
 
 return {

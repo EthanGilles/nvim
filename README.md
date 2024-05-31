@@ -336,7 +336,7 @@ plugins or keymaps wheenever I want to configure something.
  - [Highlighted Yank](#Highlighted-yank)
  - [Indent-Blankline](#indent-blankline)
  - [LSP Progress](#lsp-progress)
- - [Mason](#mason)
+ - [Mason/LSP Config](#mason)
  - [LuaLine](#lualine)
  - [Noice](#noice)
  - [Nvim-tree](#nvim-tree)

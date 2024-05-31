@@ -17,7 +17,7 @@ local config = function ()
       return msg and string.format("%s %s", name, msg) or name
     end
 
-    local sign = "" -- nf-fa-gear \uf013
+    local sign = ""
     local lsp_clients = vim.lsp.get_active_clients()
     local messages_map = {}
     for _, climsg in ipairs(client_messages) do

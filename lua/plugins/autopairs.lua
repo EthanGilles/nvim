@@ -2,20 +2,20 @@ local config = function ()
   require("nvim-autopairs").setup{}
   local Rule = require('nvim-autopairs.rule')
   local npairs = require('nvim-autopairs')
-  npairs.add_rule(Rule("$$","$$","tex"))
 
   local cond = require('nvim-autopairs.conds')
 
-  npairs.add_rule(Rule("$$","$$","tex"))
-
+  -- Adds '$' pairing in '.tex' files.
   npairs.add_rules({
   Rule("$", "$",{"tex", "latex"})
   :with_pair(cond.not_after_regex("%%"))
   :with_pair(cond.not_after_regex("$$"))
   :with_pair(cond.not_before_regex("$$"))
+  -- If you hit '$' when there is one to the right, it will move cursor instead of typing a '$'
   :with_move(cond.after_regex("$"))
   })
 
+  -- Copied from auto-pairs README. Should add '$' pairing
   npairs.add_rules({
   Rule("$$","$$","tex")
     :with_pair(function(opts)

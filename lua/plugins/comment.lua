@@ -1,7 +1,7 @@
 local config = function ()
   local api = require('Comment.api')
   local esc = vim.api.nvim_replace_termcodes('<ESC>', true, false, true)
-
+  local opts = { noremap = true, silent = true }
   -- Toggle current line
   vim.keymap.set('n', '<C-_>', api.toggle.linewise.current, opts)
 

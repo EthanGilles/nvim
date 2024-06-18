@@ -1,26 +1,29 @@
 local config = function()
-  local cyberdream = require("lualine.themes.cyberdream")
 
   require('lualine').setup {
     options = {
-      theme = cyberdream,
       globalstatus = true,
       section_separators = { left = ' ⟩ ', right = ' ⟨ ' },
       component_separators = { left = ' ⟩ ', right = ' ⟨ ' },
     },
+    extensions = {'mason', 'lazy', },
     sections = {
       lualine_a = {
-    },
-      lualine_b = {
       {
         'mode',
         fmt = function(str) return str:sub(1,1) end,
       }
     },
+      lualine_b = {
+      {
+        'location',
+        color = { fg = '#eba0ac' },
+      }
+    },
       lualine_c = {
       {
         'diagnostics',
-        sources = {'coc' },
+        sources = {'nvim_lsp'},
         sections = { 'error', 'warn', 'info', 'hint' },
         diagnostics_color = {
           -- Same values as the general color option can be used here.
@@ -41,7 +44,13 @@ local config = function()
         'diff',
         colored = true, -- Displays a colored diff status if set to true
         symbols = {added = '󱇬 ', modified = '󱣳 ', removed = '󱘹 '}, -- Changes the symbols used by the diff.
-      }
+      },
+      {
+        function()
+          return require('lsp-progress').progress()
+        end,
+        color = { fg = '#89b4fa'}
+      },
     },
       lualine_x = {
       { require('auto-session.lib').current_session_name },
@@ -56,10 +65,6 @@ local config = function()
       {
         'datetime',
         style = 'default'
-      },
-      {
-        'fileformat',
-        color = { fg = '#fab387', },
       },
       },
     },
@@ -80,6 +85,13 @@ local config = function()
     },
   },
 }
+
+  vim.api.nvim_create_augroup("lualine_augroup", { clear = true })
+  vim.api.nvim_create_autocmd("User", {
+    group = "lualine_augroup",
+    pattern = "LspProgressStatusUpdated",
+    callback = require("lualine").refresh,
+  })
 end
 
 return {

@@ -1,9 +1,15 @@
 # NEOVIM CONFIGURATION
 
 ------------------
+<!-- TO DO: -->
+<!-- Fix: Plugin List -->
+<!-- Fix: Keymaps -->
+<!-- Fix: Alpha Picture (Mason now) -->
+<!-- Fix: Plugin Information -->
+<!-- Add: Plugin Information -->
+<!-- Added: Plugin Information Headers, just need descriptions -->
 
-
-![Greeting Demo](https://github.com/EthanGilles/EthanGilles/blob/a69d86fbae49867357f74ce911a345a2eef069f3/nvim-pics/greeting-demo.gif)
+![Greeting Demo](https://github.com/EthanGilles/EthanGilles/blob/0e68bd01990fa046de65d3e28cadd0979b65dbd0/nvim-pics/greeting-demo.gif)
 
 ## Table of Conents
 
@@ -58,7 +64,7 @@ mv nvim.appimage /opt/nvim/nvim
 # add to .bashrc
 export PATH="$PATH:/opt/nvim/"
 ```
-- **NodeJS**  
+- **NodeJS**
 ```
 # installs NVM (Node Version Manager)
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
@@ -217,6 +223,7 @@ WIP
 | <kbd>leader</kbd>><kbd>f</kbd>><kbd>g</kbd>   | Use Telescope to fuzzy find using live-grep   |
 | <kbd>leader</kbd>><kbd>f</kbd>><kbd>b</kbd>   | Use Telescope to fuzzy find buffers           |
 | <kbd>leader</kbd>><kbd>f</kbd>><kbd>r</kbd>   | Use Telescope to fuzzy find recent files      |
+| <kbd>Ctrl</kbd>+<kbd>c</kbd>                  | Close the Telescope window                    |
 
 ### Code Folding
 
@@ -255,21 +262,35 @@ WIP
 | <kbd>Ctrl</kbd>+<kbd>c</kbd>                  | Clear the current search phrase     |
 | <kbd>Shift</kbd>+<kbd>k</kbd>                 | Show information for the item under the cursor |
 | <kbd>leader</kbd>><kbd>t</kbd>><kbd>o</kbd>   | Toggle the cursor to stay in the center, and not scroll off |
+| <kbd>leader</kbd>><kbd>h</kbd>><kbd>n</kbd>   | Hide line numbers                   |
+| <kbd>leader</kbd>><kbd>s</kbd>><kbd>n</kbd>   | Show line numbers                   |
+| <kbd>leader</kbd>><kbd>s</kbd>><kbd>c</kbd>   | Enable Spell Checking               |
 
 More plug-in specific keymaps can be found in the documentation for the plugin, found below.
 
-## Plugins
+## Plugins 
 
 - [Alpha](https://github.com/goolord/alpha-nvim)
 - [Auto Session](https://github.com/rmagatti/auto-session)
+- [Auto Pairs](https://github.com/windwp/nvim-autopairs)
 - [Catppuccin](https://github.com/catppuccin/nvim)
-- [Conquer of Completion](https://github.com/neoclide/coc.nvim)
+- [cmp-Ultisnips](https://github.com/quangnguyen30192/cmp-nvim-ultisnips)
+- [cmp](https://github.com/hrsh7th/nvim-cmp)
+- [cmp-lsp](https://github.com/hrsh7th/cmp-nvim-lsp)
+- [cmp-buffer](https://github.com/hrsh7th/cmp-buffer)
+- [cmp-path](https://github.com/hrsh7th/cmp-path)
+- [cmp-cmdline](https://github.com/hrsh7th/cmp-cmdline)
 - [Colorizer](https://github.com/norcalli/nvim-colorizer.lua)
 - [Comment](https://github.com/numToStr/Comment.nvim)
 - [Cyberdream](https://github.com/scottmckendry/cyberdream.nvim)
+- [Highlighted Yank](https://github.com/machakann/vim-highlightedyank)
 - [Indent-Blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
 - [Lazy](https://github.com/folke/lazy.nvim)
+- [LSP Progress](https://github.com/linrongbin16/lsp-progress.nvim)
+- [LSP Config](https://github.com/neovim/nvim-lspconfig)
 - [LuaLine](https://github.com/nvim-lualine/lualine.nvim)
+- [Mason LSP Config](https://github.com/williamboman/mason-lspconfig.nvim)
+- [Mason](https://github.com/williamboman/mason.nvim)
 - [Noice](https://github.com/folke/noice.nvim)
 - [Nui](https://github.com/MunifTanjim/nui.nvim)
 - [nvim-tree](https://github.com/nvim-tree/nvim-tree.lua)
@@ -278,7 +299,6 @@ More plug-in specific keymaps can be found in the documentation for the plugin, 
 - [Plenary](https://github.com/nvim-lua/plenary.nvim)
 - [Telescope](https://github.com/nvim-telescope/telescope.nvim)
 - [Ultisnips](https://github.com/SirVer/ultisnips)
-- [Highlighted Yank](https://github.com/machakann/vim-highlightedyank)
 - [Illuminate](https://github.com/RRethy/vim-illuminate)
 - [Vim-Snippets](https://github.com/honza/vim-snippets)
 - [VimTex](https://github.com/lervag/vimtex)
@@ -310,18 +330,22 @@ plugins or keymaps wheenever I want to configure something.
 
 ### ToC for Plugin Information
  - [Alpha](#alpha)
+ - [Auto Session](#auto-session)
+ - [Auto Pairs](#auto-pairs)
  - [Catppuccin](#catppuccin)
- - [Conquer of Completion](#conquer-of-completion)
+ - [CMP](#cmp)
  - [Colorizer](#colorizer)
  - [Comment](#comment)
+ - [Highlighted Yank](#Highlighted-yank)
  - [Indent-Blankline](#indent-blankline)
+ - [LSP Progress](#lsp-progress)
+ - [Mason/LSP Config](#mason)
  - [LuaLine](#lualine)
  - [Noice](#noice)
  - [Nvim-tree](#nvim-tree)
  - [Nvim-treesitter](#nvim-treesitter)
  - [Telescope](#telescope)
  - [UltiSnips](#ultisnips)
- - [Highlighted Yank](#Highlighted-yank)
  - [Illuminate](#illuminate)
  - [VimTex](#vimtex)
 
@@ -356,6 +380,10 @@ Currently, I have 9 buttons on the greeting screen. The options are
 
 Greeting:
 ![Greeting image](https://github.com/EthanGilles/EthanGilles/blob/61ab3fb7cd0d99a122ceccdffb7ef554871c467b/nvim-pics/alpha.png)
+
+### Auto Pairs 
+
+WIP
 
 ### Auto Session
 [Auto Session](https://github.com/rmagatti/auto-session) is a quality of life plugin that lets you
@@ -396,35 +424,9 @@ To change the transparency, find the Catppuccin config and change
 transparent_background = false,
 ```
 
-### Conquer of Completion
-[CoC](https://github.com/neoclide/coc.nvim) is used for auto completion. It has compatability with UltiSnips so you can get 
-snippets and reccomendations from the language server you choose to download. It also provides
-other auto complete functionality, like with math expressions.
+### CMP 
 
-Within COC you have to install 'CoC extensions' to get functionality.
-I have the following language servers/COC extensions installed
-- **coc-vimtex**  -  VimTex support for CoC
-- **coc-snippets**  -  Snippets for CoC
-- **coc-pairs**  -  Auto-pairing for parenthesis, quotes, brackets, etc.
-- **coc-html**  -  HTML auto complete support
-- **coc-calc**  -  Auto completes math expressions in code
-- **coc-tsserver**  -  JavaScript and TypeScript auto complete support
-- **coc-texlab**  -  LaTeX auto complete support
-- **coc-sh**  -  Bash auto complete support
-- **coc-rust-analyzer**  -  Rust auto complete support 
-- **coc-lua**  -  Lua auto complete support
-- **coc-css**  -  CSS auto complete support
-- **coc-clangd** - (C/C++ lsp for auto complete)
-
-You can install them by using the command 
-```
-:CocInstall [extension]
-```
-If you find that you want an extension that you don't see here, try [this](https://github.com/neoclide/coc.nvim/network/dependents?dependents_before=NDA0MzM0NjQyNA).
-If you find that you don't want one of the extensions, use the command
-```
-:CoCUninstall [extension]
-```
+WIP
 
 ### Colorizer
 [Colorizer](https://github.com/norcalli/nvim-colorizer.lua) highlights color-codes with the color they are representing. Hexcodes, names, RGB values,
@@ -437,6 +439,12 @@ etc. will be highlighted with its own color. A simple quality of life plugin.
 are set within the `comment.lua` file because they access the plugin's api. Currently,
 commenting out the current line (in normal mode) and commenting out the highlighted lines in visual mode
 are both set to <kbd>Ctrl</kbd>+<kbd>/</kbd>.
+
+### Highlighted Yank
+[Highlighted Yank](https://github.com/machakann/vim-highlightedyank) does exactly what the name states. 
+It is a simple quality of life plugin that shows exactly what you just copied to the clipboard. 
+It highlights the copied text to show you exactly what was copied. Something I would expect
+in any modern IDE.
 
 ### Indent-blankline
 [Indent-Blankline](https://github.com/lukas-reineke/indent-blankline.nvim) will help with auto indenting the next line, and will give you different colors
@@ -462,6 +470,14 @@ I have modified some of the colors to be brighter so I can clearly see tab level
 ```lua
 vim.api.nvim_set_hl(0, "RainbowRed", { fg = "#FF79C6" })
 ```
+
+### LSP Progress 
+
+WIP
+
+### Mason 
+
+WIP
 
 ### LuaLine
 [LuaLine](https://github.com/nvim-lualine/lualine.nvim) helps by giving you information on your NeoVim session. 
@@ -568,12 +584,6 @@ different language, add a new file to the Ultisnips directory that has the file 
 the language as the title of the file, with a '.snippets' extension.
 
 The other snippets I have downloaded are from [Vim-Snippets](https://github.com/honza/vim-snippets).
-
-### Highlighted Yank
-[Highlighted Yank](https://github.com/machakann/vim-highlightedyank) does exactly what the name states. 
-It is a simple quality of life plugin that shows exactly what you just copied to the clipboard. 
-It highlights the copied text to show you exactly what was copied. Something I would expect
-in any modern IDE.
 
 ### Illuminate
 [Illuminate](https://github.com/RRethy/vim-illuminate) is another quality of life plugin. It highlights all occurrances of the word that

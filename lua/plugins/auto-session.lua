@@ -7,11 +7,12 @@ local config = function()
     auto_session_enable_last_session = false,
 
     session_lens = {
-    buftypes_to_ignore = {}, -- list of buffer types what should not be deleted from current session
-    load_on_setup = true,
-    theme_conf = { border = true },
-    previewer = false, -- Doesn't really give a good preview of the session. 
+      buftypes_to_ignore = {}, -- list of buffer types what should not be deleted from current session
+      load_on_setup = true,
+      theme_conf = { border = true },
+      previewer = false, -- Doesn't really give a good preview of the session. 
     },
+
   }
 end
 return {

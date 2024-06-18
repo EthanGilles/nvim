@@ -30,12 +30,12 @@ local config = function()
 
 		dashboard.section.buttons.val = {
 			dashboard.button("f", "󰥨   Find Files", ":cd $HOME | Telescope find_files<CR>"),
-			dashboard.button("g", "󰱼   Find Words", ":cd $HOME | Telescope live_grep<CR>"),
-			dashboard.button("r", "󰤘   Recent Files", ":Telescope oldfiles<CR>"),
+			dashboard.button("g", "   Find Words", ":cd $HOME | Telescope live_grep<CR>"),
+			dashboard.button("r", "󰱼   Recent Files", ":Telescope oldfiles<CR>"),
 			dashboard.button("l", "󰒲   Lazy", ":Lazy<CR>"),
+			dashboard.button("m", "󰢛   Mason", ":Mason<CR>"),
 			dashboard.button("u", "   Update Plugins", "<cmd>lua require('lazy').sync()<CR>"),
-			dashboard.button("c", "   Update CoC", ":CocUpdate<CR>"),
-			dashboard.button("p", "󱌣   Update Parsers", ":TSUpdate all<CR>"),
+			dashboard.button("p", "   Update Parsers", ":TSUpdate all<CR>"),
 			dashboard.button("h", "󰋠   Check Health", ":checkhealth<CR>"),
 			dashboard.button("q", "   Quit NeoVim", ":qa<CR>"),
 		}
@@ -58,7 +58,6 @@ end
 
 return {
   'goolord/alpha-nvim',
-  lazy = false,
   event = "VimEnter",
   config = config,
 }

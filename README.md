@@ -149,7 +149,7 @@ Plugins and Configuration are setup in their own folders within the `lua` direct
 found within `keymaps.lua` and Vim options are found in `options.lua`. Configuration for each plug-in 
 can be found within it's respective lua file. [More Plugin Information](#plugin-information).
 
-![File Tree](https://github.com/EthanGilles/EthanGilles/blob/a9329906941416930681d8760c63572df4be2f1c/nvim-pics/filetree.png)
+![File Tree](https://github.com/EthanGilles/EthanGilles/blob/0e68bd01990fa046de65d3e28cadd0979b65dbd0/nvim-pics/filetree.png)
 
 Some of the options I have on that you might want to change are:
 ```lua
@@ -379,7 +379,7 @@ Currently, I have 9 buttons on the greeting screen. The options are
 | <kbd>q</kbd>              | Quit NVIM             | Close NeoVim                      |
 
 Greeting:
-![Greeting image](https://github.com/EthanGilles/EthanGilles/blob/61ab3fb7cd0d99a122ceccdffb7ef554871c467b/nvim-pics/alpha.png)
+![Greeting image](https://github.com/EthanGilles/EthanGilles/blob/0e68bd01990fa046de65d3e28cadd0979b65dbd0/nvim-pics/alpha.png)
 
 ### Auto Pairs 
 

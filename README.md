@@ -394,7 +394,7 @@ saved with their name being the current working directory.
 There are a few keybinds associated with auto session that can be found [here](#session-management). When you 
 are searching through sessions, here are a couple more keybinds to be aware of.
 
-![Auto Session Example](https://github.com/EthanGilles/EthanGilles/blob/4264a4359f7f30134432a4cf5545973f63911f40/nvim-pics/sessions.png)
+![Auto Session Example](https://github.com/EthanGilles/EthanGilles/blob/0d49e6741703b302dda2ec3e6d68771f6fc8f79a/nvim-pics/sessions.png)
 
 | Keymap                                        | Description                         |
 | --------------------------------------------- | ----------------------------------- |

@@ -262,6 +262,9 @@ WIP
 | <kbd>Ctrl</kbd>+<kbd>c</kbd>                  | Clear the current search phrase     |
 | <kbd>Shift</kbd>+<kbd>k</kbd>                 | Show information for the item under the cursor |
 | <kbd>leader</kbd>><kbd>t</kbd>><kbd>o</kbd>   | Toggle the cursor to stay in the center, and not scroll off |
+| <kbd>leader</kbd>><kbd>h</kbd>><kbd>n</kbd>   | Hide line numbers                   |
+| <kbd>leader</kbd>><kbd>s</kbd>><kbd>n</kbd>   | Show line numbers                   |
+| <kbd>leader</kbd>><kbd>s</kbd>><kbd>c</kbd>   | Enable Spell Checking               |
 
 More plug-in specific keymaps can be found in the documentation for the plugin, found below.
 

@@ -13,17 +13,20 @@ local config = function()
     },
     pickers = {
       find_files = {
-        -- theme = "dropdown",
+        theme = "dropdown",
         previewer = true,
         hidden = true,
       },
       live_grep = {
-        -- theme = "dropdown",
+        theme = "dropdown",
         previewer = true,
       },
       find_buffers = {
         theme = "dropdown",
         previewer = true,
+      },
+      colorscheme = {
+        enable_preview = true,
       }
     },
   })

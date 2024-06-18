@@ -1,10 +1,7 @@
 local config = function()
-  local cyberdream = require("lualine.themes.cyberdream")
-
 
   require('lualine').setup {
     options = {
-      theme = cyberdream,
       globalstatus = true,
       section_separators = { left = ' ⟩ ', right = ' ⟨ ' },
       component_separators = { left = ' ⟩ ', right = ' ⟨ ' },
@@ -68,10 +65,6 @@ local config = function()
       {
         'datetime',
         style = 'default'
-      },
-      {
-        'fileformat',
-        color = { fg = '#fab387', },
       },
       },
     },

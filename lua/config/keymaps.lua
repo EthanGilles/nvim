@@ -4,6 +4,9 @@ local opts = { noremap = true, silent = true }
 -- Set Cursor to the middle of the screen --
 keymap.set('n', '<leader>to', function() vim.opt.scrolloff = 999 - vim.o.scrolloff end, opts)
 
+-- Enable Spell Check --
+keymap.set('n', '<leader>sc', ':setlocal spell spelllang=en_us<CR>', opts)
+
 -- Clear the current search word
 keymap.set("n", "<C-c>", ":nohl<CR>", opts)
 
@@ -47,6 +50,10 @@ keymap.set("n", "<leader>fr", ":Telescope oldfiles<CR>") -- Find recent
 keymap.set("n", "<leader>ss", "<cmd>SessionSave<CR>") -- Save Session
 keymap.set("n", "<leader>sr", "<cmd>SessionRestore<CR>") -- Restore Session
 keymap.set("n", "<C-s>", require("auto-session.session-lens").search_session, opts)
+
+-- Line Numbers --
+keymap.set("n", "<leader>hn", ":set norelativenumber nonumber<CR>") -- Hide Numbers
+keymap.set("n", "<leader>sn", ":set number relativenumber<CR>") -- Show Numbers
 
 -- VimTex Command --
 -- <SPACE+L+C> (Latex Clean) cleans the directory with latex files after compiling.

@@ -43,6 +43,7 @@ opt.modifiable = true
 opt.encoding = "UTF-8"
 
 -- Commands --
+
 -- Disables Ruby and Perl as they're not needed for the configuration.
 vim.cmd[[let g:loaded_ruby_provider = 0]]
 vim.cmd[[let g:loaded_perl_provider = 0]]

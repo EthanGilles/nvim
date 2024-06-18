@@ -16,6 +16,7 @@ local config = function()
     "css",
     "javascript",
     "python",
+    "yaml",
     "bash", -- Needed for Noice
     "markdown", -- Needed for Noice
     "lua", -- Needed for Noice

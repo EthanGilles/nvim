@@ -35,7 +35,6 @@ local config = function()
 			dashboard.button("l", "󰒲   Lazy", ":Lazy<CR>"),
 			dashboard.button("m", "󰢛   Mason", ":Mason<CR>"),
 			dashboard.button("u", "   Update Plugins", "<cmd>lua require('lazy').sync()<CR>"),
-			dashboard.button("s", "󱌣   Update LSPs", ":MasonUpdate<CR>"),
 			dashboard.button("p", "   Update Parsers", ":TSUpdate all<CR>"),
 			dashboard.button("h", "󰋠   Check Health", ":checkhealth<CR>"),
 			dashboard.button("q", "   Quit NeoVim", ":qa<CR>"),

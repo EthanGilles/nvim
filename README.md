@@ -9,7 +9,7 @@
 <!-- Add: Plugin Information -->
 <!-- Added: Plugin Information Headers, just need descriptions -->
 
-![Greeting Demo](https://github.com/EthanGilles/EthanGilles/blob/a69d86fbae49867357f74ce911a345a2eef069f3/nvim-pics/greeting-demo.gif)
+![Greeting Demo](https://github.com/EthanGilles/EthanGilles/blob/0e68bd01990fa046de65d3e28cadd0979b65dbd0/nvim-pics/greeting-demo.gif)
 
 ## Table of Conents
 

@@ -30,8 +30,8 @@ local config = function()
 
 		dashboard.section.buttons.val = {
 			dashboard.button("f", "󰥨   Find Files", ":cd $HOME | Telescope find_files<CR>"),
-			dashboard.button("g", "󰱼   Find Words", ":cd $HOME | Telescope live_grep<CR>"),
-			dashboard.button("r", "󰤘   Recent Files", ":Telescope oldfiles<CR>"),
+			dashboard.button("g", "   Find Words", ":cd $HOME | Telescope live_grep<CR>"),
+			dashboard.button("r", "󰱼   Recent Files", ":Telescope oldfiles<CR>"),
 			dashboard.button("l", "󰒲   Lazy", ":Lazy<CR>"),
 			dashboard.button("m", "󰢛   Mason", ":Mason<CR>"),
 			dashboard.button("u", "   Update Plugins", "<cmd>lua require('lazy').sync()<CR>"),

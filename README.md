@@ -501,9 +501,12 @@ see their [documentation](https://github.com/nvim-lualine/lualine.nvim).
 
 The current LuaLine setup has: Buffers, Mode, CoC Diagnostics, git branch, modifications to the 
 file, the time and date, OS, and file-format. I have the buffers in present in the at the top left
-where you would normally see tabs in an application, but for this photo, they are along the bottom.
+where you would normally see tabs in an application.
 
-![LuaLine Example](https://github.com/EthanGilles/EthanGilles/blob/bb638cb9f4044e6096218518a17bf07e70578259/nvim-pics/lualine.png)
+![LuaLine Example](https://github.com/EthanGilles/EthanGilles/blob/0d49e6741703b302dda2ec3e6d68771f6fc8f79a/nvim-pics/lualine.png)
+
+And the Buffers are in the tab line
+![LuaLine Buffers Example](https://github.com/EthanGilles/EthanGilles/blob/0d49e6741703b302dda2ec3e6d68771f6fc8f79a/nvim-pics/lualine-buffers.png)
 
 ### Noice
 [Noice](https://github.com/folke/noice.nvim) makes things look, well, noice. It centers your command line and makes things look

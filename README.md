@@ -540,7 +540,7 @@ a lot better in general. I have disabled the notifications that Noice can provid
 you need a seperate plugin in the dependencies. However, getting notifications for writing to a file,
 executing commands, etc, is not something I was looking for.
 
-![Noice Example](https://github.com/EthanGilles/EthanGilles/blob/ef9def1e4033c1486ca68767641fe83af433b20a/nvim-pics/noice.png)
+![Noice Example](https://github.com/EthanGilles/EthanGilles/blob/0c70ceb7198427ad7c2c349427c1635aaae45367/nvim-pics/noice.png)
 
 ### Nvim-tree
 [Nvim-tree](https://github.com/nvim-tree/nvim-tree.lua) gives you a file explorer on the left side of the screen. With web-dev-icons the file

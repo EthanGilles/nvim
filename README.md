@@ -11,6 +11,8 @@
 
 ![Greeting Demo](https://github.com/EthanGilles/EthanGilles/blob/0e68bd01990fa046de65d3e28cadd0979b65dbd0/nvim-pics/greeting-demo.gif)
 
+![LaTeX Example](https://github.com/EthanGilles/EthanGilles/blob/bb3e1ed9ed89fd79477dc5a9d88273b1bc9c05b7/nvim-pics/latex.png)
+
 ## Table of Conents
 
 - [General Info](#general-info)
@@ -424,6 +426,11 @@ It uses another plugin to connect it to the native NeoVim LSPs for LSP auto comp
 as well as snippet completion through UltiSnips. The combination of autocompletion from 
 Language Servers and Snippets is extremely powerful.
 
+It also provides auto completion for commands within Vim. When typing a command with 
+':' it will provide auto-completion suggestions just like when typing normally. It also 
+will suggest different file paths for commands as well. For example, typing ':e' will 
+give auto-completion suggestions for different files to edit.
+
 To add new Language auto-completion see the [Mason](#mason) section.
 
 ### Colorizer
@@ -483,12 +490,12 @@ In this photo you can see I'm using the Marksman LSP for creating a markdown fil
 
 [Mason](https://github.com/williamboman/mason.nvim) Is the LSP Package manager being used for the configuration.
 It allows for easy installation of new LSPs and easy Updating for current ones.
-To see what LSPs are installed currently use the ```:Mason``` command. There is also access 
+To see what LSPs are installed currently use the `:Mason` command. There is also access 
 to the Mason UI through the [Alpha](#alpha) greeting screen
 
 To add new LSPs to the configuration, there are several steps. 
 The first is to open the Mason UI and download the appropriate LSP. Then open the 
-```lspconfig.lua``` file. There will be a configuration function that requires the setup 
+`lspconfig.lua` file. There will be a configuration function that requires the setup 
 of all of the other pre-installed LSPs. To add the new one, add another line to the config using the following template, 
 replacing the LSP_NAME with the one installed.
 
@@ -582,7 +589,7 @@ To remove a language, first remove it from the list above and then run the comma
 [Telescope](https://github.com/nvim-telescope/telescope.nvim) is the ultimate fuzzy finder for NeoVim. 
 It integrates with [Plenary](https://github.com/nvim-lua/plenary.nvim) to give you a fuzzy finder with a file previewer right in NeoVim.
 
-![Telescope Example](https://github.com/EthanGilles/EthanGilles/blob/ef88b8df928210ebffa3a2061edb0bf01e734ac6/nvim-pics/telescope.png)
+![Telescope Example](https://github.com/EthanGilles/EthanGilles/blob/1820d6cb779972b13c2411021cc65fd3b94b9ceb/nvim-pics/telescope.png)
 
 | Keymaps for when the Telescope window is open | Description                     |
 | ----------------------------------------- | ----------------------------------- |
@@ -632,19 +639,19 @@ section of the [Keymaps](#keymaps). To explore more of them, check out the [VimT
 
 ## Screenshots
 
+### LaTeX
+![LaTeX Example](https://github.com/EthanGilles/EthanGilles/blob/bb3e1ed9ed89fd79477dc5a9d88273b1bc9c05b7/nvim-pics/latex.png)
+
 ### Lua
-![Lua Example](https://github.com/EthanGilles/EthanGilles/blob/05ae235d6c1ae6886770ba7c17573c6a1fa2faed/nvim-pics/lua.png)
+![Lua Example](https://github.com/EthanGilles/EthanGilles/blob/bb3e1ed9ed89fd79477dc5a9d88273b1bc9c05b7/nvim-pics/lua.png)
 
 ### C++
-![C++ Example](https://github.com/EthanGilles/EthanGilles/blob/c43222f2111e03962c79e926a9d9c8e5efd09e0a/nvim-pics/cpp.png)
+![C++ Example](https://github.com/EthanGilles/EthanGilles/blob/bb3e1ed9ed89fd79477dc5a9d88273b1bc9c05b7/nvim-pics/cpp.png)
 
 ### Rust
-![Rust Example](https://github.com/EthanGilles/EthanGilles/blob/c43222f2111e03962c79e926a9d9c8e5efd09e0a/nvim-pics/rust.png)
-
-### LaTeX
-![LaTeX Example](https://github.com/EthanGilles/EthanGilles/blob/c43222f2111e03962c79e926a9d9c8e5efd09e0a/nvim-pics/latex.png)
+![Rust Example](https://github.com/EthanGilles/EthanGilles/blob/bb3e1ed9ed89fd79477dc5a9d88273b1bc9c05b7/nvim-pics/rust.png)
 
 ### JavaScript
-![JavaScript Example](https://github.com/EthanGilles/EthanGilles/blob/c43222f2111e03962c79e926a9d9c8e5efd09e0a/nvim-pics/js.png)
+![JavaScript Example](https://github.com/EthanGilles/EthanGilles/blob/bb3e1ed9ed89fd79477dc5a9d88273b1bc9c05b7/nvim-pics/js.png)
 
 

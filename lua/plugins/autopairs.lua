@@ -15,16 +15,7 @@ local config = function ()
   :with_move(cond.after_regex("$"))
   })
 
-  -- Copied from auto-pairs README. Should add '$' pairing
-  npairs.add_rules({
-  Rule("$$","$$","tex")
-    :with_pair(function(opts)
-        print(vim.inspect(opts))
-        if opts.line=="aa $$" then
-          return false
-        end
-    end)
-   })
+  -- Copied from auto-pairs README. Should add '$' pairing.
 end
 
 return {

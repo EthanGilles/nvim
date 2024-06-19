@@ -297,6 +297,7 @@ More plug-in specific keymaps can be found in the documentation for the plugin, 
 - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons)
 - [Plenary](https://github.com/nvim-lua/plenary.nvim)
+- [Smartcolumn](https://github.com/m4xshen/smartcolumn.nvim)
 - [Telescope](https://github.com/nvim-telescope/telescope.nvim)
 - [Ultisnips](https://github.com/SirVer/ultisnips)
 - [Illuminate](https://github.com/RRethy/vim-illuminate)
@@ -372,8 +373,8 @@ Currently, I have 9 buttons on the greeting screen. The options are
 | <kbd>g</kbd>              | Find word             | Use Telescope to live grep through files|
 | <kbd>r</kbd>              | Recent files          | Use Telescope to look through recent files |
 | <kbd>l</kbd>              | Lazy                  | Open Lazy plugin manager          |
+| <kbd>m</kbd>              | Mason                 | Open Mason LSP package manager    |
 | <kbd>u</kbd>              | Update Plugins        | Update plugins through the Lazy plugin manager |
-| <kbd>c</kbd>              | Update CoC            | Update all the CoC extensions installed   |
 | <kbd>p</kbd>              | Update Parsers        | Update all the tree-sitter parsers |
 | <kbd>h</kbd>              | Check Health          | Use the `:checkhealth` command to check dependencies |
 | <kbd>q</kbd>              | Quit NVIM             | Close NeoVim                      |
@@ -383,7 +384,11 @@ Greeting:
 
 ### Auto Pairs 
 
-WIP
+[Auto Pairs](https://github.com/windwp/nvim-autopairs) is a quality of life plufin that will pair 
+together parenthesis, brackets, quotes, etc. that should be paired. It also auto moves
+the cursor to the right if you press a keystroke for a paired character. The reason this 
+plugin is used is because it can be configured to auto-pair for LaTeX as well. This means
+that the '$' symbol is paired in only tex documents with the same functionality as other characters.
 
 ### Auto Session
 [Auto Session](https://github.com/rmagatti/auto-session) is a quality of life plugin that lets you
@@ -412,27 +417,20 @@ for other plugins being used in the configuration. The main reason I like using 
 have a theme for everything. I can have the same theme for my Terminal Emulator, NeoVim, and my PDF viewer,
 which is very aesthetically pleasing.
 
-I have my Terminal Emulator settings set to use my background at a certain opacity to get the 
-transparent effect that doesn't hurt the eyes too much. NeoVim will use whatever background your
-Terminal Emulator is using if you set it to transparent, so background configuration is seperate from
-NeoVim.
-
-If you would like to use my background image it is [here](https://github.com/EthanGilles/EthanGilles/blob/61ab3fb7cd0d99a122ceccdffb7ef554871c467b/nvim-pics/background.jpeg)
-
-To change the transparency, find the Catppuccin config and change
-```lua
-transparent_background = false,
-```
-
 ### CMP 
 
-WIP
+[CMP](https://github.com/hrsh7th/nvim-cmp) is the auto-completion plugin being used. 
+It uses another plugin to connect it to the native NeoVim LSPs for LSP auto completion, 
+as well as snippet completion through UltiSnips. The combination of autocompletion from 
+Language Servers and Snippets is extremely powerful.
+
+To add new Language auto-completion see the [Mason](#mason) section.
 
 ### Colorizer
 [Colorizer](https://github.com/norcalli/nvim-colorizer.lua) highlights color-codes with the color they are representing. Hexcodes, names, RGB values,
 etc. will be highlighted with its own color. A simple quality of life plugin.
 
-![Colorizer Example](https://github.com/EthanGilles/EthanGilles/blob/f367bae151299a744fcf4b6fefd28c33377dc3b1/nvim-pics/colorizer.png)
+![Colorizer Example](https://github.com/EthanGilles/EthanGilles/blob/1820d6cb779972b13c2411021cc65fd3b94b9ceb/nvim-pics/colorizer.png)
 
 ### Comment
 [Comment](https://github.com/numToStr/Comment.nvim) is used to group together and comment out code. The keymaps for this plugin
@@ -473,11 +471,32 @@ vim.api.nvim_set_hl(0, "RainbowRed", { fg = "#FF79C6" })
 
 ### LSP Progress 
 
-WIP
+[LSP Progress](https://github.com/linrongbin16/lsp-progress.nvim) Shows the current LSP being used in the status line. 
+This helps if there is a need for different LSPs with the same file extension.
+It also shows the progress of the LSP being loaded, if you have a large project.
+
+In this photo you can see I'm using the Marksman LSP for creating a markdown file.
+
+![LSP Progress Example](https://github.com/EthanGilles/EthanGilles/blob/1820d6cb779972b13c2411021cc65fd3b94b9ceb/nvim-pics/lsp-progress.png)
 
 ### Mason 
 
-WIP
+[Mason](https://github.com/williamboman/mason.nvim) Is the LSP Package manager being used for the configuration.
+It allows for easy installation of new LSPs and easy Updating for current ones.
+To see what LSPs are installed currently use the ```:Mason``` command. There is also access 
+to the Mason UI through the [Alpha](#alpha) greeting screen
+
+To add new LSPs to the configuration, there are several steps. 
+The first is to open the Mason UI and download the appropriate LSP. Then open the 
+```lspconfig.lua``` file. There will be a configuration function that requires the setup 
+of all of the other pre-installed LSPs. To add the new one, add another line to the config using the following template, 
+replacing the LSP_NAME with the one installed.
+
+```lua
+require("lspconfig").LSP_NAME.setup{ on_attach = on_attach, capabilities = capabilities, }
+```
+
+This will setup the LSP with the correct keybindings and auto-completion abilities.
 
 ### LuaLine
 [LuaLine](https://github.com/nvim-lualine/lualine.nvim) helps by giving you information on your NeoVim session. 

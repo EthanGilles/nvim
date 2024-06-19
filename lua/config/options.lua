@@ -14,7 +14,7 @@ opt.ignorecase = true
 opt.smartcase = true
 opt.hlsearch = true
 
--- Apearance --
+-- Appearance --
 opt.number = true
 opt.relativenumber = true
 opt.termguicolors = true
@@ -35,7 +35,7 @@ opt.backspace = "indent,eol,start"
 opt.splitright = true
 opt.splitbelow = true
 opt.autochdir = false
-opt.cmdheight = 2
+opt.cmdheight = 3
 opt.iskeyword:append("-")
 opt.mouse:append('a') -- mouse available in all modes
 opt.clipboard:append("unnamedplus")
@@ -47,4 +47,3 @@ opt.encoding = "UTF-8"
 -- Disables Ruby and Perl as they're not needed for the configuration.
 vim.cmd[[let g:loaded_ruby_provider = 0]]
 vim.cmd[[let g:loaded_perl_provider = 0]]
-

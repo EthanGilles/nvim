@@ -532,6 +532,7 @@ where you would normally see tabs in an application.
 ![LuaLine Example](https://github.com/EthanGilles/EthanGilles/blob/0d49e6741703b302dda2ec3e6d68771f6fc8f79a/nvim-pics/lualine.png)
 
 And the Buffers are in the tab line
+
 ![LuaLine Buffers Example](https://github.com/EthanGilles/EthanGilles/blob/0d49e6741703b302dda2ec3e6d68771f6fc8f79a/nvim-pics/lualine-buffers.png)
 
 ### Noice

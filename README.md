@@ -11,7 +11,7 @@
 
 ![Greeting Demo](https://github.com/EthanGilles/EthanGilles/blob/0e68bd01990fa046de65d3e28cadd0979b65dbd0/nvim-pics/greeting-demo.gif)
 
-![LaTeX Example](https://github.com/EthanGilles/EthanGilles/blob/bb3e1ed9ed89fd79477dc5a9d88273b1bc9c05b7/nvim-pics/latex.png)
+![LaTeX Example](https://github.com/EthanGilles/EthanGilles/blob/e62370ad135d12d4572854da3bdef4dabf4ff29c/nvim-pics/latex-demo.gif)
 
 ## Table of Conents
 

@@ -490,8 +490,20 @@ In this photo you can see I'm using the Marksman LSP for creating a markdown fil
 
 [Mason](https://github.com/williamboman/mason.nvim) Is the LSP Package manager being used for the configuration.
 It allows for easy installation of new LSPs and easy Updating for current ones.
-To see what LSPs are installed currently use the `:Mason` command. There is also access 
-to the Mason UI through the [Alpha](#alpha) greeting screen
+To check what LSPs are installed, or to check for updates, use the `:Mason` command. There is also access 
+to the Mason UI through the [Alpha](#alpha) greeting screen.
+
+Currently, I am using 10 LSPs for different languages. They are:
+ - bashls, for bash
+ - clangd, for c/c++ 
+ - jedi_language_server, for python (sometimes I use pyright as well)
+ - lua_ls, for lua
+ - marksman, for markdown
+ - texlab, for LaTex/bibTeX
+ - rust_analyzer, for rust
+ - tsserver, for JS/TS
+ - cssls, for css
+ - html, for html
 
 To add new LSPs to the configuration, there are several steps. 
 The first is to open the Mason UI and download the appropriate LSP. Then open the 

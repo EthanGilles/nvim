@@ -18,7 +18,7 @@ local config = function()
   require("lspconfig").clangd.setup{ on_attach = on_attach, capabilities = capabilities, }
   require("lspconfig").texlab.setup{ on_attach = on_attach, capabilities = capabilities, }
   require("lspconfig").marksman.setup{ on_attach = on_attach, capabilities = capabilities, }
-  require("lspconfig").pyright.setup{ on_attach = on_attach, capabilities = capabilities, }
+  require("lspconfig").jedi_language_server.setup{ on_attach = on_attach, capabilities = capabilities, }
   require("lspconfig").html.setup{ on_attach = on_attach, capabilities = capabilities, }
   require("lspconfig").cssls.setup{ on_attach = on_attach, capabilities = capabilities, }
   require("lspconfig").tsserver.setup{ on_attach = on_attach, capabilities = capabilities, }

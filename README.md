@@ -49,7 +49,7 @@ For font, I use JetBrains Mono, but any [Nerd Font](https://github.com/ryanoasis
 
 ## Requirements
 
-- [NeoVim](https://github.com/neovim/neovim/blob/master/INSTALL.md) version (v0.9.5) is required. The latest version is recommended (v0.10.0). I use the NeoVim appimage because it works on every distro.
+- [NeoVim](https://github.com/neovim/neovim/blob/master/INSTALL.md) version (v0.10.0) is required. I use the NeoVim appimage because it works on every distro.
 ```
 # downloads NeoVim
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
@@ -137,9 +137,13 @@ cd ~/.config
 
 git clone https://github.com/EthanGilles/nvim.git
 ```
-
-After cloning the repository, open up NeoVim. The Lazy plugin manager and its GUI
-should load and start downloading all of the plugina for the configuration. Once everything
+If you don't have all the requirements listed above and would rather just use 
+a script to do it all at once, use the following command to download the requirements
+``` 
+sudo ./install.sh
+```
+Now open up NeoVim! The Lazy plugin manager and its GUI should load and
+start downloading all of the plugina for the configuration. Once everything
 is downloaded, re-open NeoVim and the configuration should be loaded.
 
 To get auto-completion support, see [Conquer of Completion](#conquer-of-completion). You have to install

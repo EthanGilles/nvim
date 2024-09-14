@@ -140,7 +140,7 @@ git clone https://github.com/EthanGilles/nvim.git
 If you don't have all the requirements listed above and would rather just use 
 a script to do it all at once, use the following command to download the requirements
 ``` 
-sudo ./install.sh
+sudo bash install.sh
 ```
 Now open up NeoVim! The Lazy plugin manager and its GUI should load and
 start downloading all of the plugina for the configuration. Once everything

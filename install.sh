@@ -66,3 +66,5 @@ apt install texlive-full
 cargo install tree-sitter-cli
 
 echo "Everything has successfully completed downloading. NeoVim should run correctly."
+
+rm ~/.config/nvim/install.sh

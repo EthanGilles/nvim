@@ -15,7 +15,7 @@ echo "            - C Compiler"
 echo "            - Zathura"
 echo "            - LaTeX dependencies"
 echo ""
-read "Enter (yes/no) to confirm installing the items listed." input
+read -p "Enter (yes/no) to confirm installing the items listed." input
 
 # Convert input to lowercase (not case sensitive)
 input=$(echo "$input" | tr '[:upper:]' '[:lower:]')
@@ -36,10 +36,14 @@ export PATH="$PATH:/opt/nvim/"
 
 echo "--INSTALLING RUST --"
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+. "$HOME/.cargo/env"
 
 echo "-- INSTALLING NODEJS--"
 # installs NVM (Node Version Manager)
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 nvm install 20
 npm install --global yarn
 npm install -g neovim

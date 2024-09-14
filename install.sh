@@ -61,7 +61,4 @@ apt install zathura
 apt install texlive-full
 cargo install tree-sitter-cli
 
-echo "Everything has successfully completed downloading."
-echo "Run the next two commands to install NeoVim config:"
-echo "cd ~/.config"
-echo "git clone https://github.com/EthanGilles/nvim.git"
+echo "Everything has successfully completed downloading. NeoVim should run correctly."

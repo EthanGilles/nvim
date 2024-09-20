@@ -21,7 +21,7 @@ local config = function()
   require("lspconfig").jedi_language_server.setup{ on_attach = on_attach, capabilities = capabilities, }
   require("lspconfig").html.setup{ on_attach = on_attach, capabilities = capabilities, }
   require("lspconfig").cssls.setup{ on_attach = on_attach, capabilities = capabilities, }
-  require("lspconfig").tsserver.setup{ on_attach = on_attach, capabilities = capabilities, }
+  require("lspconfig").ts_ls.setup{ on_attach = on_attach, capabilities = capabilities, }
   require("lspconfig").bashls.setup{ on_attach = on_attach, capabilities = capabilities, }
 end
 

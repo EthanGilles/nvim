@@ -17,6 +17,6 @@ local config = function()
 end
 return {
   'rmagatti/auto-session',
-  lazy = true,
+  lazy = false,
   config = config,
 }

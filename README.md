@@ -49,6 +49,12 @@ For font, I use JetBrains Mono, but any [Nerd Font](https://github.com/ryanoasis
 
 ## Requirements
 
+Before you follow along with all of the commands, you can also use the provided install script for all of the requirements with
+```
+sudo bash install.sh
+```
+
+
 - [NeoVim](https://github.com/neovim/neovim/blob/master/INSTALL.md) version (v0.10.0) is required. I use the NeoVim appimage because it works on every distro.
 ```
 # downloads NeoVim

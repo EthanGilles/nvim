@@ -14,6 +14,7 @@ echo "            - CLI Utils"
 echo "            - C Compiler"
 echo "            - Zathura"
 echo "            - LaTeX dependencies"
+echo "            - Lua Interpreter"
 echo ""
 read -p "Enter (yes/no) to confirm installing the items listed." input
 
@@ -60,10 +61,17 @@ apt install -y -q ripgrep
 apt install -y -q fd-find
 apt install -y -q xclip
 
-echo "-- INSTALLING LATEX DEPENDENCIES -- "
+echo "-- INSTALLING LATEX DEPENDENCIES --"
 apt install zathura
 apt install texlive-full
 cargo install tree-sitter-cli
+
+echo "-- INSTALLING LUA INTERPRETER --"
+git clone git://github.com/keplerproject/luarocks.git
+cd luarocks
+./configure
+make build
+make install
 
 echo "Everything has successfully completed downloading. NeoVim should run correctly."
 

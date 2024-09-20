@@ -1,10 +1,5 @@
 local config = function()
   require("catppuccin").setup({
-    flavour = "mocha", -- latte, frappe, macchiato, mocha
-    background = { -- :h background
-        light = "mocha",
-        dark = "mocha",
-    },
     transparent_background = true, -- disables setting the background color.
     show_end_of_buffer = false, -- shows the '~' characters after the end of buffers
     term_colors = true, -- sets terminal colors (e.g. `g:terminal_color_0`)
@@ -18,13 +13,13 @@ local config = function()
         conditionals = { "italic" },
         loops = {},
         functions = {},
-        keywords = {},
+        keywords = { "bold" },
         strings = {},
         variables = {},
         numbers = {},
         booleans = {},
         properties = {},
-        types = {},
+        types = { "bold" },
         operators = {},
         -- miscs = {}, -- Uncomment to turn off hard-coded styles
     },
@@ -48,12 +43,11 @@ local config = function()
     }
   })
 
-  vim.cmd.colorscheme "catppuccin-mocha"
+  vim.cmd.colorscheme "catppuccin"
 end
 
 return {
-  "catppuccin/nvim",
-  name = "catppuccin",
+  "danwlker/primeppuccin",
   priority = 1000,
   config = config,
 }

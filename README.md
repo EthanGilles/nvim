@@ -101,6 +101,14 @@ pip3 install pynvim
 ```
 apt install build-essential
 ```
+- **Lua Interpreter**
+``` 
+git clone git://github.com/keplerproject/luarocks.git
+cd luarocks
+./configure
+make build
+sudo make install
+```
 - **RipGrep** and **fd** for Telescope.nvim (Live Grep)
 ```
 apt install ripgrep 

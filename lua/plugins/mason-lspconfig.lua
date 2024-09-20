@@ -6,10 +6,10 @@ local config = function()
       "clangd", -- C/C++
       "texlab", -- LaTeX
       "marksman", -- Markdown
-      "pyright", -- Python
-      "html",
-      "cssls",
-      "tsserver", -- JS/TypeScript
+      "jedi_language_server", -- Python
+      "html", -- HTML
+      "cssls", -- CSS
+      "ts_ls", -- JS/TypeScript
       "bashls", -- Bash
     },
   })

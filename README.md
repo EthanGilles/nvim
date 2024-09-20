@@ -264,6 +264,14 @@ WIP
 | <kbd>]</kbd>><kbd>]</kbd>                     | Jump to the next section/subsection           |
 | <kbd>[</kbd>><kbd>[</kbd>                     | Jump to the previous section/subsection       |
 
+### Info 
+
+| Keymap                                        | Description                         |
+| --------------------------------------------- | ----------------------------------- |
+| <kbd>Shift</kbd>+<kbd>k</kbd>                 | Shows the global implementation for the item under the cursor in a window |
+| <kbd>g</kbd>><kbd>r</kbd>                     | Show the global references of the variable the cursor is over with Telescope |
+| <kbd>g</kbd>+<kbd>i</kbd>                     | Brings you to the global implementation of the function the cursor is over |
+
 ### Others
 
 | Keymap                                        | Description                         |
@@ -272,7 +280,6 @@ WIP
 | <kbd>Ctrl</kbd>+<kbd>></kbd>                  | Shift highlighted code one indent to the right |
 | <kbd>Ctrl</kbd>+<kbd><</kbd>                  | Shift highlighted code one indent to the left  |
 | <kbd>Ctrl</kbd>+<kbd>c</kbd>                  | Clear the current search phrase     |
-| <kbd>Shift</kbd>+<kbd>k</kbd>                 | Show information for the item under the cursor |
 | <kbd>leader</kbd>><kbd>t</kbd>><kbd>o</kbd>   | Toggle the cursor to stay in the center, and not scroll off |
 | <kbd>leader</kbd>><kbd>h</kbd>><kbd>n</kbd>   | Hide line numbers                   |
 | <kbd>leader</kbd>><kbd>s</kbd>><kbd>n</kbd>   | Show line numbers                   |

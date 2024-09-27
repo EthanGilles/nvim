@@ -2,12 +2,7 @@
 
 ------------------
 <!-- TO DO: -->
-<!-- Fix: Plugin List -->
-<!-- Fix: Keymaps -->
-<!-- Fix: Alpha Picture (Mason now) -->
-<!-- Fix: Plugin Information -->
-<!-- Add: Plugin Information -->
-<!-- Added: Plugin Information Headers, just need descriptions -->
+<!-- Codeium Description -->
 
 ![Greeting Demo](https://github.com/EthanGilles/EthanGilles/blob/0e68bd01990fa046de65d3e28cadd0979b65dbd0/nvim-pics/greeting-demo.gif)
 
@@ -308,6 +303,7 @@ More plug-in specific keymaps can be found in the documentation for the plugin, 
 - [cmp-buffer](https://github.com/hrsh7th/cmp-buffer)
 - [cmp-path](https://github.com/hrsh7th/cmp-path)
 - [cmp-cmdline](https://github.com/hrsh7th/cmp-cmdline)
+- [Codeium](https://github.com/Exafunction/codeium.nvim)
 - [Colorizer](https://github.com/norcalli/nvim-colorizer.lua)
 - [Comment](https://github.com/numToStr/Comment.nvim)
 - [Cyberdream](https://github.com/scottmckendry/cyberdream.nvim)
@@ -364,6 +360,7 @@ plugins or keymaps wheenever I want to configure something.
  - [Auto Pairs](#auto-pairs)
  - [Primeppuccin](#primeppuccin)
  - [CMP](#cmp)
+ - [Codeium](#codeium)
  - [Colorizer](#colorizer)
  - [Comment](#comment)
  - [Hardtime](#Hardtime)
@@ -440,15 +437,21 @@ are searching through sessions, here are a couple more keybinds to be aware of.
 | <kbd>SHIFT</kbd>+<kbd>TAB</kbd>               | Highlight the previous session in the list |
 
 ### Primeppuccin 
-
 [Primeppuccin](https://github.com/DanWlker/primeppuccin) is the theme being used. There is some configuration that goes into the theme,
 like choosing whether you want the background to be transparent or not. I have also turned on integrations
 for other plugins being used in the configuration. The main reason I like using Catppuccin is because they
 have a theme for everything. I can have the same theme for my Terminal Emulator, NeoVim, and my PDF viewer,
 which is very aesthetically pleasing.
 
-### CMP 
+### Codeium 
+[Codeium](https://github.com/Exafunction/codeium) is the auto-completion plugin being used in this configuration. 
+It is free and integrates with nvim-cmp to provide suggestions while you're coding. 
+You'll know it's an AI suggestion as it will label the suggestion with Codeium.
+To get started with Codeium, use ```:Codeium Auth``` to link an api key and start using 
+their service for free. It's slightly buggy right now as I'm still int the process 
+of integrating it fully into the configuration.
 
+### CMP 
 [CMP](https://github.com/hrsh7th/nvim-cmp) is the auto-completion plugin being used. 
 It uses another plugin to connect it to the native NeoVim LSPs for LSP auto completion, 
 as well as snippet completion through UltiSnips. The combination of autocompletion from 

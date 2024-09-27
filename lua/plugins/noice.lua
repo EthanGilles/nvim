@@ -11,8 +11,7 @@ require("noice").setup({
       enabled = false,
     },
   },
-
-  })
+})
 end
 
 return {

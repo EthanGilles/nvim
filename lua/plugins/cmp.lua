@@ -1,6 +1,5 @@
 local config = function()
   local cmp = require("cmp")
-
   local cmp_ultisnips_mappings = require("cmp_nvim_ultisnips.mappings")
   local cmp_autopairs = require('nvim-autopairs.completion.cmp')
 
@@ -11,8 +10,10 @@ local config = function()
         vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
       end,
     },
+    experimental = {
+      ghost_text = true,
+    },
     window = {
-      completion = cmp.config.window.bordered(),
       documentation = cmp.config.window.bordered(),
     },
     mapping = cmp.mapping.preset.insert({
@@ -32,11 +33,13 @@ local config = function()
         ),
     }),
     sources = cmp.config.sources({
+      { name = "codeium" },
       { name = 'nvim_lsp' },
       { name = 'ultisnips' }, -- For ultisnips users.
-    }, {
-      { name = 'buffer' },
-    })
+    } ,
+      {
+        { name = 'buffer' },
+      })
   })
 
   cmp.setup.cmdline({ '/', '?' }, {
@@ -64,7 +67,7 @@ end
 
 return {
   'hrsh7th/nvim-cmp',
-  dependencies = { 'hrsh7th/cmp-nvim-lsp', 'hrsh7th/cmp-buffer', 'hrsh7th/cmp-path', 'hrsh7th/cmp-cmdline', },
+  dependencies = { 'hrsh7th/cmp-nvim-lsp', 'hrsh7th/cmp-buffer', 'hrsh7th/cmp-path', 'hrsh7th/cmp-cmdline'},
   event = "InsertEnter",
   config = config,
 }

@@ -2,8 +2,16 @@ local config = function()
   local cmp = require("cmp")
   local cmp_ultisnips_mappings = require("cmp_nvim_ultisnips.mappings")
   local cmp_autopairs = require('nvim-autopairs.completion.cmp')
+  local lspkind = require('lspkind')
 
   cmp.setup({
+    formatting = {
+      format = lspkind.cmp_format({
+        mode = 'symbol', -- show only symbol annotations
+        maxwidth = 50, -- prevent the popup from showing more than provided characters (e.g 50 will not show more than 50 characters)
+        show_labelDetails = true, -- show labelDetails in menu. Disabled by default
+      })
+    },
     snippet = {
       -- REQUIRED - you must specify a snippet engine
       expand = function(args)
@@ -67,7 +75,7 @@ end
 
 return {
   'hrsh7th/nvim-cmp',
-  dependencies = { 'hrsh7th/cmp-nvim-lsp', 'hrsh7th/cmp-buffer', 'hrsh7th/cmp-path', 'hrsh7th/cmp-cmdline'},
+  dependencies = { 'hrsh7th/cmp-nvim-lsp', 'hrsh7th/cmp-buffer', 'hrsh7th/cmp-path', 'hrsh7th/cmp-cmdline', 'onsails/lspkind.nvim'},
   event = "InsertEnter",
   config = config,
 }

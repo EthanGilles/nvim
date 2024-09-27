@@ -312,7 +312,7 @@ More plug-in specific keymaps can be found in the documentation for the plugin, 
 - [Cyberdream](https://github.com/scottmckendry/cyberdream.nvim)
 - [Hardtime](https://github.com/m4xshen/hardtime.nvim)
 - [Highlighted Yank](https://github.com/machakann/vim-highlightedyank)
-- [Indent-Blankline](https://github.com/lukas-reineke/indent-blankline.nvim)
+- [hlChunk](https://github.com/shellRaining/hlchunk.nvim)
 - [Lazy](https://github.com/folke/lazy.nvim)
 - [LSP Progress](https://github.com/linrongbin16/lsp-progress.nvim)
 - [LSP Config](https://github.com/neovim/nvim-lspconfig)
@@ -367,7 +367,7 @@ plugins or keymaps wheenever I want to configure something.
  - [Comment](#comment)
  - [Hardtime](#Hardtime)
  - [Highlighted Yank](#Highlighted-yank)
- - [Indent-Blankline](#indent-blankline)
+ - [hlChunk](#hlChunk)
  - [LSP Progress](#lsp-progress)
  - [Mason/LSP Config](#mason)
  - [LuaLine](#lualine)
@@ -484,30 +484,17 @@ It is a simple quality of life plugin that shows exactly what you just copied to
 It highlights the copied text to show you exactly what was copied. Something I would expect
 in any modern IDE.
 
-### Indent-blankline
-[Indent-Blankline](https://github.com/lukas-reineke/indent-blankline.nvim) will help with auto indenting the next line, and will give you different colors
-along the lefthand side of the editor for separate indenting levels. The colors can be customized
-by changing the hex values within the lua file.
+### HLChunk 
+[hlChunk](https://github.com/shellRaining/hlchunk.nvim) will help with highlighting the current block of code. 
 
-The highlighting order is as follows, with `RainbowRed` coming first. To change the order,
-simply arrange the variable names in the order you would like them to appear.
-```lua
-local highlight = {
-"RainbowRed",
-"RainbowBlue",
-"RainbowYellow",
-"RainbowViolet",
-"RainbowOrange",
-"RainbowGreen",
-"RainbowCyan",
-}
-```
-To change the actual value, just change the hex value for the corresponding variable. 
-For example, to change the first level indent color, modify the hex value from the line below.
-I have modified some of the colors to be brighter so I can clearly see tab levels.
-```lua
-vim.api.nvim_set_hl(0, "RainbowRed", { fg = "#FF79C6" })
-```
+hlchunk has 4 mini mods but I have two active in this configuration. The first 
+mod is called chunk, which draws an arrow around the code chunk youre working on. 
+I have the color set to gray so it isn't as distracting.
+
+The second mini mod is called line_num, and it highlights the line numbers for the 
+block of code being worked in. This causes the numbers on the left to become a blueish 
+color to help navigate the code easier as well.
+
 
 ### LSP Progress 
 

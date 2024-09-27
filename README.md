@@ -6,7 +6,7 @@
 
 ![Greeting Demo](https://github.com/EthanGilles/EthanGilles/blob/0e68bd01990fa046de65d3e28cadd0979b65dbd0/nvim-pics/greeting-demo.gif)
 
-![LaTeX Example](https://github.com/EthanGilles/EthanGilles/blob/e62370ad135d12d4572854da3bdef4dabf4ff29c/nvim-pics/latex-demo.gif)
+![Config Example](https://github.com/EthanGilles/EthanGilles/blob/08e9a57d92159c98181b54f611f92834055cb793/nvim-pics/nvim-demo.gif)
 
 ## Table of Conents
 

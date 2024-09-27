@@ -1,7 +1,7 @@
 {
   "Comment.nvim": { "branch": "master", "commit": "e30b7f2008e52442154b66f7c519bfd2f1e32acb" },
   "alpha-nvim": { "branch": "main", "commit": "b6f4129302db197a7249e67a90de3f2b676de13e" },
-  "auto-session": { "branch": "main", "commit": "0caedb838e3cace2eaf52696ec7c8b6000f9ee30" },
+  "auto-session": { "branch": "main", "commit": "21e33854fb3e561cb738dfefcd9d1d84fe6faaef" },
   "cmp-buffer": { "branch": "main", "commit": "3022dbc9166796b644a841a02de8dd1cc1d311fa" },
   "cmp-cmdline": { "branch": "main", "commit": "d250c63aa13ead745e3a40f61fdd3470efde3923" },
   "cmp-nvim-lsp": { "branch": "main", "commit": "39e2eda76828d88b773cc27a3f61d2ad782c922d" },
@@ -19,10 +19,10 @@
   "nvim-autopairs": { "branch": "master", "commit": "f158dcb865c36f72c92358f87787dab2c272eaf3" },
   "nvim-cmp": { "branch": "main", "commit": "ae644feb7b67bf1ce4260c231d1d4300b19c6f30" },
   "nvim-colorizer.lua": { "branch": "master", "commit": "0671e0eabc6842676d3310370e8fae4e1c51d7f9" },
-  "nvim-lspconfig": { "branch": "master", "commit": "b064131428f6bbbbc905f4451ba6779fda334a3a" },
-  "nvim-tree.lua": { "branch": "master", "commit": "45a93d99794fff3064141d5b3a50db98ce352697" },
-  "nvim-treesitter": { "branch": "master", "commit": "b8ad0473f4d5d7b59e17a67ad0b68711b0232486" },
-  "nvim-web-devicons": { "branch": "master", "commit": "31bd21ac46b2b6039aa0b856ca02b018cf549ef7" },
+  "nvim-lspconfig": { "branch": "master", "commit": "a9bc587e9ae0cbcb3e90a2e9342f86b3b78c4408" },
+  "nvim-tree.lua": { "branch": "master", "commit": "59a8a6ae5e9d3eae99d08ab655d12fd51d5d17f3" },
+  "nvim-treesitter": { "branch": "master", "commit": "679883ad31f1752cac92a4ca182cee8b2751d4f1" },
+  "nvim-web-devicons": { "branch": "master", "commit": "26220156aafb198b2de6a4cf80c1b120a3768da0" },
   "plenary.nvim": { "branch": "master", "commit": "2d9b06177a975543726ce5c73fca176cedbffe9d" },
   "primeppuccin": { "branch": "main", "commit": "dd28a21d83f8088074a66d66ae6508567b79a65a" },
   "smartcolumn.nvim": { "branch": "main", "commit": "cefb17be095ad5526030a21bb2a80553cae09127" },
@@ -31,5 +31,5 @@
   "vim-highlightedyank": { "branch": "master", "commit": "afb0f262b490706c23e94012c2ab9fa67c0481ce" },
   "vim-illuminate": { "branch": "master", "commit": "5eeb7951fc630682c322e88a9bbdae5c224ff0aa" },
   "vim-snippets": { "branch": "master", "commit": "f0a3184d9f90b96b044d5914625a25c554d7f301" },
-  "vimtex": { "branch": "master", "commit": "a61db58f39b7ef3060bc9c60bbc813436f414bac" }
+  "vimtex": { "branch": "master", "commit": "b9cc11536a4e726c58c4776e9bcecff26fc454cb" }
 }

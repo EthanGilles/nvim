@@ -1,6 +1,6 @@
 return {
   "lervag/vimtex",
-  lazy = false,     -- we don't want to lazy load VimTeX
+  event = "BufRead *.tex",
   init = function()
     vim.cmd[[set conceallevel=2]]
     vim.cmd[[let g:tex_conceal='abdmg']]

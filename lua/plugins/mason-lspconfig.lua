@@ -8,7 +8,7 @@ local config = function()
       "marksman", -- Markdown
       "jedi_language_server", -- Python
       "html", -- HTML
-      "cssls", -- CSS
+      "cssls",
       "ts_ls", -- JS/TypeScript
       "bashls", -- Bash
     },
@@ -17,6 +17,6 @@ end
 
 return {
   "williamboman/mason-lspconfig.nvim",
-  lazy = false,
+  lazy = true,
   config = config,
 }

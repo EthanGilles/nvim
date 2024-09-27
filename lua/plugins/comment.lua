@@ -14,8 +14,8 @@ end
 
 return {
   'numToStr/Comment.nvim',
-  opts = {
-  },
-  lazy = false,
   config = config,
+  keys= {
+    { "<C-_>", "api.toggle.linewise.current", desc = "Toggle current line as a comment" },
+  }
 }

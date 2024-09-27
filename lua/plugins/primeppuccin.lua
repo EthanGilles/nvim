@@ -14,7 +14,7 @@ local config = function()
         loops = {},
         functions = {},
         keywords = { "bold" },
-        strings = {},
+        strings = { "bold"},
         variables = {},
         numbers = {},
         booleans = {},
@@ -25,11 +25,8 @@ local config = function()
     },
     default_integrations = true,
     integrations = {
-      indent_blankline = {
-        enabled = true,
-        scope_color = "lavender", -- catppuccin color (eg. `lavender`) Default: text
-        colored_indent_levels = false,
-      },
+      alpha = true,
+      cmp = true,
       noice = true,
       nvimtree = true,
       treesitter = true,
@@ -40,6 +37,7 @@ local config = function()
         enabled = true,
         lsp = true,
       },
+
     }
   })
 

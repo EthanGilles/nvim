@@ -1,6 +1,6 @@
 return {
   'machakann/vim-highlightedyank',
-  lazy = false,
+  event = "BufRead *",
 }
 
 

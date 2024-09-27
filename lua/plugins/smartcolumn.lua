@@ -5,5 +5,5 @@ local options = {
 return {
   "m4xshen/smartcolumn.nvim",
   opts = options,
-  lazy = false,
+  event = "BufRead *",
 }

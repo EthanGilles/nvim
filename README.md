@@ -43,7 +43,7 @@ to me as a Computer Science Major. The main uses for this configuration are:
 
 ### Extra Info
 
-I am using [Catppuccin Mocha](https://github.com/catppuccin/nvim) as my main theme and for my 
+I am using [Primeppuccin Mocha](https://github.com/DanWlker/primeppuccin) as my main theme and for my 
 LuaLine I use [Cyberdream](https://github.com/scottmckendry/cyberdream.nvim).
 For font, I use JetBrains Mono, but any [Nerd Font](https://github.com/ryanoasis/nerd-fonts) will do.
 
@@ -301,7 +301,7 @@ More plug-in specific keymaps can be found in the documentation for the plugin, 
 - [Alpha](https://github.com/goolord/alpha-nvim)
 - [Auto Session](https://github.com/rmagatti/auto-session)
 - [Auto Pairs](https://github.com/windwp/nvim-autopairs)
-- [Catppuccin](https://github.com/catppuccin/nvim)
+- [Primeppuccin](https://github.com/DanWlker/primeppuccin)
 - [cmp-Ultisnips](https://github.com/quangnguyen30192/cmp-nvim-ultisnips)
 - [cmp](https://github.com/hrsh7th/nvim-cmp)
 - [cmp-lsp](https://github.com/hrsh7th/cmp-nvim-lsp)
@@ -362,7 +362,7 @@ plugins or keymaps wheenever I want to configure something.
  - [Alpha](#alpha)
  - [Auto Session](#auto-session)
  - [Auto Pairs](#auto-pairs)
- - [Catppuccin](#catppuccin)
+ - [Primeppuccin](#primeppuccin)
  - [CMP](#cmp)
  - [Colorizer](#colorizer)
  - [Comment](#comment)
@@ -439,9 +439,9 @@ are searching through sessions, here are a couple more keybinds to be aware of.
 | <kbd>TAB</kbd>                                | Highlight the next session in the list |
 | <kbd>SHIFT</kbd>+<kbd>TAB</kbd>               | Highlight the previous session in the list |
 
-### Catppuccin
+### Primeppuccin 
 
-[Catppuccin](https://github.com/catppuccin/nvim) is the theme being used. There is some configuration that goes into the theme,
+[Primeppuccin](https://github.com/DanWlker/primeppuccin) is the theme being used. There is some configuration that goes into the theme,
 like choosing whether you want the background to be transparent or not. I have also turned on integrations
 for other plugins being used in the configuration. The main reason I like using Catppuccin is because they
 have a theme for everything. I can have the same theme for my Terminal Emulator, NeoVim, and my PDF viewer,

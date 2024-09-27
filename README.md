@@ -292,6 +292,7 @@ WIP
 | <kbd>leader</kbd>><kbd>h</kbd>><kbd>n</kbd>   | Hide line numbers                   |
 | <kbd>leader</kbd>><kbd>s</kbd>><kbd>n</kbd>   | Show line numbers                   |
 | <kbd>leader</kbd>><kbd>s</kbd>><kbd>c</kbd>   | Enable Spell Checking               |
+| <kbd>leader</kbd>><kbd>h</kbd>><kbd>t</kbd>   | Toggle the Hardtime plugin          |
 
 More plug-in specific keymaps can be found in the documentation for the plugin, found below.
 

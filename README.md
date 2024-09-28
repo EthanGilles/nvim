@@ -2,7 +2,8 @@
 
 ------------------
 <!-- TO DO: -->
-<!-- Codeium Description -->
+<!-- Action Hints Description-->
+<!-- lsp timeout Description-->
 
 ![Greeting Demo](https://github.com/EthanGilles/EthanGilles/blob/0e68bd01990fa046de65d3e28cadd0979b65dbd0/nvim-pics/greeting-demo.gif)
 

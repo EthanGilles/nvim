@@ -18,7 +18,7 @@ local config = function()
       {
         'location',
         color = { fg = '#eba0ac' },
-      }
+      },
     },
       lualine_c = {
       {
@@ -50,6 +50,10 @@ local config = function()
           return require('lsp-progress').progress()
         end,
         color = { fg = '#89b4fa'}
+      },
+      {
+          require("action-hints").statusline,
+          color = { fg = '#f6b596' },
       },
     },
       lualine_x = {

@@ -288,7 +288,6 @@ WIP
 | <kbd>leader</kbd>><kbd>h</kbd>><kbd>n</kbd>   | Hide line numbers                   |
 | <kbd>leader</kbd>><kbd>s</kbd>><kbd>n</kbd>   | Show line numbers                   |
 | <kbd>leader</kbd>><kbd>s</kbd>><kbd>c</kbd>   | Enable Spell Checking               |
-| <kbd>leader</kbd>><kbd>h</kbd>><kbd>t</kbd>   | Toggle the Hardtime plugin          |
 
 More plug-in specific keymaps can be found in the documentation for the plugin, found below.
 
@@ -308,7 +307,6 @@ More plug-in specific keymaps can be found in the documentation for the plugin, 
 - [Colorizer](https://github.com/norcalli/nvim-colorizer.lua)
 - [Comment](https://github.com/numToStr/Comment.nvim)
 - [Cyberdream](https://github.com/scottmckendry/cyberdream.nvim)
-- [Hardtime](https://github.com/m4xshen/hardtime.nvim)
 - [Highlighted Yank](https://github.com/machakann/vim-highlightedyank)
 - [hlChunk](https://github.com/shellRaining/hlchunk.nvim)
 - [Lazy](https://github.com/folke/lazy.nvim)
@@ -364,7 +362,6 @@ plugins or keymaps wheenever I want to configure something.
  - [Codeium](#codeium)
  - [Colorizer](#colorizer)
  - [Comment](#comment)
- - [Hardtime](#Hardtime)
  - [Highlighted Yank](#Highlighted-yank)
  - [hlChunk](#hlChunk)
  - [LSP Progress](#lsp-progress)
@@ -476,12 +473,6 @@ etc. will be highlighted with its own color. A simple quality of life plugin.
 are set within the `comment.lua` file because they access the plugin's api. Currently,
 commenting out the current line (in normal mode) and commenting out the highlighted lines in visual mode
 are both set to <kbd>Ctrl</kbd>+<kbd>/</kbd>.
-
-### Hardtime 
-[Hardtime](https://github.com/m4xshen/hardtime.nvim) is a plugin that keeps you honest while 
-using NeoVim. It will let you know if you're not using Vim motions efficiently and educate 
-you on how you could be doing better. If you find it annoying feel free to toggle it off 
-with ```:Hardtime toggle``` or <kbd>leader</kbd>><kbd>h</kbd>><kbd>t</kbd>.
 
 ### Highlighted Yank
 [Highlighted Yank](https://github.com/machakann/vim-highlightedyank) does exactly what the name states. 

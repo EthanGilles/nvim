@@ -31,8 +31,7 @@ else
 fi
 
 echo "-- INSTALLING CURL AND WGET --"
-apt install -y -q curl
-apt install -y -q wget 
+apt install -y -q curl wget
 
 echo "-- INSTALLING NEOVIM --"
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
@@ -48,7 +47,7 @@ curl -OL "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBr
 && rm JetBrainsMono.zip \
 && fc-cache -fv 
 
-cd ~
+cd $HOME
 
 echo "--INSTALLING RUST --"
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -79,14 +78,13 @@ apt install -y -q xclip
 echo "-- INSTALLING LATEX DEPENDENCIES --"
 apt install -y -q zathura
 apt install -y -q texlive-full
-cargo install -y -q tree-sitter-cli
+cargo install tree-sitter-cli
 
 echo "-- INSTALLING LUA INTERPRETER --"
+apt install -y -q lua5.2 liblua5.2
 wget https://luarocks.org/releases/luarocks-3.11.1.tar.gz
 tar zxpf luarocks-3.11.1.tar.gz
 cd luarocks-3.11.1
 ./configure && make && sudo make install
 
 echo "Everything has completed downloading. NeoVim should run correctly."
-
-rm ~/.config/nvim/install.sh

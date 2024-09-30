@@ -7,7 +7,7 @@
 # Check to make sure I'm serious before I really run this 
 
 echo "You will be installing:"
-echo "            - curl"
+echo "            - curl and wget"
 echo "            - Neovim"
 echo "            - JetBrainsMono Nerd Font"
 echo "            - Rust"
@@ -30,8 +30,9 @@ else
   exit 0
 fi
 
-echo "-- INSTALLING CURL --"
+echo "-- INSTALLING CURL AND WGET --"
 apt install -y -q curl
+apt install -y -q wget 
 
 echo "-- INSTALLING NEOVIM --"
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage

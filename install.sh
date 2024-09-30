@@ -86,6 +86,6 @@ tar zxpf luarocks-3.11.1.tar.gz
 cd luarocks-3.11.1
 ./configure && make && sudo make install
 
-echo "Everything has successfully completed downloading. NeoVim should run correctly."
+echo "Everything has completed downloading. NeoVim should run correctly."
 
 rm ~/.config/nvim/install.sh

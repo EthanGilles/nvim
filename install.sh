@@ -8,6 +8,7 @@
 
 echo "You will be installing:"
 echo "            - curl and wget"
+echo "            - Python3 and pip3"
 echo "            - Neovim"
 echo "            - JetBrainsMono Nerd Font"
 echo "            - Rust"
@@ -32,6 +33,9 @@ fi
 
 echo "-- INSTALLING CURL AND WGET --"
 apt install -y -q curl wget
+
+echo "-- INSTALLING PYTHON3 AND PIP3 --"
+apt install -y -q python3 && apt install -y -q python3-pip 
 
 echo "-- INSTALLING NEOVIM --"
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage

@@ -31,6 +31,8 @@ else
   exit 0
 fi
 
+apt update -y && apt upgrade -y
+
 echo "-- INSTALLING CURL AND WGET --"
 apt install -y -q curl wget
 

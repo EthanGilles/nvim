@@ -7,6 +7,7 @@
 # Check to make sure I'm serious before I really run this 
 
 echo "You will be installing:"
+echo "            - curl"
 echo "            - Neovim"
 echo "            - JetBrainsMono Nerd Font"
 echo "            - Rust"
@@ -29,6 +30,9 @@ else
   exit 0
 fi
 
+echo "-- INSTALLING CURL --"
+apt install -y -q curl
+
 echo "-- INSTALLING NEOVIM --"
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 chmod 555 nvim.appimage
@@ -37,11 +41,13 @@ mv nvim.appimage /opt/nvim/nvim
 export PATH="$PATH:/opt/nvim/"
 
 echo "-- INSTALLING JETBRAINS MONO NERD FONT --"
-wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/JetBrainsMono.zip \
+wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.2/JetBrainsMono.zip \
 && cd ~/.local/share/fonts \
 && unzip JetBrainsMono.zip \
 && rm JetBrainsMono.zip \
-&& fc-cache -fv
+&& fc-cache -fv 
+
+cd ~
 
 echo "--INSTALLING RUST --"
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -75,11 +81,10 @@ apt install -y -q texlive-full
 cargo install -y -q tree-sitter-cli
 
 echo "-- INSTALLING LUA INTERPRETER --"
-git clone git://github.com/keplerproject/luarocks.git
-cd luarocks
-./configure
-make build
-make install
+wget https://luarocks.org/releases/luarocks-3.11.1.tar.gz
+tar zxpf luarocks-3.11.1.tar.gz
+cd luarocks-3.11.1
+./configure && make && sudo make install
 
 echo "Everything has successfully completed downloading. NeoVim should run correctly."
 

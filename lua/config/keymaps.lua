@@ -59,5 +59,3 @@ keymap.set("n", "<leader>sn", ":set number relativenumber<CR>") -- Show Numbers
 -- <SPACE+L+C> (Latex Clean) cleans the directory with latex files after compiling.
 keymap.set("n","<leader>lc", ":VimtexClean<CR>", {noremap = true})
 
--- Hard Time Toggle
-keymap.set("n","<leader>ht", ":Hardtime toggle<CR>", {noremap = true})

@@ -7,8 +7,9 @@
 # Check to make sure I'm serious before I really run this 
 
 echo "You will be installing:"
-echo "            - Rust"
 echo "            - Neovim"
+echo "            - JetBrainsMono Nerd Font"
+echo "            - Rust"
 echo "            - NodeJS"
 echo "            - CLI Utils"
 echo "            - C Compiler"
@@ -34,6 +35,13 @@ chmod 555 nvim.appimage
 mkdir -p /opt/nvim
 mv nvim.appimage /opt/nvim/nvim
 export PATH="$PATH:/opt/nvim/"
+
+echo "-- INSTALLING JETBRAINS MONO NERD FONT --"
+wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/JetBrainsMono.zip \
+&& cd ~/.local/share/fonts \
+&& unzip JetBrainsMono.zip \
+&& rm JetBrainsMono.zip \
+&& fc-cache -fv
 
 echo "--INSTALLING RUST --"
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -62,9 +70,9 @@ apt install -y -q fd-find
 apt install -y -q xclip
 
 echo "-- INSTALLING LATEX DEPENDENCIES --"
-apt install zathura
-apt install texlive-full
-cargo install tree-sitter-cli
+apt install -y -q zathura
+apt install -y -q texlive-full
+cargo install -y -q tree-sitter-cli
 
 echo "-- INSTALLING LUA INTERPRETER --"
 git clone git://github.com/keplerproject/luarocks.git

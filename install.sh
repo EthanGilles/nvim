@@ -42,7 +42,7 @@ mv nvim.appimage /opt/nvim/nvim
 export PATH="$PATH:/opt/nvim/"
 
 echo "-- INSTALLING JETBRAINS MONO NERD FONT --"
-curl -OL "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip"
+curl -OL "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip" \
 && cd ~/.local/share/fonts \
 && unzip JetBrainsMono.zip \
 && rm JetBrainsMono.zip \

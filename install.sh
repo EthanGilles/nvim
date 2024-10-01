@@ -17,7 +17,6 @@ echo "            - CLI Utils"
 echo "            - C Compiler"
 echo "            - Zathura"
 echo "            - LaTeX dependencies"
-echo "            - Lua Interpreter"
 echo ""
 read -p "Enter (yes/no) to confirm installing the items listed." input
 
@@ -59,6 +58,9 @@ export PATH="$PATH:/opt/nvim/"
 echo "export PATH='$PATH:/opt/nvim/'" >> $HOME/.bashrc
 
 echo "-- INSTALLING JETBRAINS MONO NERD FONT --"
+# Need this to use fc-cache on the font.
+apt install fontconfig
+
 cd $HOME && mkdir .local && mkdir .local/share && mkdir .local/share/fonts 
 curl -OL "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip" 
 cd $HOME/.local/share/fonts \
@@ -86,14 +88,5 @@ apt install -y -q ripgrep fd-find xclip
 echo "-- INSTALLING LATEX DEPENDENCIES --"
 apt install -y -q zathura texlive-full
 cargo install tree-sitter-cli
-
-echo "-- INSTALLING LUA INTERPRETER --"
-# Need apt libraries for lua to work correctly.
-apt install -y -q lua5.2 liblua5.2-dev
-
-wget https://luarocks.org/releases/luarocks-3.11.1.tar.gz
-tar zxpf luarocks-3.11.1.tar.gz
-cd luarocks-3.11.1
-./configure && make && sudo make install
 
 echo "Everything has completed downloading. NeoVim should run correctly."

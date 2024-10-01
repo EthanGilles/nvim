@@ -36,7 +36,7 @@ sudo apt install -y -q curl wget
 sudo apt install -y -q zip unzip
 
 echo "--INSTALLING RUST --"
-sudo curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh 
+sudo curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 . "$HOME/.cargo/env"
 
 echo "-- INSTALLING PYTHON3 AND PIP3 --"

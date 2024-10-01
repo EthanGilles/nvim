@@ -49,10 +49,12 @@ Before you follow along with all of the commands, you can also use the provided 
 ```
 sudo bash install.sh
 ```
-
-
 - [NeoVim](https://github.com/neovim/neovim/blob/master/INSTALL.md) version (v0.10.0) is required. I use the NeoVim appimage because it works on every distro.
 ```
+# Downloads FUSE, needed for the app image.
+add-apt-repository universe -y \
+&& apt install libfuse2 -y 
+
 # downloads NeoVim
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 
@@ -68,10 +70,21 @@ mv nvim.appimage /opt/nvim/nvim
 # add to .bashrc
 export PATH="$PATH:/opt/nvim/"
 ```
+- **Cargo/Rust**
+```
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+. "$HOME/.cargo/env"
+```
+
 - **NodeJS**
 ```
 # installs NVM (Node Version Manager)
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+
+# configure your OS to use nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 # download Node.js version 20
 nvm install 20
@@ -99,16 +112,17 @@ apt install build-essential
 ```
 - **Lua Interpreter**
 ``` 
-git clone git://github.com/keplerproject/luarocks.git
-cd luarocks
-./configure
-make build
-sudo make install
+# Need libraries for lua interpreter to work correctly.
+apt install -y -q lua5.2 liblua5.2
+
+wget https://luarocks.org/releases/luarocks-3.11.1.tar.gz
+tar zxpf luarocks-3.11.1.tar.gz
+cd luarocks-3.11.1
+./configure && make && sudo make install
 ```
 - **RipGrep** and **fd** for Telescope.nvim (Live Grep)
 ```
-apt install ripgrep 
-apt install fd-find
+apt install ripgrep fd-find
 ```
 - **XClip** for clipboard (Optional)
 ```
@@ -132,9 +146,6 @@ apt install texlive-full
 ```
 - **tree-sitter-cli**: Allows for better syntax highlighting of LaTeX Documents
 ```
-# NOTE: I used Cargo to download tree-sitter-cli. Should work with the Node Manager as well though.
-npm install tree-sitter-cli
-# OR
 cargo install tree-sitter-cli
 ```
 

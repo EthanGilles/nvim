@@ -35,6 +35,7 @@ apt update -y && apt upgrade -y
 
 echo "-- INSTALLING CURL AND WGET --"
 apt install -y -q curl wget
+apt-get install -y -q zip unzip
 
 echo "-- INSTALLING PYTHON3 AND PIP3 --"
 apt install -y -q python3 
@@ -44,7 +45,7 @@ apt install -y -q python3-pynvim
 echo "-- INSTALLING NEOVIM --"
 # Fuse is required to run the latest app image.
 add-apt-repository universe
-apt install libfuse2
+apt install libfuse2 fuse
 
 # Now download NeoVim
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
@@ -52,18 +53,18 @@ chmod 555 nvim.appimage
 mkdir -p /opt/nvim
 mv nvim.appimage /opt/nvim/nvim
 export PATH="$PATH:/opt/nvim/"
-echo >> "export PATH='$PATH:/opt/nvim/'" >> .bashrc
+echo "export PATH='$PATH:/opt/nvim/'" >> ~/.bashrc
 
 echo "-- INSTALLING JETBRAINS MONO NERD FONT --"
 curl -OL "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip" 
-cd ~ && mkdir .local && mkdir .local/share && mkdir .local/share/fonts \
-&& cd ~/.local/share/fonts \
+cd ~ && mkdir .local && mkdir .local/share && mkdir .local/share/fonts 
+cd ~/.local/share/fonts \
 && unzip ~/JetBrainsMono.zip \
 && rm ~/JetBrainsMono.zip \
 && fc-cache -fv && cd ~ 
 
 echo "--INSTALLING RUST --"
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -y 
 . "$HOME/.cargo/env"
 
 echo "-- INSTALLING NODEJS--"
@@ -88,7 +89,7 @@ cargo install tree-sitter-cli
 
 echo "-- INSTALLING LUA INTERPRETER --"
 # Need apt libraries for lua to work correctly.
-apt install -y -q lua5.2 liblua5.2
+apt install -y -q lua5.2 liblua5.2-dev
 
 wget https://luarocks.org/releases/luarocks-3.11.1.tar.gz
 tar zxpf luarocks-3.11.1.tar.gz

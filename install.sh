@@ -8,10 +8,10 @@
 
 echo "You will be installing:"
 echo "            - curl and wget"
+echo "            - Rust"
 echo "            - Python3 and pip3"
 echo "            - Neovim"
 echo "            - JetBrainsMono Nerd Font"
-echo "            - Rust"
 echo "            - NodeJS"
 echo "            - CLI Utils"
 echo "            - C Compiler"
@@ -36,6 +36,10 @@ apt update -y && apt upgrade -y
 echo "-- INSTALLING CURL AND WGET --"
 apt install -y -q curl wget
 apt-get install -y -q zip unzip
+
+echo "--INSTALLING RUST --"
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh 
+. "$HOME/.cargo/env"
 
 echo "-- INSTALLING PYTHON3 AND PIP3 --"
 apt install -y -q python3 
@@ -62,9 +66,6 @@ cd $HOME/.local/share/fonts \
 && rm $HOME/JetBrainsMono.zip \
 && fc-cache -fv && cd $HOME
 
-echo "--INSTALLING RUST --"
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -y 
-. "$HOME/.cargo/env"
 
 echo "-- INSTALLING NODEJS--"
 # installs NVM (Node Version Manager)

@@ -56,13 +56,11 @@ echo >> "export PATH='$PATH:/opt/nvim/'" >> .bashrc
 
 echo "-- INSTALLING JETBRAINS MONO NERD FONT --"
 curl -OL "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip" 
-mkdir .local && mkdir .local/share && mkdir .local/share/fonts \
+cd ~ && mkdir .local && mkdir .local/share && mkdir .local/share/fonts \
 && cd ~/.local/share/fonts \
 && unzip ~/JetBrainsMono.zip \
 && rm ~/JetBrainsMono.zip \
-&& fc-cache -fv 
-
-cd $HOME
+&& fc-cache -fv && cd ~ 
 
 echo "--INSTALLING RUST --"
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -82,13 +80,10 @@ echo "-- INSTALLING C COMPILER --"
 apt install -y -q build-essential
 
 echo "-- INSTALLING CLI UTILITIES --"
-apt install -y -q ripgrep 
-apt install -y -q fd-find
-apt install -y -q xclip
+apt install -y -q ripgrep fd-find xclip
 
 echo "-- INSTALLING LATEX DEPENDENCIES --"
-apt install -y -q zathura
-apt install -y -q texlive-full
+apt install -y -q zathura texlive-full
 cargo install tree-sitter-cli
 
 echo "-- INSTALLING LUA INTERPRETER --"

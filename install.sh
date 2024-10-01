@@ -40,7 +40,6 @@ apt-get install -y -q zip unzip
 echo "-- INSTALLING PYTHON3 AND PIP3 --"
 apt install -y -q python3 
 apt install -y -q python3-pip 
-apt install -y -q python3-pynvim
 
 echo "-- INSTALLING NEOVIM --"
 # Fuse is required to run the latest app image.
@@ -53,15 +52,15 @@ chmod 555 nvim.appimage
 mkdir -p /opt/nvim
 mv nvim.appimage /opt/nvim/nvim
 export PATH="$PATH:/opt/nvim/"
-echo "export PATH='$PATH:/opt/nvim/'" >> ~/.bashrc
+echo "export PATH='$PATH:/opt/nvim/'" >> $HOME/.bashrc
 
 echo "-- INSTALLING JETBRAINS MONO NERD FONT --"
+cd $HOME && mkdir .local && mkdir .local/share && mkdir .local/share/fonts 
 curl -OL "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip" 
-cd ~ && mkdir .local && mkdir .local/share && mkdir .local/share/fonts 
-cd ~/.local/share/fonts \
-&& unzip ~/JetBrainsMono.zip \
-&& rm ~/JetBrainsMono.zip \
-&& fc-cache -fv && cd ~ 
+cd $HOME/.local/share/fonts \
+&& unzip $HOME/JetBrainsMono.zip \
+&& rm $HOME/JetBrainsMono.zip \
+&& fc-cache -fv && cd $HOME
 
 echo "--INSTALLING RUST --"
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -y 

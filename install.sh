@@ -36,16 +36,16 @@ apt install -y -q curl wget
 apt-get install -y -q zip unzip
 
 echo "--INSTALLING RUST --"
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh 
-. "$HOME/.cargo/env"
+sudo -u $SUDO_USER curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh 
+sudo -u $SUDO_USER . "$HOME/.cargo/env"
 
 echo "-- INSTALLING PYTHON3 AND PIP3 --"
 apt install -y -q python3 
 apt install -y -q python3-pip 
+sudo -u $SUDO_USER pip3 install pynvim
 
 echo "-- INSTALLING NEOVIM --"
 # Fuse is required to run the latest app image.
-add-apt-repository universe
 apt install libfuse2 fuse
 
 # Now download NeoVim
@@ -53,16 +53,16 @@ curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 chmod 555 nvim.appimage
 mkdir -p /opt/nvim
 mv nvim.appimage /opt/nvim/nvim
-export PATH="$PATH:/opt/nvim/"
-echo "export PATH='$PATH:/opt/nvim/'" >> $HOME/.bashrc
+sudo -u $SUDO_USER export PATH="$PATH:/opt/nvim/"
+sudo -u $SUDO_USER echo "export PATH='$PATH:/opt/nvim/'" >> $HOME/.bashrc
 
 echo "-- INSTALLING JETBRAINS MONO NERD FONT --"
 # Need this to use fc-cache on the font.
 apt install fontconfig
 
-cd $HOME && mkdir .local && mkdir .local/share && mkdir .local/share/fonts 
+sudo -u $SUDO_USER cd $HOME && mkdir .local && mkdir .local/share && mkdir .local/share/fonts 
 curl -OL "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip" 
-cd $HOME/.local/share/fonts \
+sudo -u $SUDO_USER cd $HOME/.local/share/fonts \
 && unzip $HOME/JetBrainsMono.zip \
 && rm $HOME/JetBrainsMono.zip \
 && fc-cache -fv && cd $HOME
@@ -70,13 +70,13 @@ cd $HOME/.local/share/fonts \
 
 echo "-- INSTALLING NODEJS--"
 # installs NVM (Node Version Manager)
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-nvm install 20
-npm install --global yarn
-npm install -g neovim
+sudo -u $SUDO_USER curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+sudo -u $SUDO_USER export NVM_DIR="$HOME/.nvm"
+sudo -u $SUDO_USER [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+sudo -u $SUDO_USER [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+sudo -u $SUDO_USER nvm install 20
+sudo -u $SUDO_USER npm install --global yarn
+sudo -u $SUDO_USER npm install -g neovim
 
 echo "-- INSTALLING C COMPILER --"
 apt install -y -q build-essential
@@ -86,7 +86,7 @@ apt install -y -q ripgrep fd-find xclip
 
 echo "-- INSTALLING LATEX DEPENDENCIES --"
 apt install -y -q zathura texlive-full
-cargo install tree-sitter-cli
+sudo -u $SUDO_USER cargo install tree-sitter-cli
 
 echo "Everything has completed downloading. NeoVim should run correctly."
 exec bash

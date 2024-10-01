@@ -47,7 +47,9 @@ echo ""
 echo "-- INSTALLING PYTHON3 AND PIP3 --"
 sudo apt install -y -q python3 
 sudo apt install -y -q python3-pip 
-
+sudo apt install -y -q python3-venv
+echo "alias python='python3'" >> $HOME/.bashrc
+pip3 install --user --upgrade neovim --break-system-packages
 
 echo ""
 echo "-- INSTALLING NODEJS--"
@@ -70,7 +72,9 @@ echo "-- INSTALLING JETBRAINS MONO NERD FONT --"
 # Need this to use fc-cache on the font.
 sudo apt install fontconfig
 
-cd $HOME && mkdir .local && mkdir .local/share && mkdir .local/share/fonts 
+cd $HOME && mkdir .local 
+mkdir .local/share 
+mkdir .local/share/fonts 
 sudo curl -OL "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip" 
 cd $HOME/.local/share/fonts \
 && unzip $HOME/JetBrainsMono.zip \
@@ -90,6 +94,7 @@ sudo mkdir -p /opt/nvim
 sudo mv nvim.appimage /opt/nvim/nvim
 export PATH="${PATH}:/opt/nvim/"
 echo "export PATH='$PATH:/opt/nvim/'" >> $HOME/.bashrc
+echo "alias vim='nvim'" >> $HOME/.bashrc
 
 
 echo ""

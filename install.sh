@@ -37,20 +37,29 @@ echo "-- INSTALLING CURL AND WGET --"
 apt install -y -q curl wget
 
 echo "-- INSTALLING PYTHON3 AND PIP3 --"
-apt install -y -q python3 && apt install -y -q python3-pip 
+apt install -y -q python3 
+apt install -y -q python3-pip 
+apt install -y -q python3-pynvim
 
 echo "-- INSTALLING NEOVIM --"
+# Fuse is required to run the latest app image.
+add-apt-repository universe
+apt install libfuse2
+
+# Now download NeoVim
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 chmod 555 nvim.appimage
 mkdir -p /opt/nvim
 mv nvim.appimage /opt/nvim/nvim
 export PATH="$PATH:/opt/nvim/"
+echo >> "export PATH='$PATH:/opt/nvim/'" >> .bashrc
 
 echo "-- INSTALLING JETBRAINS MONO NERD FONT --"
-curl -OL "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip" \
+curl -OL "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip" 
+mkdir .local && mkdir .local/share && mkdir .local/share/fonts \
 && cd ~/.local/share/fonts \
-&& unzip JetBrainsMono.zip \
-&& rm JetBrainsMono.zip \
+&& unzip ~/JetBrainsMono.zip \
+&& rm ~/JetBrainsMono.zip \
 && fc-cache -fv 
 
 cd $HOME
@@ -69,10 +78,6 @@ nvm install 20
 npm install --global yarn
 npm install -g neovim
 
-
-echo "-- INSTALLING PIP MODULES --"
-sudo -u $(whoami) bash -c 'pip3 install pynvim'
-
 echo "-- INSTALLING C COMPILER --"
 apt install -y -q build-essential
 
@@ -87,7 +92,9 @@ apt install -y -q texlive-full
 cargo install tree-sitter-cli
 
 echo "-- INSTALLING LUA INTERPRETER --"
+# Need apt libraries for lua to work correctly.
 apt install -y -q lua5.2 liblua5.2
+
 wget https://luarocks.org/releases/luarocks-3.11.1.tar.gz
 tar zxpf luarocks-3.11.1.tar.gz
 cd luarocks-3.11.1

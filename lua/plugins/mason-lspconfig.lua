@@ -11,12 +11,15 @@ local config = function()
       "cssls",
       "ts_ls", -- JS/TypeScript
       "bashls", -- Bash
+
+      -- ONLY INCLUDE THIS if you have GHCup to install hls.
+      -- "hls", -- Haskell 
     },
   })
 end
 
 return {
   "williamboman/mason-lspconfig.nvim",
-  lazy = true,
+  lazy = false,
   config = config,
 }

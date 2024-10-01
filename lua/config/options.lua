@@ -20,9 +20,10 @@ opt.relativenumber = true
 opt.termguicolors = true
 opt.colorcolumn = '100'
 opt.signcolumn = 'yes'
-opt.cmdheight = 0
+opt.cmdheight = 1
 opt.scrolloff = 10
 opt.completeopt = "menuone,noinsert,noselect"
+vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 
 -- Behavior --
 opt.hidden = true

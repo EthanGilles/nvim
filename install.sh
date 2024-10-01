@@ -52,7 +52,7 @@ sudo curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.app
 sudo chmod 555 nvim.appimage
 sudo mkdir -p /opt/nvim
 sudo mv nvim.appimage /opt/nvim/nvim
-export PATH="$PATH:/opt/nvim/"
+export PATH="${PATH}:/opt/nvim/"
 echo "export PATH='$PATH:/opt/nvim/'" >> $HOME/.bashrc
 
 echo "-- INSTALLING JETBRAINS MONO NERD FONT --"
@@ -70,7 +70,13 @@ cd $HOME/.local/share/fonts \
 echo "-- INSTALLING NODEJS--"
 # installs NVM (Node Version Manager)
 curl -fsSL https://fnm.vercel.app/install | bash
-source $HOME/.bashrc
+
+FNM_PATH="/home/exan/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:${PATH}"
+  eval "`fnm env`"
+fi
+
 # download and install Node.js
 fnm use --install-if-missing 20
 npm install --global yarn

@@ -70,7 +70,7 @@ cd $HOME/.local/share/fonts \
 echo "-- INSTALLING NODEJS--"
 # installs NVM (Node Version Manager)
 curl -fsSL https://fnm.vercel.app/install | bash
-source ~/.bashrc
+source $HOME/.bashrc
 # download and install Node.js
 fnm use --install-if-missing 20
 npm install --global yarn

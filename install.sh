@@ -58,7 +58,7 @@ curl -fsSL https://fnm.vercel.app/install | bash
 
 FNM_PATH="/home/exan/.local/share/fnm"
 if [ -d "$FNM_PATH" ]; then
-  export PATH="$FNM_PATH:${PATH}"
+  export PATH="$FNM_PATH:$PATH"
   eval "`fnm env`"
 fi
 # download and install Node.js
@@ -93,7 +93,7 @@ sudo chmod 555 nvim.appimage
 sudo mkdir -p /opt/nvim
 sudo mv nvim.appimage /opt/nvim/nvim
 export PATH="${PATH}:/opt/nvim/"
-echo "export PATH='$PATH:/opt/nvim/'" >> $HOME/.bashrc
+echo "export PATH='\$PATH:/opt/nvim/'" >> $HOME/.bashrc
 echo "alias vim='nvim'" >> $HOME/.bashrc
 
 

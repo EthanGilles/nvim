@@ -2,9 +2,8 @@
 
 # Ethan Gilles
 # 9/13/24
-# Install needed packages and things for a new linux system.
-
-# Check to make sure I'm serious before I really run this 
+# Install needed packages for a new linux system to run 
+# my NeoVim configuration.
 
 echo "You will be installing:"
 echo "            - curl and wget"
@@ -18,7 +17,7 @@ echo "            - C Compiler"
 echo "            - Zathura"
 echo "            - LaTeX dependencies"
 echo ""
-read -p "Enter (yes/no) to confirm installing the items listed." input
+read -p "Enter (yes/no) to confirm installing the items listed. \n" input
 
 # Convert input to lowercase (not case sensitive)
 input=$(echo "$input" | tr '[:upper:]' '[:lower:]')
@@ -90,3 +89,4 @@ apt install -y -q zathura texlive-full
 cargo install tree-sitter-cli
 
 echo "Everything has completed downloading. NeoVim should run correctly."
+exec bash

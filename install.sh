@@ -63,19 +63,18 @@ cd $HOME && mkdir .local && mkdir .local/share && mkdir .local/share/fonts
 sudo curl -OL "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip" 
 cd $HOME/.local/share/fonts \
 && unzip $HOME/JetBrainsMono.zip \
-&& rm $HOME/JetBrainsMono.zip \
+&& sudo rm $HOME/JetBrainsMono.zip \
 && fc-cache -fv && cd $HOME
 
 
 echo "-- INSTALLING NODEJS--"
 # installs NVM (Node Version Manager)
-sudo curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-sudo nvm install 20
-sudo npm install --global yarn
-sudo npm install -g neovim
+curl -fsSL https://fnm.vercel.app/install | bash
+source ~/.bashrc
+# download and install Node.js
+fnm use --install-if-missing 20
+npm install --global yarn
+npm install -g neovim
 
 echo "-- INSTALLING C COMPILER --"
 sudo apt install -y -q build-essential

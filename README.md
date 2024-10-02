@@ -3,7 +3,8 @@
 ------------------
 <!-- TO DO: -->
 <!-- Action Hints Description-->
-<!-- lsp timeout Description-->
+<!-- Smartcolumn Description-->
+<!-- TS Autotag Description-->
 
 ![Greeting Demo](https://github.com/EthanGilles/EthanGilles/blob/0e68bd01990fa046de65d3e28cadd0979b65dbd0/nvim-pics/greeting-demo.gif)
 
@@ -484,11 +485,16 @@ in any modern IDE.
 
 hlchunk has 4 mini mods but I have two active in this configuration. The first 
 mod is called chunk, which draws an arrow around the code chunk youre working on. 
-I have the color set to gray so it isn't as distracting.
+I have the color set to gray so it isn't as distracting. An example of the arrow is 
+shown below. As the cursor moves into a further nested code chunk, the arrow will move as well.
+
+![HLChunk Example](https://github.com/EthanGilles/EthanGilles/blob/fc2f80866151808b00acdb5d5502c5875bb6a8cd/nvim-pics/hlChunk1.png)
+![HLChunk Example](https://github.com/EthanGilles/EthanGilles/blob/fc2f80866151808b00acdb5d5502c5875bb6a8cd/nvim-pics/hlChunk2.png)
 
 The second mini mod is called line_num, and it highlights the line numbers for the 
 block of code being worked in. This causes the numbers on the left to become a blueish 
-color to help navigate the code easier as well.
+color to help navigate the code easier as well. You can see how the numbers adjust with 
+cursor movement in the example above.
 
 
 ### LSP Progress 

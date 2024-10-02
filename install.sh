@@ -93,7 +93,7 @@ sudo chmod 555 nvim.appimage
 sudo mkdir -p /opt/nvim
 sudo mv nvim.appimage /opt/nvim/nvim
 export PATH="${PATH}:/opt/nvim/"
-echo "export PATH='\${PATH}:/opt/nvim/'" >> $HOME/.bashrc
+echo "export PATH='${PATH}:/opt/nvim/'" >> $HOME/.bashrc
 echo "alias vim='nvim'" >> $HOME/.bashrc
 
 

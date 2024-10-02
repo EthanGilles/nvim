@@ -13,7 +13,7 @@ echo "            - Python3 and pip3"
 echo "            - Neovim"
 echo "            - JetBrainsMono Nerd Font"
 echo "            - CLI Utils"
-echo "            - Zathura"
+echo "            - Zathura (with Catppuccin)"
 echo "            - LaTeX dependencies"
 echo ""
 read -p "Enter (yes/no) to confirm installing the items listed." input
@@ -107,6 +107,7 @@ echo "-- INSTALLING LATEX DEPENDENCIES --"
 sudo apt install -y -q zathura texlive-full
 cargo install tree-sitter-cli
 
+mv $HOME/.config/nvim/zathura $HOME/.config/zathura
 
 echo ""
 echo "Everything has completed downloading. NeoVim should run correctly."

@@ -13,9 +13,9 @@
 
 - [General Info](#general-info)
   - [Extra Info](#extra-info)
+- [Installation](#installation)
 - [Requirements](#requirements)
   - [LaTeX Dependencies](#latex-dependencies)
-- [Installation](#installation)
 - [Configuration](#configuration)
 - [Getting Started](#getting-started)
   - [Tutorial](#tutorial)
@@ -26,7 +26,7 @@
 
 ## General Info
 
-This guide has information relating to **Linux/Ubuntu.**  
+This guide has information relating to **Debian Linux**  
 
 This is my personal NeoVim config that I use for a wide variety of things. This config is not
 meant for a specific purpose, but rather to cover a few different purposes that are specific
@@ -35,7 +35,8 @@ to me as a Computer Science Major. The main uses for this configuration are:
 - **Making LaTeX Documents**
 - **Coding in C/C++**
 - **Coding in Rust**
-- (some) **Front end Development**
+- **Coding in Python**
+- **Front end Development**
 
 ### Extra Info
 
@@ -43,90 +44,93 @@ I am using [Primeppuccin Mocha](https://github.com/DanWlker/primeppuccin) as my 
 LuaLine I use [Cyberdream](https://github.com/scottmckendry/cyberdream.nvim).
 For font, I use JetBrains Mono, but any [Nerd Font](https://github.com/ryanoasis/nerd-fonts) will do.
 
+
+## Installation
+
+Before you start, enter the `.config` directory in the home directory.
+Then clone the repository.
+```
+cd ~/.config
+# Using SSH to clone from GitHub
+git clone git@github.com:EthanGilles/nvim.git 
+```
+If you have a Debian-based Linux distribution, you can install all of the dependencies 
+by running the install script located in the top level of the repository.
+This will install *ALL* of the dependencies needed for NeoVim from a barebones Debian OS.
+```
+bash install.sh
+```
+**DO NOT USE** ***SUDO*** **FOR THE INSTALL SCRIPT. IT WILL NOT WORK.**
+
+If you would rather go through the dependencies manually, see the [Requirements](#requirements) section.
+
+Now open up NeoVim! The Lazy plugin manager and its GUI should load and
+start downloading all of the plugins for the configuration. Once everything
+is downloaded, re-open NeoVim and the configuration should be loaded. It may take 
+several minutes for all of the parsers and LSPs to download and install.
+
+
 ## Requirements
 
-Before you follow along with all of the commands, you can also use the provided install script for all of the requirements with
-```
-sudo bash install.sh
-```
 - [NeoVim](https://github.com/neovim/neovim/blob/master/INSTALL.md) version (v0.10.0) is required. I use the NeoVim appimage because it works on every distro.
 ```
-# Downloads FUSE, needed for the app image.
-add-apt-repository universe -y \
-&& apt install libfuse2 -y 
+# Downloads FUSE, needed for app image.
+sudo apt install libfuse2 fuse -y 
 
 # downloads NeoVim
-curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+sudo curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+sudo chmod 555 nvim.appimage
 
-# give read+execute permissions to NeoVim
-chmod 555 nvim.appimage
+# add a NeoVim folder in the optional binaries directory
+sudo mkdir -p /opt/nvim
 
-# add a NeoVim folder to the optional directory
-mkdir -p /opt/nvim
-
-# move the app image to the optional directory
-mv nvim.appimage /opt/nvim/nvim
+# move the app image to the optional binaries directory
+sudo mv nvim.appimage /opt/nvim/nvim
 
 # add to .bashrc
 export PATH="$PATH:/opt/nvim/"
 ```
 - **Cargo/Rust**
 ```
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- y
 . "$HOME/.cargo/env"
 ```
 
 - **NodeJS**
 ```
-# installs NVM (Node Version Manager)
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+# installs FNM (Fast Node Manager)
+curl -fsSL https://fnm.vercel.app/install | bash
+source ~/.bashrc
 
-# configure your OS to use nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-
-# download Node.js version 20
-nvm install 20
-
-# download yarn
+# download and install Node.js and the Node packages needed.
+fnm use --install-if-missing 20
 npm install --global yarn
-
-# install the neovim package for NodeJS
 npm install -g neovim
 ```
 - **Python/Pip**
 ```
-# Ubuntu comes with python but just in case
-apt install python3
-
-# Install pip
-apt install python3-pip
-
-# Use pip to install pynvim
-pip3 install pynvim
+sudo apt install -y -q python3 python3-pip python3-venv
+pip3 install --user --upgrade neovim --break-system-packages 
 ```
 - **C/C++ Compiler**
 ```
 apt install build-essential
 ```
-- **Lua Interpreter**
-``` 
-# Need libraries for lua interpreter to work correctly.
-apt install -y -q lua5.2 liblua5.2
+- **CLI Utilites**
+```
+sudo apt install ripgrep fd-find xclip zip unzip
+```
+- **Nerd Font** 
+```
+# Install a font caching library and the font files.
+sudo apt install fontconfig
+sudo curl -OL "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip" 
 
-wget https://luarocks.org/releases/luarocks-3.11.1.tar.gz
-tar zxpf luarocks-3.11.1.tar.gz
-cd luarocks-3.11.1
-./configure && make && sudo make install
-```
-- **RipGrep** and **fd** for Telescope.nvim (Live Grep)
-```
-apt install ripgrep fd-find
-```
-- **XClip** for clipboard (Optional)
-```
-apt install xclip
+# Enter the fonts folder and add the font files.
+cd ~/.local/share/fonts \
+&& unzip ~/JetBrainsMono.zip \
+&& sudo rm ~/JetBrainsMono.zip \
+&& fc-cache -fv && cd $HOME
 ```
 
 ### LaTeX/VimTex Dependencies
@@ -136,39 +140,18 @@ First is a PDF viewer that will update whenever we write to the file. I use [Zat
 for this purpose because it comes with Vim style motions out of the box. You can also customize
 Zathura to have the colorscheme of your choice. I am using [Catppuccin Mocha](https://github.com/catppuccin/zathura).
 
-- **Zathura** (Recommended)
+- **Zathura** - Reccomended PDF Viewer
 ```
-apt install zathura
+sudo apt install zathura
 ```
 - **latexmk**: LaTeX Compiler
 ```
-apt install texlive-full
+sudo apt install texlive-full
 ```
 - **tree-sitter-cli**: Allows for better syntax highlighting of LaTeX Documents
 ```
 cargo install tree-sitter-cli
 ```
-
-## Installation
-
-Before you start, enter the `.config` directory in the home directory.
-Then clone the repository.
-```
-cd ~/.config
-
-git clone https://github.com/EthanGilles/nvim.git
-```
-If you don't have all the requirements listed above and would rather just use 
-a script to do it all at once, use the following command to download the requirements
-``` 
-sudo bash install.sh
-```
-Now open up NeoVim! The Lazy plugin manager and its GUI should load and
-start downloading all of the plugina for the configuration. Once everything
-is downloaded, re-open NeoVim and the configuration should be loaded.
-
-To get auto-completion support, see [Conquer of Completion](#conquer-of-completion). You have to install
-certain Conquer of Completion (CoC) *extensions* to get auto complete for a language.
 
 ## Configuration 
 
@@ -195,7 +178,6 @@ for executing the command in normal mode, visual mode, or insert mode.
 ```lua
 keymap.set("[n, v, i]", "[keys to press]", ":[Vim cmd]<CR>", opts)
 ```
-
 My global `<leader>` key is set to <kbd>SPACE</kbd>.
 If you would like to change the `<leader>` keymap, it is in the `globals.lua` file.
 
@@ -304,10 +286,10 @@ More plug-in specific keymaps can be found in the documentation for the plugin, 
 
 ## Plugins 
 
+- [Action Hints](https://github.com/roobert/action-hints.nvim)
 - [Alpha](https://github.com/goolord/alpha-nvim)
 - [Auto Session](https://github.com/rmagatti/auto-session)
 - [Auto Pairs](https://github.com/windwp/nvim-autopairs)
-- [Primeppuccin](https://github.com/DanWlker/primeppuccin)
 - [cmp-Ultisnips](https://github.com/quangnguyen30192/cmp-nvim-ultisnips)
 - [cmp](https://github.com/hrsh7th/nvim-cmp)
 - [cmp-lsp](https://github.com/hrsh7th/cmp-nvim-lsp)
@@ -321,8 +303,10 @@ More plug-in specific keymaps can be found in the documentation for the plugin, 
 - [Highlighted Yank](https://github.com/machakann/vim-highlightedyank)
 - [hlChunk](https://github.com/shellRaining/hlchunk.nvim)
 - [Lazy](https://github.com/folke/lazy.nvim)
-- [LSP Progress](https://github.com/linrongbin16/lsp-progress.nvim)
 - [LSP Config](https://github.com/neovim/nvim-lspconfig)
+- [LSP Progress](https://github.com/linrongbin16/lsp-progress.nvim)
+- [LSP Signature](https://github.com/ray-x/lsp_signature.nvim)
+- [LSP Kind](https://github.com/onsails/lspkind.nvim)
 - [LuaLine](https://github.com/nvim-lualine/lualine.nvim)
 - [Mason LSP Config](https://github.com/williamboman/mason-lspconfig.nvim)
 - [Mason](https://github.com/williamboman/mason.nvim)
@@ -331,9 +315,11 @@ More plug-in specific keymaps can be found in the documentation for the plugin, 
 - [nvim-tree](https://github.com/nvim-tree/nvim-tree.lua)
 - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons)
+- [Primeppuccin](https://github.com/DanWlker/primeppuccin)
 - [Plenary](https://github.com/nvim-lua/plenary.nvim)
 - [Smartcolumn](https://github.com/m4xshen/smartcolumn.nvim)
 - [Telescope](https://github.com/nvim-telescope/telescope.nvim)
+- [TS Autotag](https://github.com/windwp/nvim-ts-autotag)
 - [Ultisnips](https://github.com/SirVer/ultisnips)
 - [Illuminate](https://github.com/RRethy/vim-illuminate)
 - [Vim-Snippets](https://github.com/honza/vim-snippets)
@@ -420,11 +406,12 @@ Greeting:
 
 ### Auto Pairs 
 
-[Auto Pairs](https://github.com/windwp/nvim-autopairs) is a quality of life plufin that will pair 
-together parenthesis, brackets, quotes, etc. that should be paired. It also auto moves
+[Auto Pairs](https://github.com/windwp/nvim-autopairs) is a quality of life plugin that will pair 
+together parenthesis, brackets, quotes, etc. It also auto moves
 the cursor to the right if you press a keystroke for a paired character. The reason this 
 plugin is used is because it can be configured to auto-pair for LaTeX as well. This means
 that the '$' symbol is paired in only tex documents with the same functionality as other characters.
+I also have a plugin called [TS Autotag](https://github.com/windwp/nvim-ts-autotag) that will automatically close HTML tags as well.
 
 ### Auto Session
 [Auto Session](https://github.com/rmagatti/auto-session) is a quality of life plugin that lets you
@@ -448,15 +435,16 @@ are searching through sessions, here are a couple more keybinds to be aware of.
 ### Primeppuccin 
 [Primeppuccin](https://github.com/DanWlker/primeppuccin) is the theme being used. There is some configuration that goes into the theme,
 like choosing whether you want the background to be transparent or not. I have also turned on integrations
-for other plugins being used in the configuration. The main reason I like using Catppuccin is because they
-have a theme for everything. I can have the same theme for my Terminal Emulator, NeoVim, and my PDF viewer,
-which is very aesthetically pleasing.
+for other plugins being used in the configuration. Primeppuccin is just a slight variation of 
+Catppuccin Mocha. All of the colors are slightly muted/dulled to make it easier on my eyes. 
+Using Catppuccin based themes is fantastic as there is support for just about any software 
+that has a customizable color theme. 
 
 ### Codeium 
-[Codeium](https://github.com/Exafunction/codeium) is the auto-completion plugin being used in this configuration. 
+[Codeium](https://github.com/Exafunction/codeium) is the AI auto-completion plugin being used in this configuration. 
 It is free and integrates with nvim-cmp to provide suggestions while you're coding. 
 You'll know it's an AI suggestion as it will label the suggestion with Codeium.
-To get started with Codeium, use ```:Codeium Auth``` to link an api key and start using 
+To get started with Codeium, use ``:Codeium Auth``to link an api key and start using 
 their service for free. It's slightly buggy right now as I'm still int the process 
 of integrating it fully into the configuration.
 

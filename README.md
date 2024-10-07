@@ -139,7 +139,8 @@ cd ~/.local/share/fonts \
 For LaTeX live viewing to work with VimTex there are a few more dependencies needed.
 First is a PDF viewer that will update whenever we write to the file. I use [Zathura](https://wiki.archlinux.org/title/zathura)
 for this purpose because it comes with Vim style motions out of the box. You can also customize
-Zathura to have the colorscheme of your choice. I am using [Catppuccin Mocha](https://github.com/catppuccin/zathura).
+Zathura to have the colorscheme of your choice. I am using [Catppuccin Mocha](https://github.com/catppuccin/zathura). 
+You can use my configuration for Zathura by moving the zathura folder to `~/.config/zathura`.
 
 - **Zathura** - Reccomended PDF Viewer
 ```

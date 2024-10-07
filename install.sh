@@ -55,12 +55,12 @@ echo ""
 echo "-- INSTALLING NODEJS--"
 # installs FNM (Fast Node Manager)
 curl -fsSL https://fnm.vercel.app/install | bash
-
 FNM_PATH="/home/exan/.local/share/fnm"
 if [ -d "$FNM_PATH" ]; then
   export PATH="$FNM_PATH:${PATH}"
   eval "`fnm env`"
 fi
+
 # download and install Node.js
 fnm use --install-if-missing 20
 npm install --global yarn
@@ -72,6 +72,7 @@ echo "-- INSTALLING JETBRAINS MONO NERD FONT --"
 # Need this to use fc-cache on the font.
 sudo apt install fontconfig
 
+# Download the font and unzip it in the font folder.
 cd $HOME && mkdir .local 
 mkdir .local/share 
 mkdir .local/share/fonts 
@@ -84,7 +85,7 @@ cd $HOME/.local/share/fonts \
 
 echo ""
 echo "-- INSTALLING NEOVIM --"
-# Fuse is required to run the latest app image.
+# Fuse is required to run the app image.
 sudo apt install libfuse2 fuse
 
 # Now download NeoVim
@@ -107,6 +108,7 @@ echo "-- INSTALLING LATEX DEPENDENCIES --"
 sudo apt install -y -q zathura texlive-full
 cargo install tree-sitter-cli
 
+# Add catppuccin to zathura
 mv $HOME/.config/nvim/zathura $HOME/.config/zathura
 
 echo ""

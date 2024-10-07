@@ -24,6 +24,7 @@ local config = function()
   require("lspconfig").ts_ls.setup{ on_attach = on_attach, capabilities = capabilities, }
   require("lspconfig").bashls.setup{ on_attach = on_attach, capabilities = capabilities, }
   require("lspconfig").hls.setup{ on_attach = on_attach, capabilities = capabilities, }
+  require("lspconfig").tailwindcss.setup{ on_attach = on_attach, capabilities = capabilities, }
 end
 
 return {

@@ -1,5 +1,3 @@
-local keymap = vim.keymap
-
 local config = function()
   local telescope = require('telescope')
   telescope.setup({
@@ -35,8 +33,7 @@ end
 
 return {
     'nvim-telescope/telescope.nvim',
-    tag = '0.1.6',
-    dependencies = { 'nvim-lua/plenary.nvim' },
+    dependencies = { 'nvim-lua/plenary.nvim'},
     lazy = true,
     config = config,
     keys = {

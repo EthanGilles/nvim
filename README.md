@@ -50,7 +50,7 @@ For font, I use JetBrains Mono, but any [Nerd Font](https://github.com/ryanoasis
 
 Before you start, enter the `.config` directory in the home directory.
 Then clone the repository.
-```
+```bash
 cd ~/.config
 # Using SSH to clone from GitHub
 git clone git@github.com:EthanGilles/nvim.git 
@@ -58,7 +58,7 @@ git clone git@github.com:EthanGilles/nvim.git
 If you have a Debian-based Linux distribution, you can install all of the dependencies 
 by running the install script located in the top level of the repository.
 This will install *ALL* of the dependencies needed for NeoVim from a barebones Debian OS.
-```
+```bash
 bash install.sh
 ```
 **DO NOT USE** ***SUDO*** **FOR THE INSTALL SCRIPT. IT WILL NOT WORK.**
@@ -74,7 +74,7 @@ several minutes for all of the parsers and LSPs to download and install.
 ## Requirements
 
 - [NeoVim](https://github.com/neovim/neovim/blob/master/INSTALL.md) version (v0.10.0) is required. I use the NeoVim appimage because it works on every distro.
-```
+```bash
 # Downloads FUSE, needed for app image.
 sudo apt install libfuse2 fuse -y 
 
@@ -92,13 +92,13 @@ sudo mv nvim.appimage /opt/nvim/nvim
 export PATH="$PATH:/opt/nvim/"
 ```
 - **Cargo/Rust**
-```
+```bash
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- y
 . "$HOME/.cargo/env"
 ```
 
 - **NodeJS**
-```
+```bash
 # installs FNM (Fast Node Manager)
 curl -fsSL https://fnm.vercel.app/install | bash
 source ~/.bashrc
@@ -109,20 +109,20 @@ npm install --global yarn
 npm install -g neovim
 ```
 - **Python/Pip**
-```
+```bash
 sudo apt install -y -q python3 python3-pip python3-venv
 pip3 install --user --upgrade neovim --break-system-packages 
 ```
 - **C/C++ Compiler**
-```
+```bash
 apt install build-essential
 ```
 - **CLI Utilites**
-```
+```bash
 sudo apt install ripgrep fd-find xclip zip unzip
 ```
 - **Nerd Font** 
-```
+```bash
 # Install a font caching library and the font files.
 sudo apt install fontconfig
 sudo curl -OL "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip" 
@@ -143,15 +143,15 @@ Zathura to have the colorscheme of your choice. I am using [Catppuccin Mocha](ht
 You can use my configuration for Zathura by moving the zathura folder to `~/.config/zathura`.
 
 - **Zathura** - Reccomended PDF Viewer
-```
+```bash
 sudo apt install zathura
 ```
 - **latexmk**: LaTeX Compiler
-```
+```bash
 sudo apt install texlive-full
 ```
 - **tree-sitter-cli**: Allows for better syntax highlighting of LaTeX Documents
-```
+```bash
 cargo install tree-sitter-cli
 ```
 
@@ -688,5 +688,3 @@ section of the [Keymaps](#keymaps). To explore more of them, check out the [VimT
 
 ### JavaScript
 ![JavaScript Example](https://github.com/EthanGilles/EthanGilles/blob/bb3e1ed9ed89fd79477dc5a9d88273b1bc9c05b7/nvim-pics/js.png)
-
-

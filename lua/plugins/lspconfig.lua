@@ -15,7 +15,7 @@ local config = function()
   -- Setup all of the LSPs
   require("lspconfig").lua_ls.setup{ on_attach = on_attach, capabilities = capabilities, }
   require("lspconfig").rust_analyzer.setup{ on_attach = on_attach, capabilities = capabilities, }
-  require("lspconfig").clangd.setup{ on_attach = on_attach, capabilities = capabilities, init_options = { fallbackFlags = {"-std=c++20"} } }
+  require("lspconfig").clangd.setup{ on_attach = on_attach, capabilities = capabilities,  init_options = { fallbackFlags = {"-std=c++20"} }  }
   require("lspconfig").texlab.setup{ on_attach = on_attach, capabilities = capabilities, }
   require("lspconfig").marksman.setup{ on_attach = on_attach, capabilities = capabilities, }
   require("lspconfig").jedi_language_server.setup{ on_attach = on_attach, capabilities = capabilities, }

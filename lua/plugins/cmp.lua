@@ -44,6 +44,7 @@ local config = function()
       { name = "codeium" },
       { name = 'nvim_lsp' },
       { name = 'ultisnips' }, -- For ultisnips users.
+      { name = 'vimtex', },
     } ,
       {
         { name = 'buffer' },
@@ -75,7 +76,7 @@ end
 
 return {
   'hrsh7th/nvim-cmp',
-  dependencies = { 'hrsh7th/cmp-nvim-lsp', 'hrsh7th/cmp-buffer', 'hrsh7th/cmp-path', 'hrsh7th/cmp-cmdline', 'onsails/lspkind.nvim'},
+  dependencies = { 'hrsh7th/cmp-nvim-lsp', 'hrsh7th/cmp-buffer', 'hrsh7th/cmp-path', 'hrsh7th/cmp-cmdline', 'onsails/lspkind.nvim', 'micangl/cmp-vimtex'},
   event = "InsertEnter",
   config = config,
 }

@@ -20,8 +20,9 @@ require("lazy").setup({
   spec = {
     { import = "plugins" },
   },
-  install = { colorscheme = { "catppuccin" } },
+  install = { colorscheme = { "rose-pine" } },
   checker = { enabled = true },
 })
+vim.cmd("colorscheme rose-pine")
 require('config.keymaps')
 

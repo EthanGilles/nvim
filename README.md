@@ -43,7 +43,7 @@ to me as a Computer Science Major. The main uses for this configuration are:
 
 I am using [Primeppuccin Mocha](https://github.com/DanWlker/primeppuccin) as my main theme and for my 
 LuaLine I use [Cyberdream](https://github.com/scottmckendry/cyberdream.nvim).
-For font, I use JetBrains Mono, but any [Nerd Font](https://github.com/ryanoasis/nerd-fonts) will do.
+For font, I used Jet Brains Mono for a long time, but have recently switched to Iosevka. Any [Nerd Font](https://github.com/ryanoasis/nerd-fonts) will do though.
 
 
 ## Installation

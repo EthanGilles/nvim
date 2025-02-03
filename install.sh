@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Ethan Gilles
-# 9/13/24
+# 11/17/24
 # Install needed packages for a new linux system to run 
 # my NeoVim configuration.
 
@@ -89,10 +89,10 @@ echo "-- INSTALLING NEOVIM --"
 sudo apt install libfuse2 fuse
 
 # Now download NeoVim
-sudo curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
-sudo chmod 555 nvim.appimage
+sudo curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.appimage
+sudo chmod 555 nvim-linux-x86_64.appimage
 sudo mkdir -p /opt/nvim
-sudo mv nvim.appimage /opt/nvim/nvim
+sudo mv nvim-linux-x86_64.appimage /opt/nvim/nvim
 export PATH="${PATH}:/opt/nvim/"
 echo "export PATH='${PATH}:/opt/nvim/'" >> $HOME/.bashrc
 echo "alias vim='nvim'" >> $HOME/.bashrc

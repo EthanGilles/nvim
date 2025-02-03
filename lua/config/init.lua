@@ -12,6 +12,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
     os.exit(1)
   end
 end
+
 vim.opt.rtp:prepend(lazypath)
 
 require('config.globals')
@@ -20,9 +21,9 @@ require("lazy").setup({
   spec = {
     { import = "plugins" },
   },
-  install = { colorscheme = { "rose-pine" } },
+  install = { },
   checker = { enabled = true },
 })
-vim.cmd("colorscheme rose-pine")
+
 require('config.keymaps')
 

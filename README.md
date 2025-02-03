@@ -79,14 +79,14 @@ several minutes for all of the parsers and LSPs to download and install.
 sudo apt install libfuse2 fuse -y 
 
 # downloads NeoVim
-sudo curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
-sudo chmod 555 nvim.appimage
+sudo curl -LO https://github.com/neovim/neovim/releases/download/v0.10.4/nvim-linux-arm64.appimage
+sudo chmod 555 nvim-linux-x86_64.appimage
 
 # add a NeoVim folder in the optional binaries directory
 sudo mkdir -p /opt/nvim
 
 # move the app image to the optional binaries directory
-sudo mv nvim.appimage /opt/nvim/nvim
+sudo mv nvim-linux-x86_64.appimage /opt/nvim/nvim
 
 # add to .bashrc
 export PATH="$PATH:/opt/nvim/"

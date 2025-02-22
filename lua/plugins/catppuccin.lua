@@ -43,9 +43,9 @@ local config = function()
   vim.cmd.colorscheme "catppuccin"
 end
 
-
 return {
-  "danwlker/primeppuccin",
+  "catppuccin/nvim",
+  name = "catppuccin",
   priority = 1000,
-  config = config,
+  config = config
 }

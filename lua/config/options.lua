@@ -45,6 +45,8 @@ opt.encoding = "UTF-8"
 
 -- Commands --
 
--- Disables Ruby and Perl as they're not needed for the configuration.
+-- Disables warning messages in health checks
 vim.cmd[[let g:loaded_ruby_provider = 0]]
 vim.cmd[[let g:loaded_perl_provider = 0]]
+vim.cmd[[let g:loaded_node_provider = 0]]
+vim.deprecate = function() end

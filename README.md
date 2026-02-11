@@ -1,5 +1,7 @@
 # NEOVIM CONFIGURATION
 
+> Sorry, I no longer have the time to keep this repo up to date. Someday I will return and modernize/update this, but for now this is deprecated.
+
 ------------------
 <!-- TO DO: -->
 <!-- Action Hints Description-->
